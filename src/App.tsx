@@ -8,6 +8,7 @@ function App() {
     handleChange,
     handleCheck,
     handleNew,
+    handleReset,
     result,
     images,
     image,
@@ -21,7 +22,7 @@ function App() {
       <section className="h-full flex items-center justify-center flex-col gap-4">
         <div className="h-10">{images.length > 0 ? "Result" : null}</div>
         <div className="h-10">{result}</div>
-        <ImageSection images={images} image={image} />
+        <ImageSection handleReset={handleReset} images={images} image={image} />
         <Form
           handleChange={handleChange}
           handleCheck={handleCheck}

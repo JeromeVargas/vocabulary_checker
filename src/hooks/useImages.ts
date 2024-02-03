@@ -40,10 +40,21 @@ export const useImages = () => {
     setResult("");
     setIsInputReady(false);
   };
+
+  const handleReset = () => {
+    setImages((prevArray) => [
+      ...prevArray,
+      "hanashimashou",
+      "kaiwa",
+      "kiku_renshou",
+      "tango_hyou",
+    ]);
+  };
   return {
     handleCheck,
     handleChange,
     handleNew,
+    handleReset,
     images,
     image,
     result,

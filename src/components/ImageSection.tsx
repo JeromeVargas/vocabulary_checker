@@ -1,11 +1,12 @@
 type ImageSectionProps = {
+  handleReset: () => void;
   images: string[];
   image: number;
 };
 
-const ImageSection = ({ images, image }: ImageSectionProps) => {
+const ImageSection = ({ handleReset, images, image }: ImageSectionProps) => {
   return (
-    <section>
+    <>
       {images.length > 0 ? (
         <div className="h-64">
           <img
@@ -15,9 +16,14 @@ const ImageSection = ({ images, image }: ImageSectionProps) => {
           />
         </div>
       ) : (
-        <p>You do not have any more words to review</p>
+        <>
+          <p>You do not have any more words to review</p>
+          <button onClick={handleReset} type="button">
+            Try again
+          </button>
+        </>
       )}
-    </section>
+    </>
   );
 };
 export default ImageSection;
