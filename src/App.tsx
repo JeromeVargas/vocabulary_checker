@@ -4,8 +4,16 @@ import ImageSection from "./components/ImageSection";
 import Form from "./components/Form";
 
 function App() {
-  const { handleChange, handleCheck, handleNew, result, images, image, input } =
-    useImages();
+  const {
+    handleChange,
+    handleCheck,
+    handleNew,
+    result,
+    images,
+    image,
+    input,
+    isInputReady,
+  } = useImages();
 
   return (
     <main>
@@ -17,9 +25,9 @@ function App() {
           handleChange={handleChange}
           handleCheck={handleCheck}
           handleNew={handleNew}
-          input={input}
           images={images}
-          result={result}
+          input={input}
+          isInputReady={isInputReady}
         />
       </main>
     </main>

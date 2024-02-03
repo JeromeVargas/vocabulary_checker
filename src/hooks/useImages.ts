@@ -11,6 +11,7 @@ export const useImages = () => {
   const [image, setImage] = useState<number>(0);
   const [input, setInput] = useState("");
   const [result, setResult] = useState("");
+  const [isInputReady, setIsInputReady] = useState(false);
 
   useEffect(() => {
     setImage(randomNumber(0, images.length - 1));
@@ -22,9 +23,14 @@ export const useImages = () => {
 
   const handleCheck = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (input === "") {
+      setResult("Please provide an answer");
+      return;
+    }
     input.toLowerCase() === images[image]
       ? setResult("correct")
       : setResult("incorrect");
+    setIsInputReady(true);
   };
 
   const handleNew = () => {
@@ -32,6 +38,16 @@ export const useImages = () => {
     setImages(images.filter((image) => image !== imageIndex));
     setInput("");
     setResult("");
+    setIsInputReady(false);
   };
-  return { handleCheck, handleChange, handleNew, images, image, result, input };
+  return {
+    handleCheck,
+    handleChange,
+    handleNew,
+    images,
+    image,
+    result,
+    input,
+    isInputReady,
+  };
 };
