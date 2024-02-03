@@ -8,13 +8,11 @@ const ImageSection = ({ handleReset, images, image }: ImageSectionProps) => {
   return (
     <>
       {images.length > 0 ? (
-        <div className="h-64">
-          <img
-            className="flex-1 h-full"
-            src={`src/assets/${images[image]}.png`}
-            alt={`${images[image]}`}
-          />
-        </div>
+        <img
+          className="h-1/4"
+          src={`src/assets/${images[image]}.png`}
+          alt={`${images[image]}`}
+        />
       ) : (
         <>
           <p>You do not have any more words to review</p>
