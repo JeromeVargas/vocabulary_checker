@@ -20,8 +20,8 @@ function App() {
     <main className="h-screen flex items-center justify-center flex-col">
       <header>Vocabulary Reviewer</header>
       <section className="h-full flex items-center justify-center flex-col gap-4">
-        <div className="h-10">{images.length > 0 ? "Result" : null}</div>
-        <div className="h-10">{result}</div>
+        <p className="h-10">{images.length > 0 ? "Result" : null}</p>
+        <p className="h-10">{result}</p>
         <ImageSection handleReset={handleReset} images={images} image={image} />
         <Form
           handleChange={handleChange}
