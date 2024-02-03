@@ -17,7 +17,10 @@ const Form = ({
 }: FormProps) => {
   return (
     <>
-      <form onSubmit={handleCheck}>
+      <form
+        className="flex items-center justify-center flex-col"
+        onSubmit={handleCheck}
+      >
         <input onChange={handleChange} value={input} type="text" />
         <br />
         {images.length > 0 && isInputReady === false ? (

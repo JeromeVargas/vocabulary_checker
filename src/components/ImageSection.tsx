@@ -7,8 +7,9 @@ const ImageSection = ({ images, image }: ImageSectionProps) => {
   return (
     <section>
       {images.length > 0 ? (
-        <div className="max-w-[240px]">
+        <div className="h-64">
           <img
+            className="flex-1 h-full"
             src={`src/assets/${images[image]}.png`}
             alt={`${images[image]}`}
           />

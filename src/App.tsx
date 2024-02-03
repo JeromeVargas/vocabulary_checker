@@ -16,10 +16,11 @@ function App() {
   } = useImages();
 
   return (
-    <main>
+    <main className="h-screen flex items-center justify-center flex-col">
       <header>Vocabulary Reviewer</header>
-      <main>
-        <div>result: {result}</div>
+      <section className="h-full flex items-center justify-center flex-col gap-4">
+        <div className="h-10">{images.length > 0 ? "Result" : null}</div>
+        <div className="h-10">{result}</div>
         <ImageSection images={images} image={image} />
         <Form
           handleChange={handleChange}
@@ -29,7 +30,7 @@ function App() {
           input={input}
           isInputReady={isInputReady}
         />
-      </main>
+      </section>
     </main>
   );
 }
