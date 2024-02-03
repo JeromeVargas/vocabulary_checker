@@ -21,7 +21,16 @@ const Form = ({
         className="flex items-center justify-center flex-col"
         onSubmit={handleCheck}
       >
-        <input onChange={handleChange} value={input} type="text" />
+        <input
+          className={
+            images.length > 0 && isInputReady === false
+              ? "border-2 border-black"
+              : "invisible"
+          }
+          onChange={handleChange}
+          value={input}
+          type="text"
+        />
         <br />
         {images.length > 0 && isInputReady === false ? (
           <button type="submit">Check</button>
