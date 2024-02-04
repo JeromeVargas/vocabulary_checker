@@ -9,7 +9,7 @@ const ImageSection = ({ handleReset, images, image }: ImageSectionProps) => {
     <>
       {images.length > 0 ? (
         <img
-          className="h-1/4"
+          className="max-h-[240px] h-1/4"
           src={`src/assets/${images[image]}.png`}
           alt={`${images[image]}`}
         />
