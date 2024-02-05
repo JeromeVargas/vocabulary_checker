@@ -2,6 +2,7 @@ type FormProps = {
   handleCheck: (e: React.FormEvent<HTMLFormElement>) => void;
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleNew: () => void;
+  handleReset: () => void;
   images: string[];
   input: string;
   isInputReady: boolean;
@@ -11,6 +12,7 @@ const Form = ({
   handleCheck,
   handleChange,
   handleNew,
+  handleReset,
   images,
   input,
   isInputReady,
@@ -38,6 +40,11 @@ const Form = ({
         {isInputReady === true ? (
           <button type="button" onClick={handleNew}>
             Next
+          </button>
+        ) : null}
+        {images.length < 1 ? (
+          <button onClick={handleReset} type="button">
+            Try again
           </button>
         ) : null}
       </form>

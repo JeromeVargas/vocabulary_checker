@@ -22,11 +22,12 @@ function App() {
       <section className="h-full flex items-center justify-center flex-col gap-4">
         <p className="h-10">{images.length > 0 ? "Result" : null}</p>
         <p className="h-10">{result}</p>
-        <ImageSection handleReset={handleReset} images={images} image={image} />
+        <ImageSection images={images} image={image} />
         <Form
           handleChange={handleChange}
           handleCheck={handleCheck}
           handleNew={handleNew}
+          handleReset={handleReset}
           images={images}
           input={input}
           isInputReady={isInputReady}
