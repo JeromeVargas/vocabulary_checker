@@ -1,3 +1,5 @@
+import { useEffect, useRef } from "react";
+
 type FormProps = {
   handleCheck: (e: React.FormEvent<HTMLFormElement>) => void;
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -17,6 +19,11 @@ const Form = ({
   input,
   isInputReady,
 }: FormProps) => {
+  const inputRef = useRef<HTMLInputElement>(null);
+  useEffect(() => {
+    inputRef.current?.focus();
+  }, [images]);
+
   return (
     <>
       <form
@@ -24,6 +31,7 @@ const Form = ({
         onSubmit={handleCheck}
       >
         <input
+          ref={inputRef}
           className={
             images.length > 0 && isInputReady === false
               ? "border-2 border-black"
