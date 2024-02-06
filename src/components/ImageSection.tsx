@@ -1,5 +1,5 @@
 type ImageSectionProps = {
-  images: string[];
+  images: { word: string }[];
   image: number;
 };
 
@@ -9,8 +9,8 @@ const ImageSection = ({ images, image }: ImageSectionProps) => {
       {images.length > 0 ? (
         <img
           className="max-h-[240px] h-1/4"
-          src={`src/assets/${images[image]}.png`}
-          alt={`${images[image]}`}
+          src={`src/assets/${images[image].word}.png`}
+          alt={`${images[image].word}`}
         />
       ) : (
         <>

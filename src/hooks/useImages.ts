@@ -1,20 +1,19 @@
-import { useState, useEffect } from "react";
+import { useMemo, useState } from "react";
 import randomNumber from "../lib/utils/random";
 
 export const useImages = () => {
   const [images, setImages] = useState([
-    "hanashimashou",
-    "kaiwa",
-    "kiku_renshou",
-    "tango_hyou",
+    { word: "hanashimashou" },
+    { word: "kaiwa" },
+    { word: "kiku_renshou" },
+    { word: "tango_hyou" },
   ]);
-  const [image, setImage] = useState<number>(0);
   const [input, setInput] = useState("");
   const [result, setResult] = useState("");
   const [isInputReady, setIsInputReady] = useState(false);
 
-  useEffect(() => {
-    setImage(randomNumber(0, images.length - 1));
+  const image = useMemo(() => {
+    return randomNumber(0, images.length - 1);
   }, [images.length]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -27,7 +26,7 @@ export const useImages = () => {
       setResult("Please provide an answer");
       return;
     }
-    input.toLowerCase() === images[image]
+    input.toLowerCase() === images[image].word
       ? setResult("correct")
       : setResult("incorrect");
     setIsInputReady(true);
@@ -35,7 +34,7 @@ export const useImages = () => {
 
   const handleNew = () => {
     const imageIndex = images[image];
-    setImages(images.filter((image) => image !== imageIndex));
+    setImages((prevArray) => prevArray.filter((image) => image !== imageIndex));
     setInput("");
     setResult("");
     setIsInputReady(false);
@@ -44,10 +43,10 @@ export const useImages = () => {
   const handleReset = () => {
     setImages((prevArray) => [
       ...prevArray,
-      "hanashimashou",
-      "kaiwa",
-      "kiku_renshou",
-      "tango_hyou",
+      { word: "hanashimashou" },
+      { word: "kaiwa" },
+      { word: "kiku_renshou" },
+      { word: "tango_hyou" },
     ]);
   };
   return {

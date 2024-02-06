@@ -3,7 +3,7 @@ type FormProps = {
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleNew: () => void;
   handleReset: () => void;
-  images: string[];
+  images: { word: string }[];
   input: string;
   isInputReady: boolean;
 };
