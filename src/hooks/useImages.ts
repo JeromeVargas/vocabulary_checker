@@ -3,10 +3,10 @@ import randomNumber from "../lib/utils/random";
 
 export const useImages = () => {
   const [images, setImages] = useState([
-    { word: "hanashimashou" },
-    { word: "kaiwa" },
-    { word: "kiku_renshou" },
-    { word: "tango_hyou" },
+    { url: "src/assets/hanashimashou.png", word: "hanashimashou" },
+    { url: "src/assets/kaiwa.png", word: "kaiwa" },
+    { url: "src/assets/kiku_renshou.png", word: "kiku_renshou" },
+    { url: "src/assets/tango_hyou.png", word: "tango_hyou" },
   ]);
   const [input, setInput] = useState("");
   const [result, setResult] = useState("");
@@ -43,10 +43,10 @@ export const useImages = () => {
   const handleReset = () => {
     setImages((prevArray) => [
       ...prevArray,
-      { word: "hanashimashou" },
-      { word: "kaiwa" },
-      { word: "kiku_renshou" },
-      { word: "tango_hyou" },
+      { url: "src/assets/hanashimashou.png", word: "hanashimashou" },
+      { url: "src/assets/kaiwa.png", word: "kaiwa" },
+      { url: "src/assets/kiku_renshou.png", word: "kiku_renshou" },
+      { url: "src/assets/tango_hyou.png", word: "tango_hyou" },
     ]);
   };
   return {
