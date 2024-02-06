@@ -29,7 +29,7 @@ export const useImages = () => {
     setIsInputReady(true);
   };
 
-  const handleNew = () => {
+  const handleNext = () => {
     const imageIndex = images[image];
     setImages((prevArray) => prevArray.filter((image) => image !== imageIndex));
     setInput("");
@@ -43,7 +43,7 @@ export const useImages = () => {
   return {
     handleCheck,
     handleChange,
-    handleNew,
+    handleNext,
     handleReset,
     images,
     image,

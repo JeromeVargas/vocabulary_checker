@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 type FormProps = {
   handleCheck: (e: React.FormEvent<HTMLFormElement>) => void;
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  handleNew: () => void;
+  handleNext: () => void;
   handleReset: () => void;
   images: { url: string; word: string }[];
   input: string;
@@ -13,7 +13,7 @@ type FormProps = {
 const Form = ({
   handleCheck,
   handleChange,
-  handleNew,
+  handleNext,
   handleReset,
   images,
   input,
@@ -46,7 +46,7 @@ const Form = ({
           <button type="submit">Check</button>
         ) : null}
         {isInputReady === true ? (
-          <button type="button" onClick={handleNew}>
+          <button type="button" onClick={handleNext}>
             Next
           </button>
         ) : null}

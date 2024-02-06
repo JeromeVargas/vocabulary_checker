@@ -7,7 +7,7 @@ function App() {
   const {
     handleChange,
     handleCheck,
-    handleNew,
+    handleNext,
     handleReset,
     result,
     images,
@@ -26,7 +26,7 @@ function App() {
         <Form
           handleChange={handleChange}
           handleCheck={handleCheck}
-          handleNew={handleNew}
+          handleNext={handleNext}
           handleReset={handleReset}
           images={images}
           input={input}
