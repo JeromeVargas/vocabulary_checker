@@ -1,13 +1,19 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useRef, useEffect } from "react";
 
 import data from "../data/images.json";
 import randomNumber from "../lib/utils/random";
 
 export const useImages = () => {
+  const inputRef = useRef<HTMLInputElement>(null);
+
   const [images, setImages] = useState(data);
   const [input, setInput] = useState("");
   const [result, setResult] = useState("");
   const [isInputReady, setIsInputReady] = useState(false);
+
+  useEffect(() => {
+    inputRef.current?.focus();
+  }, [images]);
 
   const image = useMemo(() => {
     return randomNumber(0, images.length - 1);
@@ -40,6 +46,7 @@ export const useImages = () => {
   const handleReset = () => {
     setImages(data);
   };
+
   return {
     handleCheck,
     handleChange,
@@ -50,5 +57,6 @@ export const useImages = () => {
     result,
     input,
     isInputReady,
+    inputRef,
   };
 };

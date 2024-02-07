@@ -14,6 +14,7 @@ function App() {
     image,
     input,
     isInputReady,
+    inputRef,
   } = useImages();
 
   return (
@@ -31,6 +32,7 @@ function App() {
           images={images}
           input={input}
           isInputReady={isInputReady}
+          inputRef={inputRef}
         />
       </section>
     </main>

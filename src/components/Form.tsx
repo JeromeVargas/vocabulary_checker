@@ -1,5 +1,3 @@
-import { useEffect, useRef } from "react";
-
 type FormProps = {
   handleCheck: (e: React.FormEvent<HTMLFormElement>) => void;
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -8,6 +6,7 @@ type FormProps = {
   images: { url: string; word: string }[];
   input: string;
   isInputReady: boolean;
+  inputRef: React.RefObject<HTMLInputElement>;
 };
 
 const Form = ({
@@ -18,12 +17,8 @@ const Form = ({
   images,
   input,
   isInputReady,
+  inputRef,
 }: FormProps) => {
-  const inputRef = useRef<HTMLInputElement>(null);
-  useEffect(() => {
-    inputRef.current?.focus();
-  }, [images]);
-
   return (
     <>
       <form
