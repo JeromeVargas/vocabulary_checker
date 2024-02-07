@@ -14,7 +14,9 @@ const ImageSection = ({ images, image }: ImageSectionProps) => {
         />
       ) : (
         <>
-          <p>You do not have any more words to review</p>
+          <p className="text-center">
+            You do not have any more words to review
+          </p>
         </>
       )}
     </>
