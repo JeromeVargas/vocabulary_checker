@@ -2,6 +2,7 @@ import { useMemo, useState, useRef, useEffect } from "react";
 
 import data from "../data/images.json";
 import randomNumber from "../lib/utils/random";
+import speechUtterance from "../lib/utils/speech";
 
 export const useImages = () => {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -48,11 +49,16 @@ export const useImages = () => {
     setImages(data);
   };
 
+  const handleSpeech = () => {
+    speechUtterance(images[image].word);
+  };
+
   return {
     handleCheck,
     handleChange,
     handleNext,
     handleReset,
+    handleSpeech,
     images,
     image,
     result,

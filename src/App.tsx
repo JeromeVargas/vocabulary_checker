@@ -5,16 +5,17 @@ import Form from "./components/Form";
 
 function App() {
   const {
-    handleChange,
-    handleCheck,
+    // handleChange,
+    // handleCheck,
     handleNext,
     handleReset,
-    result,
+    handleSpeech,
+    // result,
     images,
     image,
-    input,
-    isInputReady,
-    inputRef,
+    // input,
+    // isInputReady,
+    // inputRef,
   } = useImages();
 
   return (
@@ -24,19 +25,23 @@ function App() {
       </header>
       <section className="h-full flex items-center justify-center flex-col gap-4 w-full bg-blue-100 ">
         <div className="w-1/4 flex items-center justify-center border-2 flex-col bg-slate-200">
-          <p className="h-10">{images.length > 0 ? "Result" : null}</p>
-          <p className="h-10">{result}</p>
+          {/* <p className="h-10">{images.length > 0 ? "Result" : null}</p> */}
+          <p className="h-10">
+            {images.length > 0 ? images[image].word : null}
+          </p>
+          {/* <p className="h-10">{result}</p> */}
         </div>
         <ImageSection images={images} image={image} />
         <Form
-          handleChange={handleChange}
-          handleCheck={handleCheck}
+          // handleChange={handleChange}
+          // handleCheck={handleCheck}
           handleNext={handleNext}
           handleReset={handleReset}
+          handleSpeech={handleSpeech}
           images={images}
-          input={input}
-          isInputReady={isInputReady}
-          inputRef={inputRef}
+          // input={input}
+          // isInputReady={isInputReady}
+          // inputRef={inputRef}
         />
       </section>
       <footer className="w-full h-40 bg-slate-200"></footer>
