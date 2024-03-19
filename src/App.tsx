@@ -4,33 +4,18 @@ import ImageSection from "./components/ImageSection";
 import Form from "./components/Form";
 
 function App() {
-  const {
-    // handleChange,
-    // handleCheck,
-    handleNext,
-    handleReset,
-    handleSpeech,
-    // result,
-    images,
-    image,
-    // input,
-    // isInputReady,
-    // inputRef,
-  } = useImages();
+  const { handleNext, handleReset, handleSpeech, images, image } = useImages();
 
   return (
-    <main className="h-screen flex items-center justify-center flex-col">
-      <header className="flex items-center justify-center w-full h-40 bg-slate-200">
-        <h1>Vocabulary Reviewer</h1>
-      </header>
-      <section className="h-full flex items-center justify-center flex-col gap-4 w-full bg-blue-100 ">
-        <div className="w-1/4 flex items-center justify-center border-2 flex-col bg-slate-200">
-          {/* <p className="h-10">{images.length > 0 ? "Result" : null}</p> */}
-          <p className="h-10">
-            {images.length > 0 ? images[image].word : null}
-          </p>
-          {/* <p className="h-10">{result}</p> */}
-        </div>
+    <main className="h-screen flex items-center justify-center flex-col bg-gradient-to-l from-blue-600 to-blue-400">
+      <section className="flex items-center justify-center flex-col gap-4 h-full w-full text-5xl">
+        {images.length > 0 ? (
+          <h1 className="w-full flex items-center justify-center flex-col p-10 text-red-400 font-black">
+            {/* <p className="h-10">{images.length > 0 ? "Result" : null}</p> */}
+            {images[image].word}
+            {/* <p className="h-10">{result}</p> */}
+          </h1>
+        ) : null}
         <ImageSection images={images} image={image} />
         <Form
           // handleChange={handleChange}
@@ -44,7 +29,7 @@ function App() {
           // inputRef={inputRef}
         />
       </section>
-      <footer className="w-full h-40 bg-slate-200"></footer>
+      <footer className="w-full h-40"></footer>
     </main>
   );
 }

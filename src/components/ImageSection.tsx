@@ -8,15 +8,13 @@ const ImageSection = ({ images, image }: ImageSectionProps) => {
     <>
       {images.length > 0 ? (
         <img
-          className="h-[240px] border-2 border-blue-500"
+          className="h-[240px] border-2 border-orange-400"
           src={images[image].url}
           alt={`${images[image].word}`}
         />
       ) : (
         <>
-          <p className="text-center">
-            You do not have any more words to review
-          </p>
+          <p className="text-center m-5">Congrats!</p>
         </>
       )}
     </>
