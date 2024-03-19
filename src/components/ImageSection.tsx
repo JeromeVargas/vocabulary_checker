@@ -8,7 +8,7 @@ const ImageSection = ({ images, image }: ImageSectionProps) => {
     <>
       {images.length > 0 ? (
         <img
-          className="max-h-[240px] h-1/4"
+          className="h-[240px] border-2 border-blue-500"
           src={images[image].url}
           alt={`${images[image].word}`}
         />

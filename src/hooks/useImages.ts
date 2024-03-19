@@ -36,6 +36,7 @@ export const useImages = () => {
   };
 
   const handleNext = () => {
+    // Todo: check how to apply as key of
     const imageIndex = images[image];
     setImages((prevArray) => prevArray.filter((image) => image !== imageIndex));
     setInput("");
