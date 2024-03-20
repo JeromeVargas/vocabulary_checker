@@ -10,9 +10,15 @@ function App() {
     <main className="h-screen flex items-center justify-center flex-col bg-gradient-to-l from-blue-600 to-blue-400">
       <section className="flex items-center justify-center flex-col gap-4 h-full w-full text-5xl">
         {images.length > 0 ? (
-          <h1 className="w-full flex items-center justify-center flex-col p-10 text-red-400 font-black">
+          <h1 className="w-full flex items-center justify-center flex-col p-10 text-red-400 font-black text-center">
             {/* <p className="h-10">{images.length > 0 ? "Result" : null}</p> */}
-            {images[image].word}
+            <div>
+              {images[image].wordArray[0]}{" "}
+              <span className="text-green-400">
+                {images[image].wordArray[1]}
+              </span>{" "}
+              {images[image].wordArray[2]}
+            </div>
             {/* <p className="h-10">{result}</p> */}
           </h1>
         ) : null}

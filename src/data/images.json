@@ -1,42 +1,52 @@
 [
   {
     "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSncj_p7-jbYQoDIUVBt_DqxJMhvMYPy7VA5vrSnqszwCseKPNx1SFA-7mfqVJOM8dQSlA&usqp=CAU",
-    "word": "a car"
+    "word": "a fast car",
+    "wordArray": ["a", "fast", "car"]
   },
   {
     "url": "https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*",
-    "word": "a dog"
+    "word": "a small dog",
+    "wordArray": ["a", "small", "dog"]
   },
   {
     "url": "https://media.istockphoto.com/id/467947584/photo/square-portrait-of-a-persian-cat-looking-at-camera.jpg?s=612x612&w=0&k=20&c=jKV39jGto2zB4S_-b0cBHQ5Qrdj46T4gzgBpoT0kTFc=",
-    "word": "a cat"
+    "word": "a funny cat",
+    "wordArray": ["a", "funny", "cat"]
   },
   {
     "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRhtcWwpy-pFvcLnF7Mk5TkmBbYwWg0rqUWqAhZDkS9iLVlLJvsPMck93BAN-wefU9tkc&usqp=CAU",
-    "word": "a house"
+    "word": "a beautiful house",
+    "wordArray": ["a", "beautiful", "house"]
   },
   {
     "url": "https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/image/rDtN98Qoishumwih/graphicstock-young-asian-male-teacher-standing-in-classroom-smiling-male-teacher-standing-in-front-of-chalkboard-friendly-male-teacher-standing-with-folded-arms-vector-flat-design-illustration-square-layout_rmfMvIqLLW_thumb.jpg",
-    "word": "a teacher"
+    "word": "a young teacher",
+    "wordArray": ["a", "young", "teacher"]
   },
   {
     "url": "https://st.depositphotos.com/1015682/1248/i/450/depositphotos_12483210-stock-photo-elephant-with-large-tusks.jpg",
-    "word": "an elephant"
+    "word": "a big elephant",
+    "wordArray": ["a", "big", "elephant"]
   },
   {
     "url": "https://media.istockphoto.com/id/185264449/photo/white-egg.jpg?s=612x612&w=0&k=20&c=OUQET-aYg91sUjakyk0qVToZBle25V6QLhWOeLoe40o=",
-    "word": "an egg"
+    "word": "a white egg",
+    "wordArray": ["a", "white", "egg"]
   },
   {
     "url": "https://media.istockphoto.com/id/532048136/photo/fresh-red-apple-isolated-on-white-with-clipping-path.jpg?s=612x612&w=0&k=20&c=aOO4GQQXg10xvOcv0KXYIm3M2kHZSC17lGX_Z9b_KXo=",
-    "word": "an apple "
+    "word": "a red apple",
+    "wordArray": ["a", "red", "apple"]
   },
   {
     "url": "https://media.istockphoto.com/id/477836156/es/foto/frutas-naranjas-aisladas-en-blanco.jpg?s=612x612&w=0&k=20&c=1B5I3LcAkVPolENJXmG8HU5UDt9qjT5MmQIrmZ_qrYI=",
-    "word": "an orange"
+    "word": "a good orange",
+    "wordArray": ["a", "good", "orange"]
   },
   {
     "url": "https://media.gettyimages.com/id/641950184/photo/interior-design-office-with-empty-wall.jpg?s=612x612&w=gi&k=20&c=4kMMgVecXAAVfNPCcBqV7sMuBFNqTvFViXPiiLPpVKw=",
-    "word": "an office"
+    "word": "a nice office",
+    "wordArray": ["a", "nice", "office"]
   }
 ]
