@@ -3,7 +3,7 @@ import { useImages } from "./hooks/useImages";
 import ImageSection from "./components/ImageSection";
 import Form from "./components/Form";
 
-function App() {
+function VerbToBe() {
   const { handleNext, handleReset, handleSpeech, images, image } = useImages();
 
   return (
@@ -13,11 +13,13 @@ function App() {
           <h1 className="w-full flex items-center justify-center flex-col p-10 text-red-400 font-black text-center">
             {/* <p className="h-10">{images.length > 0 ? "Result" : null}</p> */}
             <div>
-              {images[image].wordArrayAdjective[0]}{" "}
               <span className="text-green-400">
-                {images[image].wordArrayAdjective[1]}
+                {images[image].wordArrayVerbToBe[0]}{" "}
+                {images[image].wordArrayVerbToBe[1]}
               </span>{" "}
-              {images[image].wordArrayAdjective[2]}
+              {images[image].wordArrayVerbToBe[2]}{" "}
+              {images[image].wordArrayVerbToBe[3]}{" "}
+              {images[image].wordArrayVerbToBe[4]}
             </div>
             {/* <p className="h-10">{result}</p> */}
           </h1>
@@ -40,4 +42,4 @@ function App() {
   );
 }
 
-export default App;
+export default VerbToBe;

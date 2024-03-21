@@ -5,5 +5,12 @@
   // language - current active spelling language
   "language": "en",
   // words - list of words to be always considered correct
-  "words": ["hanashimashou", "hyou", "kaiwa", "kiku", "renshou"]
+  "words": [
+    "hanashimashou",
+    "hyou",
+    "kaiwa",
+    "kiku",
+    "renshou",
+    "verbtobe"
+  ]
 }

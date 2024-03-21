@@ -4,7 +4,7 @@ type FormProps = {
   handleNext: () => void;
   handleReset: () => void;
   handleSpeech: () => void;
-  images: { url: string; wordAdjective: string }[];
+  images: { url: string; wordArticleNoun: string }[];
   // input: string;
   // isInputReady: boolean;
   // inputRef: React.RefObject<HTMLInputElement>;

@@ -1,8 +1,8 @@
 import { useMemo, useState, useRef, useEffect } from "react";
 
-import data from "../data/images.json";
-import randomNumber from "../lib/utils/random";
-import speechUtterance from "../lib/utils/speech";
+import data from "../../../data/images.json";
+import randomNumber from "../../../lib/utils/random";
+import speechUtterance from "../../../lib/utils/speech";
 
 export const useImages = () => {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -30,7 +30,7 @@ export const useImages = () => {
       setResult("Please provide an answer");
       return;
     }
-    input.toLowerCase() === images[image].wordArticleNoun
+    input.toLowerCase() === images[image].wordVerbToBe
       ? setResult("correct")
       : setResult("incorrect");
     setIsInputReady(true);
@@ -50,7 +50,7 @@ export const useImages = () => {
   };
 
   const handleSpeech = () => {
-    speechUtterance(images[image].wordAdjective);
+    speechUtterance(images[image].wordVerbToBe);
   };
 
   return {
