@@ -1,16 +1,17 @@
 type ImageSectionProps = {
-  images: { url: string; wordPossessive: string }[];
-  image: number;
+  images: { url: string }[];
+  index: number;
+  text: string;
 };
 
-const ImageSection = ({ images, image }: ImageSectionProps) => {
+const ImageSection = ({ images, index, text }: ImageSectionProps) => {
   return (
     <>
       {images.length > 0 ? (
         <img
           className="h-[240px] border-2 border-orange-400"
-          src={images[image].url}
-          alt={`${images[image].wordPossessive}`}
+          src={images[index].url}
+          alt={text}
         />
       ) : (
         <>

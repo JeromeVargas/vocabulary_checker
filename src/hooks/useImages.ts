@@ -1,24 +1,38 @@
-import { useMemo, useState, useRef, useEffect } from "react";
+import { useMemo, useState } from "react";
 
-import data from "../data/images.json";
+import { imagesState, wordsToHighlight } from "../data/images.json";
 import randomNumber from "../lib/utils/random";
 import speechUtterance from "../lib/utils/speech";
+import { useLocation } from "react-router-dom";
 
 export const useImages = () => {
-  const inputRef = useRef<HTMLInputElement>(null);
-
-  const [images, setImages] = useState(data);
+  const [images, setImages] = useState(imagesState);
   const [input, setInput] = useState("");
   const [result, setResult] = useState("");
   const [isInputReady, setIsInputReady] = useState(false);
 
-  useEffect(() => {
-    inputRef.current?.focus();
-  }, [images]);
-
-  const image = useMemo(() => {
+  const index = useMemo(() => {
     return randomNumber(0, images.length - 1);
   }, [images.length]);
+
+  // transforms the url to camelCase
+  const { pathname } = useLocation();
+  const path = pathname
+    .slice(1, pathname.length)
+    .split("-")
+    .map((pathPart, index) => {
+      if (index !== 0) return pathPart[0].toUpperCase() + pathPart.slice(1);
+      return pathPart;
+    })
+    .join("");
+
+  // gets the value from the images state keys dynamically
+  const text = `${index}.${path}`
+    .split(".")
+    .reduce((obj, key) => (obj as never)?.[key], images) as unknown as string;
+
+  // gets the value from the words to highlight state keys dynamically
+  const highlights = wordsToHighlight[path as keyof typeof wordsToHighlight];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value);
@@ -30,27 +44,27 @@ export const useImages = () => {
       setResult("Please provide an answer");
       return;
     }
-    input.toLowerCase() === images[image].wordArticleNoun
+    input.toLowerCase() === text
       ? setResult("correct")
       : setResult("incorrect");
     setIsInputReady(true);
   };
 
   const handleNext = () => {
-    // Todo: check how to apply as key of
-    const imageIndex = images[image];
-    setImages((prevArray) => prevArray.filter((image) => image !== imageIndex));
+    setImages((prevArray) =>
+      prevArray.filter((image) => image !== images[index])
+    );
     setInput("");
     setResult("");
     setIsInputReady(false);
   };
 
   const handleReset = () => {
-    setImages(data);
+    setImages(imagesState);
   };
 
   const handleSpeech = () => {
-    speechUtterance(images[image].wordAdjective);
+    speechUtterance(text);
   };
 
   return {
@@ -60,10 +74,11 @@ export const useImages = () => {
     handleReset,
     handleSpeech,
     images,
-    image,
+    index,
     result,
     input,
     isInputReady,
-    inputRef,
+    text,
+    highlights,
   };
 };

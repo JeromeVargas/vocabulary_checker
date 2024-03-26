@@ -1,112 +1,80 @@
-[
-  {
-    "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSncj_p7-jbYQoDIUVBt_DqxJMhvMYPy7VA5vrSnqszwCseKPNx1SFA-7mfqVJOM8dQSlA&usqp=CAU",
-    "wordArticleNoun": "a car",
-    "wordArrayArticleNoun": ["a", "car"],
-    "wordAdjective": "a fast car",
-    "wordArrayAdjective": ["a", "fast", "car"],
-    "wordVerbToBe": "it is a fast car",
-    "wordArrayVerbToBe": ["it", "is", "a", "fast", "car"],
-    "wordPossessive": "her car is fast",
-    "wordArrayPossessive": ["her", "car", "is", "fast"]
+{
+  "wordsToHighlight": {
+    "articleNoun": [0],
+    "adjective": [1],
+    "verbToBe": [0, 1],
+    "possessivePronouns": [0, 1]
   },
-  {
-    "url": "https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*",
-    "wordArticleNoun": "a dog",
-    "wordArrayArticleNoun": ["a", "dog"],
-    "wordAdjective": "a small dog",
-    "wordArrayAdjective": ["a", "small", "dog"],
-    "wordVerbToBe": "she is a small dog",
-    "wordArrayVerbToBe": ["she", "is", "a", "small", "dog"],
-    "wordPossessive": "his dog is a small",
-    "wordArrayPossessive": ["his", "dog", "is", "small"]
-  },
-  {
-    "url": "https://media.istockphoto.com/id/467947584/photo/square-portrait-of-a-persian-cat-looking-at-camera.jpg?s=612x612&w=0&k=20&c=jKV39jGto2zB4S_-b0cBHQ5Qrdj46T4gzgBpoT0kTFc=",
-    "wordArticleNoun": "a cat",
-    "wordArrayArticleNoun": ["a", "cat"],
-    "wordAdjective": "a funny cat",
-    "wordArrayAdjective": ["a", "funny", "cat"],
-    "wordVerbToBe": "he is a funny cat",
-    "wordArrayVerbToBe": ["he", "is", "a", "funny", "cat"],
-    "wordPossessive": "your cat is funny",
-    "wordArrayPossessive": ["your", "cat", "is", "funny"]
-  },
-  {
-    "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRhtcWwpy-pFvcLnF7Mk5TkmBbYwWg0rqUWqAhZDkS9iLVlLJvsPMck93BAN-wefU9tkc&usqp=CAU",
-    "wordArticleNoun": "a house",
-    "wordArrayArticleNoun": ["a", "house"],
-    "wordAdjective": "a beautiful house",
-    "wordArrayAdjective": ["a", "beautiful", "house"],
-    "wordVerbToBe": "it is a beautiful house",
-    "wordArrayVerbToBe": ["it", "is", "a", "beautiful", "house"],
-    "wordPossessive": "our house is beautiful",
-    "wordArrayPossessive": ["our", "house", "is", "beautiful"]
-  },
-  {
-    "url": "https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/image/rDtN98Qoishumwih/graphicstock-young-asian-male-teacher-standing-in-classroom-smiling-male-teacher-standing-in-front-of-chalkboard-friendly-male-teacher-standing-with-folded-arms-vector-flat-design-illustration-square-layout_rmfMvIqLLW_thumb.jpg",
-    "wordArticleNoun": "a teacher",
-    "wordArrayArticleNoun": ["a", "teacher"],
-    "wordAdjective": "a young teacher",
-    "wordArrayAdjective": ["a", "young", "teacher"],
-    "wordVerbToBe": "he is a young teacher",
-    "wordArrayVerbToBe": ["he", "is", "a", "young", "teacher"],
-    "wordPossessive": "their teacher is young",
-    "wordArrayPossessive": ["their", "teacher", "is", "young"]
-  },
-  {
-    "url": "https://st.depositphotos.com/1015682/1248/i/450/depositphotos_12483210-stock-photo-elephant-with-large-tusks.jpg",
-    "wordArticleNoun": "an elephant",
-    "wordArrayArticleNoun": ["an", "elephant"],
-    "wordAdjective": "a big elephant",
-    "wordArrayAdjective": ["a", "big", "elephant"],
-    "wordVerbToBe": "he is a big elephant",
-    "wordArrayVerbToBe": ["he", "is", "a", "big", "elephant"],
-    "wordPossessive": "our elephant is big",
-    "wordArrayPossessive": ["our", "elephant", "is", "big"]
-  },
-  {
-    "url": "https://media.istockphoto.com/id/185264449/photo/white-egg.jpg?s=612x612&w=0&k=20&c=OUQET-aYg91sUjakyk0qVToZBle25V6QLhWOeLoe40o=",
-    "wordArticleNoun": "an egg",
-    "wordArrayArticleNoun": ["an", "egg"],
-    "wordAdjective": "a white egg",
-    "wordArrayAdjective": ["a", "white", "egg"],
-    "wordVerbToBe": "it is a white egg",
-    "wordArrayVerbToBe": ["it", "is", "a", "white", "egg"],
-    "wordPossessive": "their egg is white",
-    "wordArrayPossessive": ["their", "egg", "is", "white"]
-  },
-  {
-    "url": "https://media.istockphoto.com/id/532048136/photo/fresh-red-apple-isolated-on-white-with-clipping-path.jpg?s=612x612&w=0&k=20&c=aOO4GQQXg10xvOcv0KXYIm3M2kHZSC17lGX_Z9b_KXo=",
-    "wordArticleNoun": "an apple",
-    "wordArrayArticleNoun": ["an", "apple"],
-    "wordAdjective": "a red apple",
-    "wordArrayAdjective": ["a", "red", "apple"],
-    "wordVerbToBe": "it is a red apple",
-    "wordArrayVerbToBe": ["it", "is", "a", "red", "apple"],
-    "wordPossessive": "my apple is red",
-    "wordArrayPossessive": ["my", "apple", "is", "red"]
-  },
-  {
-    "url": "https://media.istockphoto.com/id/477836156/es/foto/frutas-naranjas-aisladas-en-blanco.jpg?s=612x612&w=0&k=20&c=1B5I3LcAkVPolENJXmG8HU5UDt9qjT5MmQIrmZ_qrYI=",
-    "wordArticleNoun": "an orange",
-    "wordArrayArticleNoun": ["an", "orange"],
-    "wordAdjective": "a good orange",
-    "wordArrayAdjective": ["a", "good", "orange"],
-    "wordVerbToBe": "it is a good orange",
-    "wordArrayVerbToBe": ["it", "is", "a", "good", "orange"],
-    "wordPossessive": "his orange is good",
-    "wordArrayPossessive": ["his", "orange", "is", "good"]
-  },
-  {
-    "url": "https://media.gettyimages.com/id/641950184/photo/interior-design-office-with-empty-wall.jpg?s=612x612&w=gi&k=20&c=4kMMgVecXAAVfNPCcBqV7sMuBFNqTvFViXPiiLPpVKw=",
-    "wordArticleNoun": "an office",
-    "wordArrayArticleNoun": ["an", "office"],
-    "wordAdjective": "a nice office",
-    "wordArrayAdjective": ["a", "nice", "office"],
-    "wordVerbToBe": "it is a nice office",
-    "wordArrayVerbToBe": ["it", "is", "a", "nice", "office"],
-    "wordPossessive": "your office is nice",
-    "wordArrayPossessive": ["your", "office", "is", "nice"]
-  }
-]
+  "imagesState": [
+    {
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSncj_p7-jbYQoDIUVBt_DqxJMhvMYPy7VA5vrSnqszwCseKPNx1SFA-7mfqVJOM8dQSlA&usqp=CAU",
+      "articleNoun": "a car",
+      "adjective": "a fast car",
+      "verbToBe": "it is a fast car",
+      "possessivePronouns": "her car is fast"
+    },
+    {
+      "url": "https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*",
+      "articleNoun": "a dog",
+      "adjective": "a small dog",
+      "verbToBe": "she is a small dog",
+      "possessivePronouns": "his dog is a small"
+    },
+    {
+      "url": "https://media.istockphoto.com/id/467947584/photo/square-portrait-of-a-persian-cat-looking-at-camera.jpg?s=612x612&w=0&k=20&c=jKV39jGto2zB4S_-b0cBHQ5Qrdj46T4gzgBpoT0kTFc=",
+      "articleNoun": "a cat",
+      "adjective": "a funny cat",
+      "verbToBe": "he is a funny cat",
+      "possessivePronouns": "your cat is funny"
+    },
+    {
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRhtcWwpy-pFvcLnF7Mk5TkmBbYwWg0rqUWqAhZDkS9iLVlLJvsPMck93BAN-wefU9tkc&usqp=CAU",
+      "articleNoun": "a house",
+      "adjective": "a beautiful house",
+      "verbToBe": "it is a beautiful house",
+      "possessivePronouns": "our house is beautiful"
+    },
+    {
+      "url": "https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/image/rDtN98Qoishumwih/graphicstock-young-asian-male-teacher-standing-in-classroom-smiling-male-teacher-standing-in-front-of-chalkboard-friendly-male-teacher-standing-with-folded-arms-vector-flat-design-illustration-square-layout_rmfMvIqLLW_thumb.jpg",
+      "articleNoun": "a teacher",
+      "adjective": "a young teacher",
+      "verbToBe": "he is a young teacher",
+      "possessivePronouns": "their teacher is young"
+    },
+    {
+      "url": "https://st.depositphotos.com/1015682/1248/i/450/depositphotos_12483210-stock-photo-elephant-with-large-tusks.jpg",
+      "articleNoun": "an elephant",
+      "adjective": "a big elephant",
+      "verbToBe": "he is a big elephant",
+      "possessivePronouns": "our elephant is big"
+    },
+    {
+      "url": "https://media.istockphoto.com/id/185264449/photo/white-egg.jpg?s=612x612&w=0&k=20&c=OUQET-aYg91sUjakyk0qVToZBle25V6QLhWOeLoe40o=",
+      "articleNoun": "an egg",
+      "adjective": "a white egg",
+      "verbToBe": "it is a white egg",
+      "possessivePronouns": "their egg is white"
+    },
+    {
+      "url": "https://media.istockphoto.com/id/532048136/photo/fresh-red-apple-isolated-on-white-with-clipping-path.jpg?s=612x612&w=0&k=20&c=aOO4GQQXg10xvOcv0KXYIm3M2kHZSC17lGX_Z9b_KXo=",
+      "articleNoun": "an apple",
+      "adjective": "a red apple",
+      "verbToBe": "it is a red apple",
+      "possessivePronouns": "my apple is red"
+    },
+    {
+      "url": "https://media.istockphoto.com/id/477836156/es/foto/frutas-naranjas-aisladas-en-blanco.jpg?s=612x612&w=0&k=20&c=1B5I3LcAkVPolENJXmG8HU5UDt9qjT5MmQIrmZ_qrYI=",
+      "articleNoun": "an orange",
+      "adjective": "a good orange",
+      "verbToBe": "it is a good orange",
+      "possessivePronouns": "his orange is good"
+    },
+    {
+      "url": "https://media.gettyimages.com/id/641950184/photo/interior-design-office-with-empty-wall.jpg?s=612x612&w=gi&k=20&c=4kMMgVecXAAVfNPCcBqV7sMuBFNqTvFViXPiiLPpVKw=",
+      "articleNoun": "an office",
+      "adjective": "a nice office",
+      "verbToBe": "it is a nice office",
+      "possessivePronouns": "your office is nice"
+    }
+  ]
+}
