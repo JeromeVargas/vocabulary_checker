@@ -9,13 +9,13 @@ type TextSectionProps = {
 const TextSection = ({ images, text, highlights }: TextSectionProps) => {
   const [showText, setShowText] = useState(true);
   return (
-    <>
+    <section className="w-full flex items-center justify-center flex-col min-h-[30%]">
       {images.length > 0 ? (
         <h1
           onClick={() => {
             setShowText(!showText);
           }}
-          className="w-full flex items-center justify-center flex-col p-10 text-red-400 font-black text-center"
+          className="p-10 text-red-400 font-black text-center"
         >
           {showText ? (
             <div>
@@ -49,7 +49,7 @@ const TextSection = ({ images, text, highlights }: TextSectionProps) => {
           )}
         </h1>
       ) : null}
-    </>
+    </section>
   );
 };
 export default TextSection;

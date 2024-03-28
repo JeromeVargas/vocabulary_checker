@@ -6,7 +6,7 @@ type ImageSectionProps = {
 
 const ImageSection = ({ images, index, text }: ImageSectionProps) => {
   return (
-    <>
+    <section>
       {images.length > 0 ? (
         <img
           className="h-[240px] border-2 border-orange-400"
@@ -18,7 +18,7 @@ const ImageSection = ({ images, index, text }: ImageSectionProps) => {
           <p className="text-center m-5">Congrats!</p>
         </>
       )}
-    </>
+    </section>
   );
 };
 export default ImageSection;
