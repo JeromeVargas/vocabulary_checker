@@ -1,16 +1,16 @@
-type ButtonProps = {
+type ButtonsSectionProps = {
   handleNext: () => void;
   handleReset: () => void;
   handleSpeech: () => void;
   images: { url: string }[];
 };
 
-const Button = ({
+const ButtonsSection = ({
   handleNext,
   handleReset,
   handleSpeech,
   images,
-}: ButtonProps) => {
+}: ButtonsSectionProps) => {
   return (
     <>
       {images.length > 0 ? (
@@ -61,4 +61,4 @@ const Button = ({
     </>
   );
 };
-export default Button;
+export default ButtonsSection;

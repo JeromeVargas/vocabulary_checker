@@ -2,7 +2,7 @@ import { useImages } from "../../hooks/useImages";
 
 import TextSection from "./components/TextSection";
 import ImageSection from "./components/ImageSection";
-import Button from "./components/Button";
+import ButtonsSection from "./components/ButtonSection";
 
 function Interface() {
   const {
@@ -19,7 +19,7 @@ function Interface() {
     <main className="h-screen w-full flex items-center justify-center flex-col gap-4 text-5xl bg-gradient-to-l from-blue-600 to-blue-400">
       <TextSection images={images} text={text} highlights={highlights} />
       <ImageSection images={images} index={index} text={text} />
-      <Button
+      <ButtonsSection
         handleNext={handleNext}
         handleReset={handleReset}
         handleSpeech={handleSpeech}
