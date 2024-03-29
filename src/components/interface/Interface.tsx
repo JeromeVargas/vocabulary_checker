@@ -16,7 +16,7 @@ function Interface() {
   } = useImages();
 
   return (
-    <main className="h-screen w-full flex items-center justify-center flex-col gap-4 text-5xl bg-gradient-to-l from-blue-600 to-blue-400">
+    <main className="h-screen w-full flex items-center justify-center flex-col gap-4 text-5xl bg-background">
       <TextSection images={images} text={text} highlights={highlights} />
       <ImageSection images={images} index={index} text={text} />
       <ButtonsSection

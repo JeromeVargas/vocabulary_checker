@@ -15,7 +15,7 @@ const TextSection = ({ images, text, highlights }: TextSectionProps) => {
           onClick={() => {
             setShowText(!showText);
           }}
-          className="p-10 text-red-400 font-black text-center"
+          className="p-10 font-black text-center"
         >
           {showText ? (
             <div>
@@ -25,12 +25,14 @@ const TextSection = ({ images, text, highlights }: TextSectionProps) => {
                     {item}{" "}
                   </span>
                 ) : (
-                  <span key={index}>{item} </span>
+                  <span key={index} className="text-text-base">
+                    {item}{" "}
+                  </span>
                 )
               )}
             </div>
           ) : (
-            <div>
+            <div className="text-text-base">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

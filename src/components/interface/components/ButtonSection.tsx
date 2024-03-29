@@ -43,7 +43,7 @@ const ButtonsSection = ({
           </button>
           <button
             type="button"
-            className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-4 px-10 rounded text-center"
+            className="bg-neutral-main hover:bg-neutral-shade text-neutral-contrast font-bold py-4 px-10 rounded text-center"
             onClick={handleNext}
           >
             Next
@@ -51,7 +51,7 @@ const ButtonsSection = ({
         </>
       ) : (
         <button
-          className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-4 px-10 rounded text-center"
+          className="bg-neutral-main hover:bg-neutral-shade text-neutral-contrast font-bold py-4 px-10 rounded text-center"
           onClick={handleReset}
           type="button"
         >

@@ -9,13 +9,13 @@ const ImageSection = ({ images, index, text }: ImageSectionProps) => {
     <section>
       {images.length > 0 ? (
         <img
-          className="h-[240px] border-2 border-orange-400"
+          className="h-[240px] w-[240px] border-4 border-orange-400"
           src={images[index].url}
           alt={text}
         />
       ) : (
         <>
-          <p className="text-center m-5">Congrats!</p>
+          <p className="text-center m-5 text-text-base font-bold">Congrats!</p>
         </>
       )}
     </section>
