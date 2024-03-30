@@ -7,17 +7,11 @@ type ImageSectionProps = {
 const ImageSection = ({ images, index, text }: ImageSectionProps) => {
   return (
     <section>
-      {images.length > 0 ? (
-        <img
-          className="h-[240px] w-[240px] border-4 border-orange-400"
-          src={images[index].url}
-          alt={text}
-        />
-      ) : (
-        <>
-          <p className="text-center m-5 text-text-base font-bold">Congrats!</p>
-        </>
-      )}
+      <img
+        className="h-[240px] w-[240px] border-4 border-accent"
+        src={images[index].url}
+        alt={text}
+      />
     </section>
   );
 };

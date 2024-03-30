@@ -58,11 +58,11 @@ const ButtonsSection = ({
             onClick={handleReset}
             type="button"
           >
-            Try again
+            Try Again
           </button>
-          <h1 className="w-10/12 text-text-base text-center">
-            <Link to="/">Do you want to try a new exercise?</Link>
-          </h1>
+          <button className="mt-20 bg-neutral-main hover:bg-neutral-shade text-neutral-contrast font-bold py-4 px-4 rounded text-center">
+            <Link to="/">New Exercise</Link>
+          </button>
         </>
       )}
     </>
