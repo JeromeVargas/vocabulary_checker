@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 type ButtonsSectionProps = {
   handleNext: () => void;
   handleReset: () => void;
@@ -50,13 +52,18 @@ const ButtonsSection = ({
           </button>
         </>
       ) : (
-        <button
-          className="bg-neutral-main hover:bg-neutral-shade text-neutral-contrast font-bold py-4 px-10 rounded text-center"
-          onClick={handleReset}
-          type="button"
-        >
-          Try again
-        </button>
+        <>
+          <button
+            className="bg-neutral-main hover:bg-neutral-shade text-neutral-contrast font-bold py-4 px-10 rounded text-center"
+            onClick={handleReset}
+            type="button"
+          >
+            Try again
+          </button>
+          <h1 className="w-10/12 text-text-base text-center">
+            <Link to="/">Do you want to try a new exercise?</Link>
+          </h1>
+        </>
       )}
     </>
   );
