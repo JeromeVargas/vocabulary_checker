@@ -54,13 +54,13 @@ const ButtonsSection = ({
       ) : (
         <>
           <button
-            className="bg-neutral-main hover:bg-neutral-shade text-neutral-contrast font-bold py-4 px-10 rounded text-center"
+            className="bg-neutral-main hover:bg-neutral-shade text-neutral-contrast font-bold py-4 px-10 rounded text-center max-[300px]:w-10/12"
             onClick={handleReset}
             type="button"
           >
             Try Again
           </button>
-          <button className="mt-20 bg-neutral-main hover:bg-neutral-shade text-neutral-contrast font-bold py-4 px-4 rounded text-center">
+          <button className="mt-20 bg-neutral-main hover:bg-neutral-shade text-neutral-contrast font-bold py-4 px-4 rounded text-center max-[300px]:w-10/12">
             <Link to="/">New Exercise</Link>
           </button>
         </>
