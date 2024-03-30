@@ -2,7 +2,7 @@ import { useImages } from "../../hooks/useImages";
 
 import TextSection from "./components/TextSection";
 import ImageSection from "./components/ImageSection";
-import ButtonsSection from "./components/ButtonSection";
+import ButtonsSection from "./components/ButtonsSection";
 
 function Interface() {
   const {

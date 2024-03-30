@@ -15,11 +15,11 @@ const ButtonsSection = ({
     <>
       {images.length > 0 ? (
         <>
-          <button type="button" className="text-base" onClick={handleSpeech}>
+          <button type="button" onClick={handleSpeech}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="5em"
-              height="5em"
+              width="5rem"
+              height="5rem"
               viewBox="0 0 48 48"
             >
               <path
