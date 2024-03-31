@@ -45,7 +45,7 @@ const ButtonsSection = ({
           </button>
           <button
             type="button"
-            className="bg-neutral-main hover:bg-neutral-shade text-neutral-contrast font-bold py-4 px-10 rounded text-center"
+            className="rounded bg-neutral-main px-10 py-4 text-center font-bold text-neutral-contrast hover:bg-neutral-shade"
             onClick={handleNext}
           >
             Next
@@ -54,13 +54,13 @@ const ButtonsSection = ({
       ) : (
         <>
           <button
-            className="bg-neutral-main hover:bg-neutral-shade text-neutral-contrast font-bold py-4 px-10 rounded text-center max-[300px]:w-10/12"
+            className="rounded bg-neutral-main px-10 py-4 text-center font-bold text-neutral-contrast hover:bg-neutral-shade max-[300px]:w-10/12"
             onClick={handleReset}
             type="button"
           >
             Try Again
           </button>
-          <button className="mt-20 bg-neutral-main hover:bg-neutral-shade text-neutral-contrast font-bold py-4 px-4 rounded text-center max-[300px]:w-10/12">
+          <button className="mt-20 rounded bg-neutral-main px-4 py-4 text-center font-bold text-neutral-contrast hover:bg-neutral-shade max-[300px]:w-10/12">
             <Link to="/">New Exercise</Link>
           </button>
         </>

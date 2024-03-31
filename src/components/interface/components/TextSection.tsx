@@ -9,13 +9,13 @@ type TextSectionProps = {
 const TextSection = ({ images, text, highlights }: TextSectionProps) => {
   const [showText, setShowText] = useState(true);
   return (
-    <section className="w-full flex items-center justify-center flex-col min-h-[30%]">
+    <section className="flex min-h-[30%] w-full flex-col items-center justify-center">
       {images.length > 0 ? (
         <h1
           onClick={() => {
             setShowText(!showText);
           }}
-          className="p-10 font-black text-center"
+          className="p-10 text-center font-black"
         >
           {showText ? (
             <div>
@@ -28,7 +28,7 @@ const TextSection = ({ images, text, highlights }: TextSectionProps) => {
                   <span key={index} className="text-text-base">
                     {item}{" "}
                   </span>
-                )
+                ),
               )}
             </div>
           ) : (
@@ -39,7 +39,7 @@ const TextSection = ({ images, text, highlights }: TextSectionProps) => {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="w-20 h-20"
+                className="h-20 w-20"
               >
                 <path
                   strokeLinecap="round"

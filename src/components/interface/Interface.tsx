@@ -16,14 +16,14 @@ function Interface() {
   } = useImages();
 
   return (
-    <main className="h-screen flex items-center justify-center flex-col gap-4 text-5xl bg-background">
+    <main className="flex h-screen flex-col items-center justify-center gap-4 bg-background text-5xl">
       {images.length > 0 ? (
         <>
           <TextSection images={images} text={text} highlights={highlights} />
           <ImageSection images={images} index={index} text={text} />
         </>
       ) : (
-        <p className="text-center m-5 text-text-base font-bold">Congrats!</p>
+        <p className="m-5 text-center font-bold text-text-base">Congrats!</p>
       )}
       <ButtonsSection
         handleNext={handleNext}
@@ -31,7 +31,7 @@ function Interface() {
         handleSpeech={handleSpeech}
         images={images}
       />
-      <footer className="w-full h-40"></footer>
+      <footer className="h-40 w-full"></footer>
     </main>
   );
 }
