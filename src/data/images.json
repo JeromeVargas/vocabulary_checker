@@ -178,5 +178,50 @@
       ]
     ],
     "wordsToHighlight": [0, 1]
+  },
+  "pluralBasic": {
+    "metadata": [
+      [
+        "her cars are fast",
+        "https://cdndailyexcelsior.b-cdn.net/wp-content/uploads/2019/05/page3-6.jpg"
+      ],
+      [
+        "his dogs are small",
+        "https://dogsbestlife.com/wp-content/uploads/2016/05/two-dogs-same-litter-min.jpeg"
+      ],
+      [
+        "your cats are funny",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvwvLT12qLEIEdoqXgUNDwHrje0VuoJNQMqA&usqp=CAU"
+      ],
+      [
+        "our houses are beautiful",
+        "https://cropper.watch.aetnd.com/cdn.watch.aetnd.com/sites/3/2015/05/watch-mobile-hero-tiny-house-hunting.jpg"
+      ],
+      [
+        "their teachers are young",
+        "https://soe.lmu.edu/media/lmuschoolofeducation/homepage/2021refresh/teacher-prep-720x720.jpg"
+      ],
+      [
+        "our elephants are big",
+        "https://i.pinimg.com/736x/94/3d/59/943d59d6ae0a28fb71714218e15d50ad.jpg"
+      ],
+      [
+        "their eggs are white",
+        "https://theseedguelph.ca/wp-content/uploads/2022/03/eggs_edited.jpg"
+      ],
+      [
+        "my apples are red",
+        "https://tristarplants.com/cdn/shop/products/red-delicious-apple-istock.jpg?v=1632438762&width=720"
+      ],
+      [
+        "his oranges are good",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR07oo18giVW3iOEXZtaVHxL9AJmkoi_Qsxzw&usqp=CAU"
+      ],
+      [
+        "your offices are nice",
+        "https://aeispaces.com/wp-content/uploads/2023/09/FD-Fotografia-AW_RedHat_047-720x720.jpg"
+      ]
+    ],
+    "wordsToHighlight": [1, 2]
   }
 }

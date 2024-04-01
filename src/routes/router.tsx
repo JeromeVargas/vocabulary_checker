@@ -1,10 +1,11 @@
+import { createBrowserRouter } from "react-router-dom";
+
 import App from "../App";
 import ArticleNoun from "../pages/ArticleNoun";
 import Adjective from "../pages/Adjective";
 import VerbToBe from "../pages/VerbToBe";
 import PossessivePronouns from "../pages/PossessivePronouns";
-
-import { createBrowserRouter } from "react-router-dom";
+import PluralBasic from "../pages/PluralBasic";
 import ErrorPage from "../components/Error404Page";
 
 const router = createBrowserRouter([
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "possessive-pronouns",
     element: <PossessivePronouns />,
+  },
+  {
+    path: "plural-basic",
+    element: <PluralBasic />,
   },
   {
     path: "*",

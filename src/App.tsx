@@ -33,6 +33,13 @@ function App() {
           Possessives
         </Link>
         <br />
+        <Link
+          className="rounded bg-neutral-main px-10 py-4 text-center font-bold text-neutral-contrast hover:bg-neutral-shade"
+          to="/plural-basic"
+        >
+          Plurals basics
+        </Link>
+        <br />
       </div>
     </main>
   );
