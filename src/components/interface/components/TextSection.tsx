@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 type TextSectionProps = {
-  images: { url: string }[];
+  images: string[][];
   text: string;
   highlights: number[];
 };

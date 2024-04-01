@@ -4,7 +4,7 @@ type ButtonsSectionProps = {
   handleNext: () => void;
   handleReset: () => void;
   handleSpeech: () => void;
-  images: { url: string }[];
+  images: string[][];
 };
 
 const ButtonsSection = ({

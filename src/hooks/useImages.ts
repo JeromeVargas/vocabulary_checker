@@ -1,22 +1,14 @@
 import { useMemo, useState } from "react";
 
-import { imagesState, wordsToHighlight } from "../data/images.json";
+import data from "../data/images.json";
 import randomNumber from "../lib/utils/random";
 import speechUtterance from "../lib/utils/speech";
 import { useLocation } from "react-router-dom";
 
 export const useImages = () => {
-  const [images, setImages] = useState(imagesState);
-  const [input, setInput] = useState("");
-  const [result, setResult] = useState("");
-  const [isInputReady, setIsInputReady] = useState(false);
-
-  const index = useMemo(() => {
-    return randomNumber(0, images.length - 1);
-  }, [images.length]);
-
   // transforms the url to camelCase
   const { pathname } = useLocation();
+
   const path = pathname
     .slice(1, pathname.length)
     .split("-")
@@ -26,13 +18,25 @@ export const useImages = () => {
     })
     .join("");
 
+  const [images, setImages] = useState(
+    data[path as keyof typeof data].metadata,
+  );
+
+  const [input, setInput] = useState("");
+  const [result, setResult] = useState("");
+  const [isInputReady, setIsInputReady] = useState(false);
+
+  const index = useMemo(() => {
+    return randomNumber(0, images.length - 1);
+  }, [images.length]);
+
   // gets the value from the images state keys dynamically
-  const text = `${index}.${path}`
+  const text = `${index}.${0}`
     .split(".")
     .reduce((obj, key) => (obj as never)?.[key], images) as unknown as string;
 
   // gets the value from the words to highlight state keys dynamically
-  const highlights = wordsToHighlight[path as keyof typeof wordsToHighlight];
+  const highlights = data[path as keyof typeof data].wordsToHighlight;
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value);
@@ -52,7 +56,7 @@ export const useImages = () => {
 
   const handleNext = () => {
     setImages((prevArray) =>
-      prevArray.filter((image) => image !== images[index])
+      prevArray.filter((image) => image !== images[index]),
     );
     setInput("");
     setResult("");
@@ -60,7 +64,7 @@ export const useImages = () => {
   };
 
   const handleReset = () => {
-    setImages(imagesState);
+    setImages(data[path as keyof typeof data].metadata);
   };
 
   const handleSpeech = () => {

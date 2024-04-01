@@ -1,80 +1,182 @@
 {
-  "wordsToHighlight": {
-    "articleNoun": [0],
-    "adjective": [1],
-    "verbToBe": [0, 1],
-    "possessivePronouns": [0, 1]
+  "articleNoun": {
+    "metadata": [
+      [
+        "a car",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSncj_p7-jbYQoDIUVBt_DqxJMhvMYPy7VA5vrSnqszwCseKPNx1SFA-7mfqVJOM8dQSlA&usqp=CAU"
+      ],
+      [
+        "a dog",
+        "https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*"
+      ],
+      [
+        "a cat",
+        "https://media.istockphoto.com/id/467947584/photo/square-portrait-of-a-persian-cat-looking-at-camera.jpg?s=612x612&w=0&k=20&c=jKV39jGto2zB4S_-b0cBHQ5Qrdj46T4gzgBpoT0kTFc="
+      ],
+      [
+        "a house",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRhtcWwpy-pFvcLnF7Mk5TkmBbYwWg0rqUWqAhZDkS9iLVlLJvsPMck93BAN-wefU9tkc&usqp=CAU"
+      ],
+      [
+        "a teacher",
+        "https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/image/rDtN98Qoishumwih/graphicstock-young-asian-male-teacher-standing-in-classroom-smiling-male-teacher-standing-in-front-of-chalkboard-friendly-male-teacher-standing-with-folded-arms-vector-flat-design-illustration-square-layout_rmfMvIqLLW_thumb.jpg"
+      ],
+      [
+        "an elephant",
+        "https://st.depositphotos.com/1015682/1248/i/450/depositphotos_12483210-stock-photo-elephant-with-large-tusks.jpg"
+      ],
+      [
+        "an egg",
+        "https://media.istockphoto.com/id/185264449/photo/white-egg.jpg?s=612x612&w=0&k=20&c=OUQET-aYg91sUjakyk0qVToZBle25V6QLhWOeLoe40o="
+      ],
+      [
+        "an apple",
+        "https://media.istockphoto.com/id/532048136/photo/fresh-red-apple-isolated-on-white-with-clipping-path.jpg?s=612x612&w=0&k=20&c=aOO4GQQXg10xvOcv0KXYIm3M2kHZSC17lGX_Z9b_KXo="
+      ],
+      [
+        "an orange",
+        "https://media.istockphoto.com/id/477836156/es/foto/frutas-naranjas-aisladas-en-blanco.jpg?s=612x612&w=0&k=20&c=1B5I3LcAkVPolENJXmG8HU5UDt9qjT5MmQIrmZ_qrYI="
+      ],
+      [
+        "an office",
+        "https://media.gettyimages.com/id/641950184/photo/interior-design-office-with-empty-wall.jpg?s=612x612&w=gi&k=20&c=4kMMgVecXAAVfNPCcBqV7sMuBFNqTvFViXPiiLPpVKw="
+      ]
+    ],
+    "wordsToHighlight": [0]
   },
-  "imagesState": [
-    {
-      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSncj_p7-jbYQoDIUVBt_DqxJMhvMYPy7VA5vrSnqszwCseKPNx1SFA-7mfqVJOM8dQSlA&usqp=CAU",
-      "articleNoun": "a car",
-      "adjective": "a fast car",
-      "verbToBe": "it is a fast car",
-      "possessivePronouns": "her car is fast"
-    },
-    {
-      "url": "https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*",
-      "articleNoun": "a dog",
-      "adjective": "a small dog",
-      "verbToBe": "she is a small dog",
-      "possessivePronouns": "his dog is small"
-    },
-    {
-      "url": "https://media.istockphoto.com/id/467947584/photo/square-portrait-of-a-persian-cat-looking-at-camera.jpg?s=612x612&w=0&k=20&c=jKV39jGto2zB4S_-b0cBHQ5Qrdj46T4gzgBpoT0kTFc=",
-      "articleNoun": "a cat",
-      "adjective": "a funny cat",
-      "verbToBe": "he is a funny cat",
-      "possessivePronouns": "your cat is funny"
-    },
-    {
-      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRhtcWwpy-pFvcLnF7Mk5TkmBbYwWg0rqUWqAhZDkS9iLVlLJvsPMck93BAN-wefU9tkc&usqp=CAU",
-      "articleNoun": "a house",
-      "adjective": "a beautiful house",
-      "verbToBe": "it is a beautiful house",
-      "possessivePronouns": "our house is beautiful"
-    },
-    {
-      "url": "https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/image/rDtN98Qoishumwih/graphicstock-young-asian-male-teacher-standing-in-classroom-smiling-male-teacher-standing-in-front-of-chalkboard-friendly-male-teacher-standing-with-folded-arms-vector-flat-design-illustration-square-layout_rmfMvIqLLW_thumb.jpg",
-      "articleNoun": "a teacher",
-      "adjective": "a young teacher",
-      "verbToBe": "he is a young teacher",
-      "possessivePronouns": "their teacher is young"
-    },
-    {
-      "url": "https://st.depositphotos.com/1015682/1248/i/450/depositphotos_12483210-stock-photo-elephant-with-large-tusks.jpg",
-      "articleNoun": "an elephant",
-      "adjective": "a big elephant",
-      "verbToBe": "he is a big elephant",
-      "possessivePronouns": "our elephant is big"
-    },
-    {
-      "url": "https://media.istockphoto.com/id/185264449/photo/white-egg.jpg?s=612x612&w=0&k=20&c=OUQET-aYg91sUjakyk0qVToZBle25V6QLhWOeLoe40o=",
-      "articleNoun": "an egg",
-      "adjective": "a white egg",
-      "verbToBe": "it is a white egg",
-      "possessivePronouns": "their egg is white"
-    },
-    {
-      "url": "https://media.istockphoto.com/id/532048136/photo/fresh-red-apple-isolated-on-white-with-clipping-path.jpg?s=612x612&w=0&k=20&c=aOO4GQQXg10xvOcv0KXYIm3M2kHZSC17lGX_Z9b_KXo=",
-      "articleNoun": "an apple",
-      "adjective": "a red apple",
-      "verbToBe": "it is a red apple",
-      "possessivePronouns": "my apple is red"
-    },
-    {
-      "url": "https://media.istockphoto.com/id/477836156/es/foto/frutas-naranjas-aisladas-en-blanco.jpg?s=612x612&w=0&k=20&c=1B5I3LcAkVPolENJXmG8HU5UDt9qjT5MmQIrmZ_qrYI=",
-      "articleNoun": "an orange",
-      "adjective": "a good orange",
-      "verbToBe": "it is a good orange",
-      "possessivePronouns": "his orange is good"
-    },
-    {
-      "url": "https://media.gettyimages.com/id/641950184/photo/interior-design-office-with-empty-wall.jpg?s=612x612&w=gi&k=20&c=4kMMgVecXAAVfNPCcBqV7sMuBFNqTvFViXPiiLPpVKw=",
-      "articleNoun": "an office",
-      "adjective": "a nice office",
-      "verbToBe": "it is a nice office",
-      "possessivePronouns": "your office is nice"
-    }
-  ]
+  "adjective": {
+    "metadata": [
+      [
+        "a fast car",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSncj_p7-jbYQoDIUVBt_DqxJMhvMYPy7VA5vrSnqszwCseKPNx1SFA-7mfqVJOM8dQSlA&usqp=CAU"
+      ],
+      [
+        "a small dog",
+        "https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*"
+      ],
+      [
+        "a funny cat",
+        "https://media.istockphoto.com/id/467947584/photo/square-portrait-of-a-persian-cat-looking-at-camera.jpg?s=612x612&w=0&k=20&c=jKV39jGto2zB4S_-b0cBHQ5Qrdj46T4gzgBpoT0kTFc="
+      ],
+      [
+        "a beautiful house",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRhtcWwpy-pFvcLnF7Mk5TkmBbYwWg0rqUWqAhZDkS9iLVlLJvsPMck93BAN-wefU9tkc&usqp=CAU"
+      ],
+      [
+        "a young teacher",
+        "https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/image/rDtN98Qoishumwih/graphicstock-young-asian-male-teacher-standing-in-classroom-smiling-male-teacher-standing-in-front-of-chalkboard-friendly-male-teacher-standing-with-folded-arms-vector-flat-design-illustration-square-layout_rmfMvIqLLW_thumb.jpg"
+      ],
+      [
+        "a big elephant",
+        "https://st.depositphotos.com/1015682/1248/i/450/depositphotos_12483210-stock-photo-elephant-with-large-tusks.jpg"
+      ],
+      [
+        "a white egg",
+        "https://media.istockphoto.com/id/185264449/photo/white-egg.jpg?s=612x612&w=0&k=20&c=OUQET-aYg91sUjakyk0qVToZBle25V6QLhWOeLoe40o="
+      ],
+      [
+        "a red apple",
+        "https://media.istockphoto.com/id/532048136/photo/fresh-red-apple-isolated-on-white-with-clipping-path.jpg?s=612x612&w=0&k=20&c=aOO4GQQXg10xvOcv0KXYIm3M2kHZSC17lGX_Z9b_KXo="
+      ],
+      [
+        "a good orange",
+        "https://media.istockphoto.com/id/477836156/es/foto/frutas-naranjas-aisladas-en-blanco.jpg?s=612x612&w=0&k=20&c=1B5I3LcAkVPolENJXmG8HU5UDt9qjT5MmQIrmZ_qrYI="
+      ],
+      [
+        "a nice office",
+        "https://media.gettyimages.com/id/641950184/photo/interior-design-office-with-empty-wall.jpg?s=612x612&w=gi&k=20&c=4kMMgVecXAAVfNPCcBqV7sMuBFNqTvFViXPiiLPpVKw="
+      ]
+    ],
+    "wordsToHighlight": [1]
+  },
+  "verbToBe": {
+    "metadata": [
+      [
+        "it is a fast car",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSncj_p7-jbYQoDIUVBt_DqxJMhvMYPy7VA5vrSnqszwCseKPNx1SFA-7mfqVJOM8dQSlA&usqp=CAU"
+      ],
+      [
+        "she is a small dog",
+        "https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*"
+      ],
+      [
+        "he is a funny cat",
+        "https://media.istockphoto.com/id/467947584/photo/square-portrait-of-a-persian-cat-looking-at-camera.jpg?s=612x612&w=0&k=20&c=jKV39jGto2zB4S_-b0cBHQ5Qrdj46T4gzgBpoT0kTFc="
+      ],
+      [
+        "it is a beautiful house",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRhtcWwpy-pFvcLnF7Mk5TkmBbYwWg0rqUWqAhZDkS9iLVlLJvsPMck93BAN-wefU9tkc&usqp=CAU"
+      ],
+      [
+        "he is a young teacher",
+        "https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/image/rDtN98Qoishumwih/graphicstock-young-asian-male-teacher-standing-in-classroom-smiling-male-teacher-standing-in-front-of-chalkboard-friendly-male-teacher-standing-with-folded-arms-vector-flat-design-illustration-square-layout_rmfMvIqLLW_thumb.jpg"
+      ],
+      [
+        "he is a big elephant",
+        "https://st.depositphotos.com/1015682/1248/i/450/depositphotos_12483210-stock-photo-elephant-with-large-tusks.jpg"
+      ],
+      [
+        "it is a white egg",
+        "https://media.istockphoto.com/id/185264449/photo/white-egg.jpg?s=612x612&w=0&k=20&c=OUQET-aYg91sUjakyk0qVToZBle25V6QLhWOeLoe40o="
+      ],
+      [
+        "it is a red apple",
+        "https://media.istockphoto.com/id/532048136/photo/fresh-red-apple-isolated-on-white-with-clipping-path.jpg?s=612x612&w=0&k=20&c=aOO4GQQXg10xvOcv0KXYIm3M2kHZSC17lGX_Z9b_KXo="
+      ],
+      [
+        "it is a good orange",
+        "https://media.istockphoto.com/id/477836156/es/foto/frutas-naranjas-aisladas-en-blanco.jpg?s=612x612&w=0&k=20&c=1B5I3LcAkVPolENJXmG8HU5UDt9qjT5MmQIrmZ_qrYI="
+      ],
+      [
+        "it is a nice office",
+        "https://media.gettyimages.com/id/641950184/photo/interior-design-office-with-empty-wall.jpg?s=612x612&w=gi&k=20&c=4kMMgVecXAAVfNPCcBqV7sMuBFNqTvFViXPiiLPpVKw="
+      ]
+    ],
+    "wordsToHighlight": [0, 1]
+  },
+  "possessivePronouns": {
+    "metadata": [
+      [
+        "her car is fast",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSncj_p7-jbYQoDIUVBt_DqxJMhvMYPy7VA5vrSnqszwCseKPNx1SFA-7mfqVJOM8dQSlA&usqp=CAU"
+      ],
+      [
+        "his dog is small",
+        "https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*"
+      ],
+      [
+        "your cat is funny",
+        "https://media.istockphoto.com/id/467947584/photo/square-portrait-of-a-persian-cat-looking-at-camera.jpg?s=612x612&w=0&k=20&c=jKV39jGto2zB4S_-b0cBHQ5Qrdj46T4gzgBpoT0kTFc="
+      ],
+      [
+        "our house is beautiful",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRhtcWwpy-pFvcLnF7Mk5TkmBbYwWg0rqUWqAhZDkS9iLVlLJvsPMck93BAN-wefU9tkc&usqp=CAU"
+      ],
+      [
+        "their teacher is young",
+        "https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/image/rDtN98Qoishumwih/graphicstock-young-asian-male-teacher-standing-in-classroom-smiling-male-teacher-standing-in-front-of-chalkboard-friendly-male-teacher-standing-with-folded-arms-vector-flat-design-illustration-square-layout_rmfMvIqLLW_thumb.jpg"
+      ],
+      [
+        "our elephant is big",
+        "https://st.depositphotos.com/1015682/1248/i/450/depositphotos_12483210-stock-photo-elephant-with-large-tusks.jpg"
+      ],
+      [
+        "their egg is white",
+        "https://media.istockphoto.com/id/185264449/photo/white-egg.jpg?s=612x612&w=0&k=20&c=OUQET-aYg91sUjakyk0qVToZBle25V6QLhWOeLoe40o="
+      ],
+      [
+        "my apple is red",
+        "https://media.istockphoto.com/id/532048136/photo/fresh-red-apple-isolated-on-white-with-clipping-path.jpg?s=612x612&w=0&k=20&c=aOO4GQQXg10xvOcv0KXYIm3M2kHZSC17lGX_Z9b_KXo="
+      ],
+      [
+        "his orange is good",
+        "https://media.istockphoto.com/id/477836156/es/foto/frutas-naranjas-aisladas-en-blanco.jpg?s=612x612&w=0&k=20&c=1B5I3LcAkVPolENJXmG8HU5UDt9qjT5MmQIrmZ_qrYI="
+      ],
+      [
+        "your office is nice",
+        "https://media.gettyimages.com/id/641950184/photo/interior-design-office-with-empty-wall.jpg?s=612x612&w=gi&k=20&c=4kMMgVecXAAVfNPCcBqV7sMuBFNqTvFViXPiiLPpVKw="
+      ]
+    ],
+    "wordsToHighlight": [0, 1]
+  }
 }
