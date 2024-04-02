@@ -7,6 +7,7 @@ import VerbToBe from "../pages/VerbToBe";
 import PossessivePronouns from "../pages/PossessivePronouns";
 import PluralBasic from "../pages/PluralBasic";
 import ErrorPage from "../components/Error404Page";
+import ThereToBe from "../pages/ThereToBe";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
   {
     path: "plural-basic",
     element: <PluralBasic />,
+  },
+  {
+    path: "there-to-be",
+    element: <ThereToBe />,
   },
   {
     path: "*",
