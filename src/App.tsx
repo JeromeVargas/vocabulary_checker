@@ -7,37 +7,9 @@ function App() {
       <div className="mt-20 flex flex-col">
         <Link
           className="rounded bg-neutral-main px-10 py-4 text-center font-bold text-neutral-contrast hover:bg-neutral-shade"
-          to="/article-noun"
+          to="/instructions"
         >
-          Articles
-        </Link>
-        <br />
-        <Link
-          className="rounded bg-neutral-main px-10 py-4 text-center font-bold text-neutral-contrast hover:bg-neutral-shade"
-          to="/adjective"
-        >
-          Adjectives
-        </Link>
-        <br />
-        <Link
-          className="rounded bg-neutral-main px-10 py-4 text-center font-bold text-neutral-contrast hover:bg-neutral-shade"
-          to="/verb-to-be"
-        >
-          Verb To Be
-        </Link>
-        <br />
-        <Link
-          className="rounded bg-neutral-main px-10 py-4 text-center font-bold text-neutral-contrast hover:bg-neutral-shade"
-          to="/possessive-pronouns"
-        >
-          Possessives
-        </Link>
-        <br />
-        <Link
-          className="rounded bg-neutral-main px-10 py-4 text-center font-bold text-neutral-contrast hover:bg-neutral-shade"
-          to="/plural-basic"
-        >
-          Plurals basics
+          せつめいしょ
         </Link>
         <br />
       </div>
