@@ -8,6 +8,7 @@ import PossessivePronouns from "../pages/PossessivePronouns";
 import PluralBasic from "../pages/PluralBasic";
 import ErrorPage from "../components/Error404Page";
 import ThereToBe from "../pages/ThereToBe";
+import ThereToBeNew from "../pages/ThereToBeNew";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
   {
     path: "there-to-be",
     element: <ThereToBe />,
+  },
+  {
+    path: "there-to-be-new",
+    element: <ThereToBeNew />,
   },
   {
     path: "*",

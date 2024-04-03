@@ -44,7 +44,14 @@ function App() {
           className="rounded bg-neutral-main px-10 py-4 text-center font-bold text-neutral-contrast hover:bg-neutral-shade"
           to="/there-to-be"
         >
-          There to Be
+          There to Be 1
+        </Link>
+        <br />
+        <Link
+          className="rounded bg-neutral-main px-10 py-4 text-center font-bold text-neutral-contrast hover:bg-neutral-shade"
+          to="/there-to-be-new"
+        >
+          There to Be 2
         </Link>
         <br />
       </div>

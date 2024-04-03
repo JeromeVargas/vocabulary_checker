@@ -268,5 +268,50 @@
       ]
     ],
     "wordsToHighlight": [0, 1, 3]
+  },
+  "thereToBeNew": {
+    "metadata": [
+      [
+        "there are two cars",
+        "https://cdndailyexcelsior.b-cdn.net/wp-content/uploads/2019/05/page3-6.jpg"
+      ],
+      [
+        "there is a dog",
+        "https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*"
+      ],
+      [
+        "there are two cats",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvwvLT12qLEIEdoqXgUNDwHrje0VuoJNQMqA&usqp=CAU"
+      ],
+      [
+        "there is a house",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRhtcWwpy-pFvcLnF7Mk5TkmBbYwWg0rqUWqAhZDkS9iLVlLJvsPMck93BAN-wefU9tkc&usqp=CAU"
+      ],
+      [
+        "there are two teachers",
+        "https://soe.lmu.edu/media/lmuschoolofeducation/homepage/2021refresh/teacher-prep-720x720.jpg"
+      ],
+      [
+        "there is an elephant",
+        "https://st.depositphotos.com/1015682/1248/i/450/depositphotos_12483210-stock-photo-elephant-with-large-tusks.jpg"
+      ],
+      [
+        "there are twelve eggs",
+        "https://theseedguelph.ca/wp-content/uploads/2022/03/eggs_edited.jpg"
+      ],
+      [
+        "there is an apple",
+        "https://media.istockphoto.com/id/532048136/photo/fresh-red-apple-isolated-on-white-with-clipping-path.jpg?s=612x612&w=0&k=20&c=aOO4GQQXg10xvOcv0KXYIm3M2kHZSC17lGX_Z9b_KXo="
+      ],
+      [
+        "there are twelve oranges",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR07oo18giVW3iOEXZtaVHxL9AJmkoi_Qsxzw&usqp=CAU"
+      ],
+      [
+        "there is an office",
+        "https://media.gettyimages.com/id/641950184/photo/interior-design-office-with-empty-wall.jpg?s=612x612&w=gi&k=20&c=4kMMgVecXAAVfNPCcBqV7sMuBFNqTvFViXPiiLPpVKw="
+      ]
+    ],
+    "wordsToHighlight": [0, 1, 3]
   }
 }
