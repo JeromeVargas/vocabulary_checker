@@ -9,6 +9,7 @@ import PluralBasic from "../pages/PluralBasic";
 import ErrorPage from "../components/Error404Page";
 import ThereToBe from "../pages/ThereToBe";
 import ThereToBeNew from "../pages/ThereToBeNew";
+import SimplePresent from "../pages/SimplePresent";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
   {
     path: "there-to-be-new",
     element: <ThereToBeNew />,
+  },
+  {
+    path: "simple-present",
+    element: <SimplePresent />,
   },
   {
     path: "*",
