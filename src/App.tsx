@@ -58,7 +58,14 @@ function App() {
           className="rounded bg-neutral-main px-10 py-4 text-center font-bold text-neutral-contrast hover:bg-neutral-shade"
           to="/simple-present"
         >
-          Simple present
+          Simple present 1
+        </Link>
+        <br />
+        <Link
+          className="rounded bg-neutral-main px-10 py-4 text-center font-bold text-neutral-contrast hover:bg-neutral-shade"
+          to="/simple-present-new"
+        >
+          Simple present 2
         </Link>
         <br />
       </div>

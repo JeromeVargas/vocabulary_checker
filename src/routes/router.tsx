@@ -49,6 +49,10 @@ const router = createBrowserRouter([
     element: <SimplePresent />,
   },
   {
+    path: "simple-present-new",
+    element: <SimplePresent />,
+  },
+  {
     path: "*",
     element: <ErrorPage />,
   },
