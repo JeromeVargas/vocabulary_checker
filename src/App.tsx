@@ -68,6 +68,13 @@ function App() {
           Simple present 2
         </Link>
         <br />
+        <Link
+          className="rounded bg-neutral-main px-10 py-4 text-center font-bold text-neutral-contrast hover:bg-neutral-shade"
+          to="/auxiliary"
+        >
+          Auxiliary Do / Does
+        </Link>
+        <br />
       </div>
     </main>
   );

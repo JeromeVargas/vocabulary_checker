@@ -10,6 +10,7 @@ import ErrorPage from "../components/Error404Page";
 import ThereToBe from "../pages/ThereToBe";
 import ThereToBeNew from "../pages/ThereToBeNew";
 import SimplePresent from "../pages/SimplePresent";
+import Auxiliary from "../pages/Auxiliary";
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
   {
     path: "simple-present-new",
     element: <SimplePresent />,
+  },
+  {
+    path: "auxiliary",
+    element: <Auxiliary />,
   },
   {
     path: "*",
