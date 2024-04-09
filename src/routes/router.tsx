@@ -11,6 +11,7 @@ import ThereToBe from "../pages/ThereToBe";
 import ThereToBeNew from "../pages/ThereToBeNew";
 import SimplePresent from "../pages/SimplePresent";
 import Auxiliary from "../pages/Auxiliary";
+import Questions from "../pages/AuxiliaryQuestions";
 
 const router = createBrowserRouter([
   {
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
   {
     path: "auxiliary",
     element: <Auxiliary />,
+  },
+  {
+    path: "questions",
+    element: <Questions />,
   },
   {
     path: "*",
