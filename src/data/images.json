@@ -1,22 +1,22 @@
 {
   "instructions": {
     "metadata": [
-      [
-        "はなしましょう",
-        "https://sb-cafetalk.s3.amazonaws.com/user-uploaded-files/cafetalk-optimized-618d23a685de3-954832700-1636639654.jpg"
-      ],
-      [
-        "かいわ",
-        "https://www.universityofcalifornia.edu/sites/default/files/styles/article_default_banner/public/improve-talk-uc-san-diego.jpg?h=792bbb88&itok=rH_V951k"
-      ],
-      [
-        "きくれんしゅう",
-        "https://engfluent.com/wp-content/uploads/2016/09/english-listening-practice.png"
-      ],
-      [
-        "たんごひょう",
-        "https://www.callcentrehelper.com/images/stories/2022/08/vocabulary-293796887-760.jpg"
-      ]
+      ["はなしましょう", "./src/images/hanashimashou.jpg"],
+      ["かいわ", "./src/images/kaiwa.jpg"],
+      ["きくれんしゅう", "./src/images/kikurenshou.jpg"],
+      ["たんごひょう", "./src/images/tangohyou.jpg"]
+    ],
+    "wordsToHighlight": [0]
+  },
+  "greetings": {
+    "metadata": [
+      ["おはようございます", "./src/images/ohayou_gozaimasu.jpg"],
+      ["こんにちは", "./src/images/konnichiwa.jpg"],
+      ["こんばんは", "./src/images/konbanwa.jpg"],
+      ["おやすみなさい", "./src/images/oyasumi_nasai.jpg"],
+      ["さよなら", "./src/images/sayonara.jpg"],
+      ["じゃあまたね", "./src/images/ja_mata_ne.jpg"],
+      ["またあした", "./src/images/mata_ashita.jpg"]
     ],
     "wordsToHighlight": [0]
   }

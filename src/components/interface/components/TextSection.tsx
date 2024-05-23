@@ -21,11 +21,11 @@ const TextSection = ({ images, text, highlights }: TextSectionProps) => {
             <div>
               {text.split(" ").map((item, index) =>
                 highlights.includes(index) ? (
-                  <span key={index} className="text-green-400">
+                  <span key={index} className="text-text-base">
                     {item}{" "}
                   </span>
                 ) : (
-                  <span key={index} className="text-text-base">
+                  <span key={index} className="text-green-400">
                     {item}{" "}
                   </span>
                 ),
