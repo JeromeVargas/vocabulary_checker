@@ -1,5 +1,6 @@
 {
   "instructions": {
+    "translation": "しょるい",
     "metadata": [
       ["はなしましょう", "./src/images/hanashimashou.jpg"],
       ["かいわ", "./src/images/kaiwa.jpg"],
@@ -9,6 +10,7 @@
     "wordsToHighlight": [0]
   },
   "greetings": {
+    "translation": "あいさつ",
     "metadata": [
       ["おはようございます", "./src/images/ohayou_gozaimasu.jpg"],
       ["こんにちは", "./src/images/konnichiwa.jpg"],

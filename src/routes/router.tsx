@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
+import data from "../data/images.json";
 
 import App from "../App";
-// import ArticleNoun from "../pages/ArticleNoun";
 import ErrorPage from "../components/Error404Page";
 import Interface from "../components/interface/Interface";
 
@@ -11,18 +11,16 @@ const paths = [
     element: <App />,
   },
   {
-    path: "instructions",
-    element: <Interface />,
-  },
-  {
-    path: "greetings",
-    element: <Interface />,
-  },
-  {
     path: "*",
     element: <ErrorPage />,
   },
 ];
+
+const pathsFromJson = Object.keys(data);
+
+for (let index = 0; index < pathsFromJson.length; index++) {
+  paths.push({ path: pathsFromJson[index], element: <Interface /> });
+}
 
 const router = createBrowserRouter(paths);
 
