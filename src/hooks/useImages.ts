@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 
-import data from "../data/images.json";
+import data from "../data/attributesSchema.json";
 import randomNumber from "../lib/utils/random";
 import speechUtterance from "../lib/utils/speech";
 import { useLocation } from "react-router-dom";

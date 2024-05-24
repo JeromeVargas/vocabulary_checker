@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import data from "../data/images.json";
+import data from "../data/attributesSchema.json";
 
 const titles = Object.keys(data);
 const values = Object.values(data);

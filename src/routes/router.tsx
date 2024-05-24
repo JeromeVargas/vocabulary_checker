@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import data from "../data/images.json";
+import data from "../data/attributesSchema.json";
 
 import App from "../App";
 import ErrorPage from "../components/Error404Page";
