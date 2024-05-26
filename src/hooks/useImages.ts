@@ -1,27 +1,17 @@
 import { useMemo, useState } from "react";
 
 import data from "../data/attributesSchema.json";
+import { useLocation } from "react-router-dom";
 import randomNumber from "../lib/utils/random";
 import speechUtterance from "../lib/utils/speech";
-import { useLocation } from "react-router-dom";
+import findPath from "../lib/utils/path";
 
 export const useImages = () => {
-  // transforms the url to camelCase
   const { pathname } = useLocation();
-
-  const path = pathname
-    .slice(1, pathname.length)
-    .split("-")
-    .map((pathPart, index) => {
-      if (index !== 0) return pathPart[0].toUpperCase() + pathPart.slice(1);
-      return pathPart;
-    })
-    .join("");
-
+  const path = findPath(pathname);
   const [images, setImages] = useState(
     data[path as keyof typeof data].metadata,
   );
-
   const [input, setInput] = useState("");
   const [result, setResult] = useState("");
   const [isInputReady, setIsInputReady] = useState(false);
