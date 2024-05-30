@@ -1,22 +1,22 @@
-import { useState } from "react";
-
 type TextSectionProps = {
   images: string[][];
   text: string;
   highlights: number[];
+  showText: boolean;
+  handleShowText: () => void;
 };
 
-const TextSection = ({ images, text, highlights }: TextSectionProps) => {
-  const [showText, setShowText] = useState(true);
+const TextSection = ({
+  images,
+  text,
+  highlights,
+  showText,
+  handleShowText,
+}: TextSectionProps) => {
   return (
     <section className="flex min-h-[30%] w-full flex-col items-center justify-center">
       {images.length > 0 ? (
-        <h1
-          onClick={() => {
-            setShowText(!showText);
-          }}
-          className="p-10 text-center font-black"
-        >
+        <h1 onClick={handleShowText} className="p-10 text-center font-black">
           {showText ? (
             <div>
               {text.split(" ").map((item, index) =>
