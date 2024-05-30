@@ -28,22 +28,6 @@ export const useImages = () => {
   // gets the value from the words to highlight state keys dynamically
   const highlights = data[path as keyof typeof data].wordsToHighlight;
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInput(e.target.value);
-  };
-
-  const handleCheck = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (input === "") {
-      setResult("Please provide an answer");
-      return;
-    }
-    input.toLowerCase() === text
-      ? setResult("correct")
-      : setResult("incorrect");
-    setIsInputReady(true);
-  };
-
   const handleNext = () => {
     setImages((prevArray) =>
       prevArray.filter((image) => image !== images[index]),
@@ -62,8 +46,6 @@ export const useImages = () => {
   };
 
   return {
-    handleCheck,
-    handleChange,
     handleNext,
     handleReset,
     handleSpeech,
