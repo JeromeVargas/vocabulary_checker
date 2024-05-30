@@ -39,12 +39,12 @@ export const useImages = () => {
   };
 
   return {
-    handleNext,
-    handleReset,
-    handleSpeech,
     images,
     index,
     text,
     highlights,
+    handleNext,
+    handleReset,
+    handleSpeech,
   };
 };

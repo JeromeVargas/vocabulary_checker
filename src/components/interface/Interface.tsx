@@ -11,13 +11,13 @@ import ButtonsSection from "./components/ButtonsSection";
 
 function Interface({ showText, handleShowText }: InterfaceProps) {
   const {
-    handleNext,
-    handleReset,
-    handleSpeech,
     images,
     index,
     text,
     highlights,
+    handleNext,
+    handleReset,
+    handleSpeech,
   } = useImages();
 
   return (
