@@ -12,10 +12,6 @@ export const useImages = () => {
   const [images, setImages] = useState(
     data[path as keyof typeof data].metadata,
   );
-  const [input, setInput] = useState("");
-  const [result, setResult] = useState("");
-  const [isInputReady, setIsInputReady] = useState(false);
-
   const index = useMemo(() => {
     return randomNumber(0, images.length - 1);
   }, [images.length]);
@@ -32,9 +28,6 @@ export const useImages = () => {
     setImages((prevArray) =>
       prevArray.filter((image) => image !== images[index]),
     );
-    setInput("");
-    setResult("");
-    setIsInputReady(false);
   };
 
   const handleReset = () => {
@@ -51,9 +44,6 @@ export const useImages = () => {
     handleSpeech,
     images,
     index,
-    result,
-    input,
-    isInputReady,
     text,
     highlights,
   };
