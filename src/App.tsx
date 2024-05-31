@@ -16,7 +16,7 @@ function App() {
   const handleShowText = () => setShowText((prevShowText) => !prevShowText);
   return (
     <Routes>
-      <Route path="/" element={<TopicsIndex />} />
+      <Route index element={<TopicsIndex />} />
       {pathsFromJson.map((path) => (
         <Route
           key={path}
