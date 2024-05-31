@@ -4,11 +4,12 @@ import data from "../data/attributesSchema.json";
 import { useLocation } from "react-router-dom";
 import randomNumber from "../lib/utils/random";
 import speechUtterance from "../lib/utils/speech";
-import findPath from "../lib/utils/path";
+import pathToKebabCase from "../lib/utils/path";
 
 export const useImages = () => {
   const { pathname } = useLocation();
-  const path = findPath(pathname);
+  console.log(pathname);
+  const path = pathToKebabCase(pathname);
   const [images, setImages] = useState(
     data[path as keyof typeof data].metadata,
   );

@@ -1,4 +1,4 @@
-const findPath = (pathname: string) => {
+const pathToKebabCase = (pathname: string) => {
   return pathname
     .slice(1, pathname.length)
     .split("-")
@@ -9,4 +9,4 @@ const findPath = (pathname: string) => {
     .join("");
 };
 
-export default findPath;
+export default pathToKebabCase;
