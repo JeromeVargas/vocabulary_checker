@@ -1,7 +1,4 @@
-type image = {
-  word: string;
-  translation: string;
-};
+import { type image } from "../../../types";
 
 type ImageSectionProps = {
   images: image[];

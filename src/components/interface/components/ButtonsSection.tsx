@@ -1,9 +1,5 @@
 import { Link } from "react-router-dom";
-
-type image = {
-  word: string;
-  translation: string;
-};
+import { type image } from "../../../types";
 
 type ButtonsSectionProps = {
   handleNext: () => void;
