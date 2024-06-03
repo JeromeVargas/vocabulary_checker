@@ -7,7 +7,6 @@ import TopicsIndex from "./components/TopicsIndex";
 import Interface from "./components/interface/Interface";
 import Error404Page from "./components/Error404Page";
 
-// TODO: work image wrapper component lazy load
 function App() {
   const [showText, setShowText] = useState(true);
   const pathsFromJson = Object.keys(data);
