@@ -1,5 +1,10 @@
+type image = {
+  word: string;
+  translation: string;
+};
+
 type TextSectionProps = {
-  images: string[][];
+  images: image[];
   text: string;
   highlights: number[];
   showText: boolean;
@@ -21,11 +26,11 @@ const TextSection = ({
             <div>
               {text.split(" ").map((item, index) =>
                 highlights.includes(index) ? (
-                  <span key={index} className="text-text-base">
-                    {item}{" "}
+                  <span key={index} className="text-green-400">
+                    {item}
                   </span>
                 ) : (
-                  <span key={index} className="text-green-400">
+                  <span key={index} className="text-text-base">
                     {item}{" "}
                   </span>
                 ),

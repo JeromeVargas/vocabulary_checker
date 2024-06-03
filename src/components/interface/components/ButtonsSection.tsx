@@ -1,10 +1,15 @@
 import { Link } from "react-router-dom";
 
+type image = {
+  word: string;
+  translation: string;
+};
+
 type ButtonsSectionProps = {
   handleNext: () => void;
   handleReset: () => void;
   handleSpeech: () => void;
-  images: string[][];
+  images: image[];
 };
 
 const ButtonsSection = ({

@@ -7,8 +7,7 @@ import TopicsIndex from "./components/TopicsIndex";
 import Interface from "./components/interface/Interface";
 import Error404Page from "./components/Error404Page";
 
-// TODO: simplify the use images hook process
-// TODO: work on making the images being imported with javascript to make them being downloaded once, dynamic import
+// TODO: work image wrapper component lazy load
 function App() {
   const [showText, setShowText] = useState(true);
   const pathsFromJson = Object.keys(data);

@@ -12,16 +12,14 @@ export const useImages = () => {
   const [images, setImages] = useState(
     data[path as keyof typeof data].metadata,
   );
+
   const index = useMemo(() => {
     return randomNumber(0, images.length - 1);
   }, [images.length]);
 
-  // gets the value from the images state keys dynamically
-  const text = `${index}.${0}`
-    .split(".")
-    .reduce((obj, key) => (obj as never)?.[key], images) as unknown as string;
+  const text = images.length > 0 ? images[index].word : "";
+  const currentImage = images.length > 0 ? images[index].translation : "";
 
-  // gets the value from the words to highlight state keys dynamically
   const highlights = data[path as keyof typeof data].wordsToHighlight;
 
   const handleNext = () => {
@@ -40,8 +38,8 @@ export const useImages = () => {
 
   return {
     images,
-    index,
     text,
+    currentImage,
     highlights,
     handleNext,
     handleReset,

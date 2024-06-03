@@ -12,8 +12,8 @@ import ButtonsSection from "./components/ButtonsSection";
 function Interface({ showText, handleShowText }: InterfaceProps) {
   const {
     images,
-    index,
     text,
+    currentImage,
     highlights,
     handleNext,
     handleReset,
@@ -31,7 +31,7 @@ function Interface({ showText, handleShowText }: InterfaceProps) {
             handleShowText={handleShowText}
             showText={showText}
           />
-          <ImageSection images={images} index={index} text={text} />
+          <ImageSection images={images} currentImage={currentImage} />
         </>
       ) : (
         <p className="m-5 text-center font-bold text-text-base">Congrats!</p>
