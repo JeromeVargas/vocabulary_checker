@@ -1,8 +1,9 @@
-import { type image } from "../../../types";
+import Image from "./Image";
+import { type image } from "../../../../types";
 
 type ImageSectionProps = {
   images: image[];
-  currentImage?: string;
+  currentImage: string;
 };
 
 const ImageSection = ({ images, currentImage }: ImageSectionProps) => {
@@ -10,19 +11,15 @@ const ImageSection = ({ images, currentImage }: ImageSectionProps) => {
     <section className="grid border-4 border-accent">
       {images.map((image) => {
         const imageUrl: string = new URL(
-          `../../../images/${image.translation}.jpg`,
+          `../../../../images/${image.translation}.jpg`,
           import.meta.url,
         ).href;
         return (
-          <img
+          <Image
             key={image.translation}
-            className={
-              image.translation === currentImage
-                ? "col-start-1 row-start-1 h-[240px] w-[240px]"
-                : "invisible col-start-1 row-start-1 h-[240px] w-[240px]"
-            }
-            src={imageUrl}
-            alt={image.translation}
+            imageUrl={imageUrl}
+            imageTranslation={image.translation}
+            currentImage={currentImage}
           />
         );
       })}
