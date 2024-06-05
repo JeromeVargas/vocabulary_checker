@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
 import { useImages } from "../../hooks/useImages";
+import { Rings } from "react-loader-spinner";
 
 import TextSection from "./components/TextSection";
 import ButtonsSection from "./components/ButtonsSection";
@@ -37,8 +38,8 @@ function Interface({ showText, handleShowText }: InterfaceProps) {
           />
           <Suspense
             fallback={
-              <section className="flex h-[240px] w-[240px] items-center justify-center border-4 border-accent text-xl text-text-base">
-                <h1>...Loading</h1>
+              <section className="flex h-[240px] w-[240px] items-center justify-center border-4 border-accent">
+                <Rings color="#00BFFF" height="200" width="200" />
               </section>
             }
           >
