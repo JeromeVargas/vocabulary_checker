@@ -2,17 +2,19 @@ import { Link } from "react-router-dom";
 import { type image } from "../../../types";
 
 type ButtonsSectionProps = {
+  images: image[];
+  loaded: boolean;
   handleNext: () => void;
   handleReset: () => void;
   handleSpeech: () => void;
-  images: image[];
 };
 
 const ButtonsSection = ({
+  images,
+  loaded,
   handleNext,
   handleReset,
   handleSpeech,
-  images,
 }: ButtonsSectionProps) => {
   return (
     <>
@@ -45,9 +47,14 @@ const ButtonsSection = ({
             </svg>
           </button>
           <button
-            type="button"
-            className="rounded bg-neutral-main px-10 py-4 text-center font-bold text-neutral-contrast hover:bg-neutral-shade"
             onClick={handleNext}
+            className={
+              !loaded
+                ? "cursor-not-allowed rounded bg-neutral-main px-10 py-4 text-center font-bold text-neutral-contrast opacity-50 hover:bg-neutral-shade"
+                : "rounded bg-neutral-main px-10 py-4 text-center font-bold text-neutral-contrast hover:bg-neutral-shade"
+            }
+            type="button"
+            disabled={!loaded}
           >
             Next
           </button>

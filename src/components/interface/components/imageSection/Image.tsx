@@ -1,17 +1,24 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import { Rings } from "react-loader-spinner";
 
 type ImageProps = {
   imageUrl: string;
   imageTranslation: string;
   currentImage: string;
+  loaded: boolean;
+  handleSetLoaded: () => void;
 };
 
-const Image = ({ imageUrl, imageTranslation, currentImage }: ImageProps) => {
+const Image = ({
+  imageUrl,
+  imageTranslation,
+  currentImage,
+  loaded,
+  handleSetLoaded,
+}: ImageProps) => {
   const imgEl = useRef<HTMLImageElement>(null);
-  const [loaded, setLoaded] = useState(false);
 
-  const onImageLoaded = () => setLoaded(true);
+  const onImageLoaded = () => handleSetLoaded();
 
   useEffect(() => {
     const imgElCurrent = imgEl.current;
@@ -20,6 +27,7 @@ const Image = ({ imageUrl, imageTranslation, currentImage }: ImageProps) => {
       imgElCurrent.addEventListener("load", onImageLoaded);
       return () => imgElCurrent.removeEventListener("load", onImageLoaded);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [imgEl]);
 
   return (

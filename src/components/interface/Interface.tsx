@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useState } from "react";
 import { useImages } from "../../hooks/useImages";
 import { Rings } from "react-loader-spinner";
 
@@ -15,6 +15,7 @@ type InterfaceProps = {
 };
 
 function Interface({ showText, handleShowText }: InterfaceProps) {
+  const [loaded, setLoaded] = useState(false);
   const {
     images,
     text,
@@ -24,6 +25,8 @@ function Interface({ showText, handleShowText }: InterfaceProps) {
     handleReset,
     handleSpeech,
   } = useImages();
+
+  const handleSetLoaded = () => setLoaded(true);
 
   return (
     <main className="flex h-screen flex-col items-center justify-center gap-4 bg-background text-5xl">
@@ -43,17 +46,23 @@ function Interface({ showText, handleShowText }: InterfaceProps) {
               </section>
             }
           >
-            <ImageSection images={images} currentImage={currentImage} />
+            <ImageSection
+              images={images}
+              currentImage={currentImage}
+              handleSetLoaded={handleSetLoaded}
+              loaded={loaded}
+            />
           </Suspense>
         </>
       ) : (
         <p className="m-5 text-center font-bold text-text-base">Congrats!</p>
       )}
       <ButtonsSection
+        images={images}
+        loaded={loaded}
         handleNext={handleNext}
         handleReset={handleReset}
         handleSpeech={handleSpeech}
-        images={images}
       />
       <footer className="h-40 w-full"></footer>
     </main>

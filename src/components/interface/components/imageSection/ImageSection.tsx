@@ -4,9 +4,16 @@ import { type image } from "../../../../types";
 type ImageSectionProps = {
   images: image[];
   currentImage: string;
+  loaded: boolean;
+  handleSetLoaded: () => void;
 };
 
-const ImageSection = ({ images, currentImage }: ImageSectionProps) => {
+const ImageSection = ({
+  images,
+  currentImage,
+  loaded,
+  handleSetLoaded,
+}: ImageSectionProps) => {
   return (
     <section className="grid border-4 border-accent">
       {images.map((image) => {
@@ -20,6 +27,8 @@ const ImageSection = ({ images, currentImage }: ImageSectionProps) => {
             imageUrl={imageUrl}
             imageTranslation={image.translation}
             currentImage={currentImage}
+            loaded={loaded}
+            handleSetLoaded={handleSetLoaded}
           />
         );
       })}
