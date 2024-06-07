@@ -24,7 +24,7 @@ const TextSection = ({
               {text.split(" ").map((item, index) =>
                 highlights.includes(index) ? (
                   <span key={index} className="text-green-400">
-                    {item}
+                    {item}{" "}
                   </span>
                 ) : (
                   <span key={index} className="text-text-base">
