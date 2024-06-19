@@ -18,16 +18,13 @@ const Image = ({
 }: ImageProps) => {
   const imgEl = useRef<HTMLImageElement>(null);
 
-  const onImageLoaded = () => handleSetLoaded();
-
   useEffect(() => {
     const imgElCurrent = imgEl.current;
 
     if (imgElCurrent) {
-      imgElCurrent.addEventListener("load", onImageLoaded);
-      return () => imgElCurrent.removeEventListener("load", onImageLoaded);
+      imgElCurrent.addEventListener("load", handleSetLoaded);
+      return () => imgElCurrent.removeEventListener("load", handleSetLoaded);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [imgEl]);
 
   return (
