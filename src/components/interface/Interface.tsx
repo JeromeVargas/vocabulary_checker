@@ -21,6 +21,7 @@ function Interface({ showText, handleShowText }: InterfaceProps) {
     text,
     currentImage,
     highlights,
+    speechReady,
     handleNext,
     handleReset,
     handleSpeech,
@@ -57,7 +58,7 @@ function Interface({ showText, handleShowText }: InterfaceProps) {
         )}
         <ButtonsSection
           images={images}
-          loaded={loaded}
+          speechReady={speechReady}
           handleNext={handleNext}
           handleReset={handleReset}
           handleSpeech={handleSpeech}

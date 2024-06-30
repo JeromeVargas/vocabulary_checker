@@ -3,7 +3,7 @@ import { type image } from "../../../types";
 
 type ButtonsSectionProps = {
   images: image[];
-  loaded: boolean;
+  speechReady: boolean;
   handleNext: () => void;
   handleReset: () => void;
   handleSpeech: () => void;
@@ -11,7 +11,7 @@ type ButtonsSectionProps = {
 
 const ButtonsSection = ({
   images,
-  loaded,
+  speechReady,
   handleNext,
   handleReset,
   handleSpeech,
@@ -20,11 +20,15 @@ const ButtonsSection = ({
     <>
       {images.length > 0 ? (
         <>
-          <button type="button" onClick={handleSpeech}>
+          <button
+            className="rounded-full border-2 border-orange-300 bg-blue-300 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-100 hover:border-red-500"
+            type="button"
+            onClick={handleSpeech}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="5rem"
-              height="5rem"
+              width="4rem"
+              height="4rem"
               viewBox="0 0 48 48"
             >
               <path
@@ -49,14 +53,14 @@ const ButtonsSection = ({
           <button
             onClick={handleNext}
             className={
-              !loaded
-                ? "cursor-not-allowed rounded bg-neutral-main px-10 py-4 text-center font-bold text-neutral-contrast opacity-50 hover:bg-neutral-shade"
-                : "rounded bg-neutral-main px-10 py-4 text-center font-bold text-neutral-contrast hover:bg-neutral-shade"
+              !speechReady
+                ? "w-60 cursor-none rounded-2xl bg-neutral-shade px-10 py-4 text-center font-bold text-text-base "
+                : "w-60 rounded-2xl bg-gray-600 px-10 py-4 text-center font-bold text-text-base opacity-80 hover:border-2 hover:border-accent"
             }
             type="button"
-            disabled={!loaded}
+            disabled={!speechReady}
           >
-            Next
+            {!speechReady ? "Listen" : "Next"}
           </button>
         </>
       ) : (

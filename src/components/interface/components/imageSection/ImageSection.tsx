@@ -14,7 +14,11 @@ const ImageSection = ({
 }: ImageSectionProps) => {
   return (
     <>
-      <section className={"grid border-4 border-accent bg-background"}>
+      <section
+        className={
+          "grid rounded-3xl border-8 border-orange-300 bg-background p-4"
+        }
+      >
         {images.map((image) => {
           const imageUrl: string = new URL(
             `../../../../images/${image.translation}.jpg`,
