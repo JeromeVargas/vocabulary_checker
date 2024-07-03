@@ -16,9 +16,12 @@ const TextSection = ({
   handleShowText,
 }: TextSectionProps) => {
   return (
-    <section className="flex min-h-[30%] w-full flex-col items-center justify-center">
+    <section className="flex min-h-20 w-full flex-col items-center justify-center">
       {images.length > 0 ? (
-        <h1 onClick={handleShowText} className="p-10 text-center font-black">
+        <h1
+          onClick={handleShowText}
+          className="select-none text-center font-medium"
+        >
           {showText ? (
             <div>
               {text.split(" ").map((item, index) =>
@@ -34,7 +37,7 @@ const TextSection = ({
               )}
             </div>
           ) : (
-            <div className="text-text-base">
+            <div className="font-medium text-text-base">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

@@ -27,8 +27,8 @@ const ButtonsSection = ({
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="4rem"
-              height="4rem"
+              width="5.5rem"
+              height="5.5rem"
               viewBox="0 0 48 48"
             >
               <path
@@ -54,8 +54,8 @@ const ButtonsSection = ({
             onClick={handleNext}
             className={
               !speechReady
-                ? "w-60 cursor-none rounded-2xl bg-neutral-shade px-10 py-4 text-center font-bold text-text-base "
-                : "w-60 rounded-2xl bg-gray-600 px-10 py-4 text-center font-bold text-text-base opacity-80 hover:border-2 hover:border-accent"
+                ? "w-60 cursor-none select-none rounded-2xl border-4 bg-blue-300 px-10 py-4 text-center font-bold text-text-base"
+                : "w-60 select-none rounded-2xl border-4 border-orange-300 bg-green-300 px-10 py-4 text-center font-bold text-text-base hover:-translate-y-1 hover:translate-x-1"
             }
             type="button"
             disabled={!speechReady}
@@ -66,13 +66,13 @@ const ButtonsSection = ({
       ) : (
         <>
           <button
-            className="rounded bg-neutral-main px-10 py-4 text-center font-bold text-neutral-contrast hover:bg-neutral-shade max-[300px]:w-10/12"
+            className="w-10/12 rounded-xl border-4 bg-green-300 px-10 py-4 text-center font-normal text-text-base opacity-90 hover:-translate-y-1 hover:translate-x-1 hover:bg-accent md:w-auto"
             onClick={handleReset}
             type="button"
           >
             Try Again
           </button>
-          <button className="mt-20 rounded bg-neutral-main px-4 py-4 text-center font-bold text-neutral-contrast hover:bg-neutral-shade max-[300px]:w-10/12">
+          <button className="w-10/12 rounded-xl border-4 bg-green-300 px-10 py-4 text-center font-normal text-text-base opacity-90 hover:-translate-y-1 hover:translate-x-1 hover:bg-accent md:w-auto">
             <Link to="/">New Exercise</Link>
           </button>
         </>

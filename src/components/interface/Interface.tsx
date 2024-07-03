@@ -37,7 +37,7 @@ function Interface({ showText, handleShowText }: InterfaceProps) {
         </section>
       }
     >
-      <main className="flex h-screen flex-col items-center justify-center gap-4 bg-background text-5xl">
+      <main className="flex h-screen flex-col items-center justify-evenly bg-background text-5xl">
         {images.length > 0 ? (
           <>
             <TextSection
@@ -54,7 +54,9 @@ function Interface({ showText, handleShowText }: InterfaceProps) {
             />
           </>
         ) : (
-          <p className="m-5 text-center font-bold text-text-base">Congrats!</p>
+          <p className="text-center text-6xl font-bold text-text-base md:text-9xl">
+            Congrats!
+          </p>
         )}
         <ButtonsSection
           images={images}
@@ -63,7 +65,6 @@ function Interface({ showText, handleShowText }: InterfaceProps) {
           handleReset={handleReset}
           handleSpeech={handleSpeech}
         />
-        <footer className="h-40 w-full"></footer>
       </main>
       {!loaded && (
         <div className="fixed inset-0 flex h-screen items-center justify-center border-4 border-accent bg-text-base">
