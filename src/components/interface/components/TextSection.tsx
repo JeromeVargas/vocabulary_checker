@@ -26,18 +26,18 @@ const TextSection = ({
             <div>
               {text.split(" ").map((item, index) =>
                 highlights.includes(index) ? (
-                  <span key={index} className="text-green-400">
+                  <span key={index} className="text-accent-shade">
                     {item}{" "}
                   </span>
                 ) : (
-                  <span key={index} className="text-text-base">
+                  <span key={index} className="text-font-main">
                     {item}{" "}
                   </span>
                 ),
               )}
             </div>
           ) : (
-            <div className="font-medium text-text-base">
+            <div className="text-font-main font-medium">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

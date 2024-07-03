@@ -21,7 +21,7 @@ const ButtonsSection = ({
       {images.length > 0 ? (
         <>
           <button
-            className="rounded-full border-2 border-orange-300 bg-blue-300 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-100 hover:border-red-500"
+            className="border-accent-shade bg-base-shade hover:border-accent-contrast rounded-full border-2 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-100"
             type="button"
             onClick={handleSpeech}
           >
@@ -54,8 +54,8 @@ const ButtonsSection = ({
             onClick={handleNext}
             className={
               !speechReady
-                ? "w-60 cursor-none select-none rounded-2xl border-4 bg-blue-300 px-10 py-4 text-center font-bold text-text-base"
-                : "w-60 select-none rounded-2xl border-4 border-orange-300 bg-green-300 px-10 py-4 text-center font-bold text-text-base hover:-translate-y-1 hover:translate-x-1"
+                ? "bg-base-main text-font-main w-60 cursor-none select-none rounded-2xl border-4 px-10 py-4 text-center font-bold"
+                : "border-accent-shade text-font-main w-60 select-none rounded-2xl border-4 bg-neutral-shade px-10 py-4 text-center font-bold hover:-translate-y-1 hover:translate-x-1"
             }
             type="button"
             disabled={!speechReady}
@@ -66,13 +66,13 @@ const ButtonsSection = ({
       ) : (
         <>
           <button
-            className="w-10/12 rounded-xl border-4 bg-green-300 px-10 py-4 text-center font-normal text-text-base opacity-90 hover:-translate-y-1 hover:translate-x-1 hover:bg-accent md:w-auto"
+            className="hover:bg-accent-main text-font-main w-10/12 rounded-xl border-4 bg-neutral-shade px-10 py-4 text-center font-normal opacity-90 hover:-translate-y-1 hover:translate-x-1 md:w-auto"
             onClick={handleReset}
             type="button"
           >
             Try Again
           </button>
-          <button className="w-10/12 rounded-xl border-4 bg-green-300 px-10 py-4 text-center font-normal text-text-base opacity-90 hover:-translate-y-1 hover:translate-x-1 hover:bg-accent md:w-auto">
+          <button className="hover:bg-accent-main text-font-main w-10/12 rounded-xl border-4 bg-neutral-shade px-10 py-4 text-center font-normal opacity-90 hover:-translate-y-1 hover:translate-x-1 md:w-auto">
             <Link to="/">New Exercise</Link>
           </button>
         </>

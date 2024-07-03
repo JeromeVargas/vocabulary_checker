@@ -32,12 +32,12 @@ function Interface({ showText, handleShowText }: InterfaceProps) {
   return (
     <Suspense
       fallback={
-        <section className="flex h-screen items-center justify-center border-4 border-accent">
-          <Rings color="#00BFFF" height="200" width="200" />
+        <section className="bg-neutral-light flex h-screen items-center justify-center border-4 border-accent-main">
+          <Rings color="#4ADE80" height="500" width="500" />
         </section>
       }
     >
-      <main className="flex h-screen flex-col items-center justify-evenly bg-background text-5xl">
+      <main className="flex h-screen flex-col items-center justify-evenly bg-base-main text-5xl">
         {images.length > 0 ? (
           <>
             <TextSection
@@ -54,7 +54,7 @@ function Interface({ showText, handleShowText }: InterfaceProps) {
             />
           </>
         ) : (
-          <p className="text-center text-6xl font-bold text-text-base md:text-9xl">
+          <p className="text-center text-6xl font-bold text-font-main md:text-9xl">
             Congrats!
           </p>
         )}
@@ -67,8 +67,8 @@ function Interface({ showText, handleShowText }: InterfaceProps) {
         />
       </main>
       {!loaded && (
-        <div className="fixed inset-0 flex h-screen items-center justify-center border-4 border-accent bg-text-base">
-          <Rings color="#00BFFF" height="200" width="200" />
+        <div className="bg-neutral-light fixed inset-0 flex h-screen items-center justify-center border-4 border-accent-main">
+          <Rings color="#4ADE80" height="500" width="500" />
         </div>
       )}
     </Suspense>

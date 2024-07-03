@@ -16,7 +16,7 @@ const ImageSection = ({
     <>
       <section
         className={
-          "grid rounded-3xl border-8 border-orange-300 bg-background p-4"
+          "border-accent-shade bg-base-main grid rounded-3xl border-8 p-4"
         }
       >
         {images.map((image) => {

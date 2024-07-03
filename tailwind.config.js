@@ -5,17 +5,23 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "#60A5FA",
-        text: {
-          base: "#FFFFFF",
-          highlight: "#4ADE80",
+        base: {
+          main: "#60A5FA",
+          shade: "#93C5FD",
+        },
+        font: {
+          main: "#FFFFFF",
         },
         neutral: {
-          main: "#D1D5DB",
-          shade: "#99A3AF",
-          contrast: "#1F2937",
+          main: "#4ADE80",
+          shade: "#86EFAC",
+          light: "#BBF7D0",
         },
-        accent: "#FB923C",
+        accent: {
+          main: "#FB923C",
+          shade: "#FDBA74",
+          contrast: "#F87171",
+        },
       },
     },
   },
