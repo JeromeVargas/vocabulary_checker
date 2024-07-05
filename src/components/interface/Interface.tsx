@@ -1,6 +1,6 @@
 import { lazy, Suspense, useState } from "react";
 import { useImages } from "../../hooks/useImages";
-import { Rings } from "react-loader-spinner";
+import { Oval } from "react-loader-spinner";
 
 import TextSection from "./components/TextSection";
 import ButtonsSection from "./components/ButtonsSection";
@@ -33,7 +33,7 @@ function Interface({ showText, handleShowText }: InterfaceProps) {
     <Suspense
       fallback={
         <section className="bg-neutral-light flex h-screen items-center justify-center border-4 border-accent-main">
-          <Rings color="#4ADE80" height="500" width="500" />
+          <Oval height="200" width="200" />
         </section>
       }
     >
@@ -68,7 +68,7 @@ function Interface({ showText, handleShowText }: InterfaceProps) {
       </main>
       {!loaded && (
         <div className="bg-neutral-light fixed inset-0 flex h-screen items-center justify-center border-4 border-accent-main">
-          <Rings color="#4ADE80" height="500" width="500" />
+          <Oval height="200" width="200" />
         </div>
       )}
     </Suspense>
