@@ -33,8 +33,8 @@ const Image = ({
       <img
         className={
           imageTranslation === currentImage
-            ? "col-start-1 row-start-1 h-[240px] w-[240px]"
-            : "invisible col-start-1 row-start-1 h-[240px] w-[240px]"
+            ? "col-start-1 row-start-1 h-full w-full"
+            : "invisible col-start-1 row-start-1 h-full w-full"
         }
         ref={imgEl}
         src={imageUrl}
