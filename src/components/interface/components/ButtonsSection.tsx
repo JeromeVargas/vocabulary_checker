@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { cn } from "../../../lib/utils/classMerge";
 import { type image } from "../../../types";
 
 type ButtonsSectionProps = {
@@ -21,7 +22,7 @@ const ButtonsSection = ({
       {images.length > 0 ? (
         <>
           <button
-            className="border-accent-shade bg-base-shade hover:border-accent-contrast rounded-full border-2 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-100"
+            className="rounded-full border-2 border-accent-shade bg-base-shade transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-100 hover:border-accent-contrast"
             type="button"
             onClick={handleSpeech}
           >
@@ -52,11 +53,14 @@ const ButtonsSection = ({
           </button>
           <button
             onClick={handleNext}
-            className={
-              !speechReady
-                ? "bg-base-main text-font-main w-60 cursor-none select-none rounded-2xl border-4 px-10 py-4 text-center font-bold"
-                : "border-accent-shade text-font-main w-60 select-none rounded-2xl border-4 bg-neutral-shade px-10 py-4 text-center font-bold hover:-translate-y-1 hover:translate-x-1"
-            }
+            className={cn(
+              "w-60 select-none rounded-2xl border-4 px-10 py-4 text-center font-bold text-font-main",
+              {
+                "cursor-none bg-base-main": !speechReady,
+                "border-accent-shade bg-neutral-shade hover:-translate-y-1 hover:translate-x-1":
+                  speechReady,
+              },
+            )}
             type="button"
             disabled={!speechReady}
           >
@@ -66,13 +70,13 @@ const ButtonsSection = ({
       ) : (
         <>
           <button
-            className="hover:bg-accent-main text-font-main w-10/12 rounded-xl border-4 bg-neutral-shade px-10 py-4 text-center font-normal opacity-90 hover:-translate-y-1 hover:translate-x-1 md:w-auto"
+            className="w-10/12 rounded-xl border-4 bg-neutral-shade px-10 py-4 text-center font-normal text-font-main opacity-90 hover:-translate-y-1 hover:translate-x-1 hover:bg-accent-main md:w-auto"
             onClick={handleReset}
             type="button"
           >
             Try Again
           </button>
-          <button className="hover:bg-accent-main text-font-main w-10/12 rounded-xl border-4 bg-neutral-shade px-10 py-4 text-center font-normal opacity-90 hover:-translate-y-1 hover:translate-x-1 md:w-auto">
+          <button className="w-10/12 rounded-xl border-4 bg-neutral-shade px-10 py-4 text-center font-normal text-font-main opacity-90 hover:-translate-y-1 hover:translate-x-1 hover:bg-accent-main md:w-auto">
             <Link to="/">New Exercise</Link>
           </button>
         </>

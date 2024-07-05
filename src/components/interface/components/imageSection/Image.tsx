@@ -1,4 +1,5 @@
 import { useRef, useEffect } from "react";
+import { cn } from "../../../../lib/utils/classMerge";
 
 type ImageProps = {
   imageUrl: string;
@@ -31,11 +32,9 @@ const Image = ({
   return (
     <>
       <img
-        className={
-          imageTranslation === currentImage
-            ? "col-start-1 row-start-1 h-full w-full"
-            : "invisible col-start-1 row-start-1 h-full w-full"
-        }
+        className={cn("col-start-1 row-start-1 h-full w-full", {
+          "invisible ": imageTranslation !== currentImage,
+        })}
         ref={imgEl}
         src={imageUrl}
         alt={imageTranslation}
