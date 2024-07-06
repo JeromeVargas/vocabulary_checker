@@ -5,26 +5,23 @@ export default {
   theme: {
     extend: {
       colors: {
-        // blue
         base: {
-          main: "#60A5FA",
+          main: "#60A5FA", // blue
           shade: "#93C5FD",
         },
-        // white
         font: {
-          main: "#FFFFFF",
+          main: "#FFFFFF", // white
         },
-        // green
         neutral: {
-          main: "#4ADE80",
+          main: "#4ADE80", // green
           shade: "#86EFAC",
           light: "#BBF7D0",
         },
-        // orange / red
+
         accent: {
-          main: "#FB923C",
+          main: "#FB923C", // orange
           shade: "#FDBA74",
-          contrast: "#F87171",
+          contrast: "#F87171", // red
         },
       },
     },
