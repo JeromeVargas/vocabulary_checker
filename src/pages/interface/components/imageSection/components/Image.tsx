@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-import { cn } from "../../../../lib/utils/classMerge";
+import { cn } from "../../../../../lib/utils/classMerge";
 
 type ImageProps = {
   imageUrl: string;

@@ -3,9 +3,9 @@ import { Route, Routes } from "react-router-dom";
 
 import data from "./data/attributesSchema.json";
 
-import TopicsIndex from "./components/TopicsIndex";
-import Interface from "./components/interface/Interface";
-import Error404Page from "./components/Error404Page";
+import TopicsIndex from "./pages/TopicsIndex";
+import Interface from "./pages/interface/Interface";
+import Error404Page from "./pages/Error404Page";
 
 function App() {
   const [showText, setShowText] = useState(true);

@@ -1,4 +1,4 @@
-import Image from "./Image";
+import Image from "./components/Image";
 import { type image } from "../../../../types";
 
 type ImageSectionProps = {
@@ -16,7 +16,7 @@ const ImageSection = ({
     <>
       <section
         className={
-          "border-accent-shade bg-base-main grid rounded-3xl border-8 p-4"
+          "grid rounded-3xl border-8 border-accent-shade bg-base-main p-4"
         }
       >
         {images.map((image) => {

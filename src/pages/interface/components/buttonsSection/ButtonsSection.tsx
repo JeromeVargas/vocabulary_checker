@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { type image } from "../../../types";
-import ButtonHandleSpeech from "../../ButtonHandleSpeech";
-import ButtonHandleNext from "../../ButtonHandleNext";
-import ButtonHandleReset from "./ButtonHandleReset";
+import { type image } from "../../../../types";
+import ButtonHandleSpeech from "./components/ButtonHandleSpeech";
+import ButtonHandleNext from "./components/ButtonHandleNext";
+import ButtonHandleReset from "./components/ButtonHandleReset";
 
 type ButtonsSectionProps = {
   images: image[];

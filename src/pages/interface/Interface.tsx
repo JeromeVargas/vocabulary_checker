@@ -1,8 +1,8 @@
 import { lazy, Suspense, useState } from "react";
 import { useImages } from "../../hooks/useImages";
 
-import TextSection from "./components/TextSection";
-import ButtonsSection from "./components/ButtonsSection";
+import TextSection from "./components/TextSection/TextSection";
+import ButtonsSection from "./components/buttonsSection/ButtonsSection";
 import Loader from "../../components/Loader";
 
 const ImageSection = lazy(
