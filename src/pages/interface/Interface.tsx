@@ -4,6 +4,8 @@ import { useImages } from "../../hooks/useImages";
 import TextSection from "./components/TextSection/TextSection";
 import ButtonsSection from "./components/buttonsSection/ButtonsSection";
 import Loader from "../../components/Loader";
+import ErrorBoundary from "../../components/ErrorBoundary";
+import ErrorPage from "../Error404Page";
 
 const ImageSection = lazy(
   () => import("./components/imageSection/ImageSection"),
@@ -30,38 +32,40 @@ function Interface({ showText, handleShowText }: InterfaceProps) {
   const handleSetLoaded = () => setLoaded(true);
 
   return (
-    <Suspense fallback={<Loader />}>
-      <main className="flex h-screen flex-col items-center justify-evenly bg-base-main text-5xl">
-        {images.length > 0 ? (
-          <>
-            <TextSection
-              images={images}
-              text={text}
-              highlights={highlights}
-              handleShowText={handleShowText}
-              showText={showText}
-            />
-            <ImageSection
-              images={images}
-              currentImage={currentImage}
-              handleSetLoaded={handleSetLoaded}
-            />
-          </>
-        ) : (
-          <p className="text-center text-6xl font-bold text-font-main md:text-9xl">
-            Congrats!
-          </p>
-        )}
-        <ButtonsSection
-          images={images}
-          speechReady={speechReady}
-          handleNext={handleNext}
-          handleReset={handleReset}
-          handleSpeech={handleSpeech}
-        />
-      </main>
-      {!loaded && <Loader />}
-    </Suspense>
+    <ErrorBoundary fallback={<ErrorPage />}>
+      <Suspense fallback={<Loader />}>
+        <main className="flex h-screen flex-col items-center justify-evenly bg-base-main text-5xl">
+          {images.length > 0 ? (
+            <>
+              <TextSection
+                images={images}
+                text={text}
+                highlights={highlights}
+                handleShowText={handleShowText}
+                showText={showText}
+              />
+              <ImageSection
+                images={images}
+                currentImage={currentImage}
+                handleSetLoaded={handleSetLoaded}
+              />
+            </>
+          ) : (
+            <p className="text-center text-6xl font-bold text-font-main md:text-9xl">
+              Congrats!
+            </p>
+          )}
+          <ButtonsSection
+            images={images}
+            speechReady={speechReady}
+            handleNext={handleNext}
+            handleReset={handleReset}
+            handleSpeech={handleSpeech}
+          />
+        </main>
+        {!loaded && <Loader />}
+      </Suspense>
+    </ErrorBoundary>
   );
 }
 
