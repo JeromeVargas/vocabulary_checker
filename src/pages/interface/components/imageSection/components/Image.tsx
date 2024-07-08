@@ -51,7 +51,7 @@ const Image = ({
     <>
       {error && errorThrower()}
       <img
-        className={cn("col-start-1 row-start-1 h-full w-full", {
+        className={cn("col-start-1 row-start-1 h-full w-full text-sm", {
           "invisible ": imageTranslation !== currentImage,
         })}
         ref={imgEl}
