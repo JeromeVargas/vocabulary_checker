@@ -1,5 +1,5 @@
 import { type image } from "../../../../types";
-import TextPlaceHolder from "./components/TextPlaceHolder";
+import Text from "./components/Text";
 
 type TextSectionProps = {
   images: image[];
@@ -19,28 +19,12 @@ const TextSection = ({
   return (
     <section className="flex min-h-20 w-full flex-col items-center justify-center">
       {images.length > 0 ? (
-        <h1
-          onClick={handleShowText}
-          className="select-none text-center font-medium"
-        >
-          {showText ? (
-            <div>
-              {text.split(" ").map((item, index) =>
-                highlights.includes(index) ? (
-                  <span key={index} className="text-accent-shade">
-                    {item}{" "}
-                  </span>
-                ) : (
-                  <span key={index} className="text-font-main">
-                    {item}{" "}
-                  </span>
-                ),
-              )}
-            </div>
-          ) : (
-            <TextPlaceHolder />
-          )}
-        </h1>
+        <Text
+          text={text}
+          highlights={highlights}
+          showText={showText}
+          handleShowText={handleShowText}
+        />
       ) : null}
     </section>
   );
