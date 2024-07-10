@@ -6,22 +6,22 @@ export default {
     extend: {
       colors: {
         base: {
-          main: "#60A5FA", // blue
-          shade: "#93C5FD",
+          main: "rgb(var(--color-base-main))",
+          shade: "rgb(var(--color-base-shade))",
         },
         font: {
-          main: "#FFFFFF", // white
+          main: "rgb(var(--color-font-main))", // white
         },
         neutral: {
-          main: "#4ADE80", // green
-          shade: "#86EFAC",
-          light: "#BBF7D0",
+          main: "rgb(var(--color-neutral-main))", // green
+          shade: "rgb(var(--color-neutral-shade))",
+          light: "rgb(var(--color-neutral-light))",
         },
 
         accent: {
-          main: "#FB923C", // orange
-          shade: "#FDBA74",
-          contrast: "#F87171", // red
+          main: "rgb(var(--color-accent-main))", // orange
+          shade: "rgb(var(--color-accent-shade))",
+          contrast: "rgb(var(--color-accent-contrast))", // red
         },
       },
     },
