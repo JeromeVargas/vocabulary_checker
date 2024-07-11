@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 
-import TopicsIndex from "./pages/TopicsIndex";
+import TopicsIndex from "./pages/topicsIndex/TopicsIndex";
 import Interface from "./pages/interface/Interface";
 import Error404Page from "./pages/Error404Page";
 
