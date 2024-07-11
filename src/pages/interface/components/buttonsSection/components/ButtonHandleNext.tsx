@@ -1,4 +1,4 @@
-import { cn } from "../../../../../lib/utils/classMerge";
+import { cn } from "../../../../../lib/classMerge";
 
 type ButtonHandleNextProps = {
   speechReady: boolean;
