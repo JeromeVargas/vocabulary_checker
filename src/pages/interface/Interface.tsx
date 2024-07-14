@@ -1,5 +1,6 @@
-import { lazy, Suspense, useState } from "react";
+import { lazy, Suspense } from "react";
 import { useImages } from "../../hooks/useImages";
+import useLoad from "../../hooks/useLoad";
 
 import TextSection from "./components/TextSection/TextSection";
 import ButtonsSection from "./components/buttonsSection/ButtonsSection";
@@ -17,7 +18,7 @@ type InterfaceProps = {
 };
 
 function Interface({ showText, handleShowText }: InterfaceProps) {
-  const [loaded, setLoaded] = useState(false);
+  const { loaded, handleSetLoaded } = useLoad();
   const {
     images,
     text,
@@ -28,8 +29,6 @@ function Interface({ showText, handleShowText }: InterfaceProps) {
     handleReset,
     handleSpeech,
   } = useImages();
-
-  const handleSetLoaded = () => setLoaded(true);
 
   return (
     <ErrorBoundary fallback={<ErrorPage />}>
