@@ -3,17 +3,22 @@ import TextPlaceHolder from "./../components/TextPlaceHolder";
 type TextProps = {
   text: string;
   highlights: number[];
-  showText: boolean;
-  handleShowText: () => void;
+  isShowText: boolean;
+  handleIsShowText: () => void;
 };
 
-const Text = ({ text, highlights, showText, handleShowText }: TextProps) => {
+const Text = ({
+  text,
+  highlights,
+  isShowText,
+  handleIsShowText,
+}: TextProps) => {
   return (
     <h1
-      onClick={handleShowText}
+      onClick={handleIsShowText}
       className="select-none text-center font-medium"
     >
-      {showText ? (
+      {isShowText ? (
         <div>
           {text.split(" ").map((item, index) =>
             highlights.includes(index) ? (

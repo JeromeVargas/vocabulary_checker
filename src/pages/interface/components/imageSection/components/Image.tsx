@@ -5,16 +5,16 @@ type ImageProps = {
   imageUrl: string;
   imageTranslation: string;
   currentImage: string;
-  handleSetLoaded: () => void;
+  handleSetIsLoaded: () => void;
 };
 
 const Image = ({
   imageUrl,
   imageTranslation,
   currentImage,
-  handleSetLoaded,
+  handleSetIsLoaded,
 }: ImageProps) => {
-  const { error, imgEl, errorThrower } = useImage({ handleSetLoaded });
+  const { error, imgEl, errorThrower } = useImage({ handleSetIsLoaded });
   return (
     <>
       {error && errorThrower()}

@@ -8,7 +8,7 @@ import useDarkMode from "./hooks/useDarkMode";
 import useData from "./hooks/useData";
 
 function App() {
-  const { showText, pathsFromJson, handleShowText } = useData();
+  const { isShowText, pathsFromJson, handleIsShowText } = useData();
   const { theme, handleChangeTheme } = useDarkMode();
 
   return (
@@ -24,7 +24,10 @@ function App() {
           key={path}
           path={path}
           element={
-            <Interface showText={showText} handleShowText={handleShowText} />
+            <Interface
+              isShowText={isShowText}
+              handleIsShowText={handleIsShowText}
+            />
           }
         />
       ))}

@@ -13,18 +13,18 @@ const ImageSection = lazy(
 );
 
 type InterfaceProps = {
-  showText: boolean;
-  handleShowText: () => void;
+  isShowText: boolean;
+  handleIsShowText: () => void;
 };
 
-function Interface({ showText, handleShowText }: InterfaceProps) {
-  const { loaded, handleSetLoaded } = useLoad();
+function Interface({ isShowText, handleIsShowText }: InterfaceProps) {
+  const { isLoaded, handleSetIsLoaded } = useLoad();
   const {
     images,
     text,
     currentImage,
     highlights,
-    speechReady,
+    isSpeechReady,
     handleNext,
     handleReset,
     handleSpeech,
@@ -40,13 +40,13 @@ function Interface({ showText, handleShowText }: InterfaceProps) {
                 images={images}
                 text={text}
                 highlights={highlights}
-                handleShowText={handleShowText}
-                showText={showText}
+                handleIsShowText={handleIsShowText}
+                isShowText={isShowText}
               />
               <ImageSection
                 images={images}
                 currentImage={currentImage}
-                handleSetLoaded={handleSetLoaded}
+                handleSetIsLoaded={handleSetIsLoaded}
               />
             </>
           ) : (
@@ -56,13 +56,13 @@ function Interface({ showText, handleShowText }: InterfaceProps) {
           )}
           <ButtonsSection
             images={images}
-            speechReady={speechReady}
+            isSpeechReady={isSpeechReady}
             handleNext={handleNext}
             handleReset={handleReset}
             handleSpeech={handleSpeech}
           />
         </main>
-        {!loaded && <Loader />}
+        {!isLoaded && <Loader />}
       </Suspense>
     </ErrorBoundary>
   );

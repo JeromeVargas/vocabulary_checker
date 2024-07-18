@@ -5,7 +5,7 @@ import Button from "./components/Button";
 
 type ButtonsSectionProps = {
   images: image[];
-  speechReady: boolean;
+  isSpeechReady: boolean;
   handleNext: () => void;
   handleReset: () => void;
   handleSpeech: () => void;
@@ -13,7 +13,7 @@ type ButtonsSectionProps = {
 
 const ButtonsSection = ({
   images,
-  speechReady,
+  isSpeechReady,
   handleNext,
   handleReset,
   handleSpeech,
@@ -23,7 +23,11 @@ const ButtonsSection = ({
       {images.length > 0 ? (
         <>
           <ButtonHandleSpeech handleSpeech={handleSpeech} />
-          <Button kind="next" speechReady={speechReady} onClick={handleNext} />
+          <Button
+            kind="next"
+            isSpeechReady={isSpeechReady}
+            onClick={handleNext}
+          />
         </>
       ) : (
         <>

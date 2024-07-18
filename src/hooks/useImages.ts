@@ -12,7 +12,7 @@ export const useImages = () => {
   const [images, setImages] = useState(
     data[path as keyof typeof data].metadata,
   );
-  const [speechReady, setSpeechReady] = useState(false);
+  const [isSpeechReady, setIsSpeechReady] = useState(false);
 
   const index = useMemo(() => {
     return randomNumber(0, images.length - 1);
@@ -24,7 +24,7 @@ export const useImages = () => {
   const highlights = data[path as keyof typeof data].wordsToHighlight;
 
   const handleNext = () => {
-    setSpeechReady(false);
+    setIsSpeechReady(false);
     setImages((prevArray) =>
       prevArray.filter((image) => image !== images[index]),
     );
@@ -36,7 +36,7 @@ export const useImages = () => {
 
   const handleSpeech = () => {
     setTimeout(() => {
-      setSpeechReady(true);
+      setIsSpeechReady(true);
     }, 1000);
     speechUtterance(text);
   };
@@ -46,7 +46,7 @@ export const useImages = () => {
     text,
     currentImage,
     highlights,
-    speechReady,
+    isSpeechReady,
     handleNext,
     handleReset,
     handleSpeech,

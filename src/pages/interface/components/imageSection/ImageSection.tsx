@@ -4,13 +4,13 @@ import { type image } from "../../../../types";
 type ImageSectionProps = {
   images: image[];
   currentImage: string;
-  handleSetLoaded: () => void;
+  handleSetIsLoaded: () => void;
 };
 
 const ImageSection = ({
   images,
   currentImage,
-  handleSetLoaded,
+  handleSetIsLoaded,
 }: ImageSectionProps) => {
   return (
     <>
@@ -26,7 +26,7 @@ const ImageSection = ({
               imageUrl={imageUrl}
               imageTranslation={image.translation}
               currentImage={currentImage}
-              handleSetLoaded={handleSetLoaded}
+              handleSetIsLoaded={handleSetIsLoaded}
             />
           );
         })}

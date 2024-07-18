@@ -5,16 +5,16 @@ type TextSectionProps = {
   images: image[];
   text: string;
   highlights: number[];
-  showText: boolean;
-  handleShowText: () => void;
+  isShowText: boolean;
+  handleIsShowText: () => void;
 };
 
 const TextSection = ({
   images,
   text,
   highlights,
-  showText,
-  handleShowText,
+  isShowText,
+  handleIsShowText,
 }: TextSectionProps) => {
   return (
     <section className="flex min-h-20 w-full flex-col items-center justify-center">
@@ -22,8 +22,8 @@ const TextSection = ({
         <Text
           text={text}
           highlights={highlights}
-          showText={showText}
-          handleShowText={handleShowText}
+          isShowText={isShowText}
+          handleIsShowText={handleIsShowText}
         />
       ) : null}
     </section>

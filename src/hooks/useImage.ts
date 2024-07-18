@@ -1,10 +1,10 @@
 import { useRef, useEffect, useState } from "react";
 
 type useImageProps = {
-  handleSetLoaded: () => void;
+  handleSetIsLoaded: () => void;
 };
 
-const useImage = ({ handleSetLoaded }: useImageProps) => {
+const useImage = ({ handleSetIsLoaded }: useImageProps) => {
   const imgEl = useRef<HTMLImageElement>(null);
   const [error, setError] = useState(false);
 
@@ -27,16 +27,16 @@ const useImage = ({ handleSetLoaded }: useImageProps) => {
 
       imgElCurrent.addEventListener("load", () => {
         setTimeout(() => {
-          handleSetLoaded();
+          handleSetIsLoaded();
         }, 3000);
       });
 
       return () => {
-        imgElCurrent.removeEventListener("load", handleSetLoaded);
+        imgElCurrent.removeEventListener("load", handleSetIsLoaded);
         imgElCurrent.removeEventListener("error", handleSetError);
       };
     }
-  }, [imgEl, handleSetLoaded]);
+  }, [imgEl, handleSetIsLoaded]);
 
   return { error, imgEl, errorThrower };
 };

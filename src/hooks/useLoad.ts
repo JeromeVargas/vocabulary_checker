@@ -1,9 +1,9 @@
 import { useState } from "react";
 
 const useLoad = () => {
-  const [loaded, setLoaded] = useState(false);
-  const handleSetLoaded = () => setLoaded(true);
-  return { loaded, handleSetLoaded };
+  const [isLoaded, setIsLoaded] = useState(false);
+  const handleSetIsLoaded = () => setIsLoaded(true);
+  return { isLoaded, handleSetIsLoaded };
 };
 
 export default useLoad;
