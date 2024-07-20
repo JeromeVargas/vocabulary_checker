@@ -19,7 +19,6 @@ interface ButtonProps
   extends HTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof variants> {
   isSpeechReady?: boolean;
-  onClick?: () => void;
 }
 
 const Button = ({
