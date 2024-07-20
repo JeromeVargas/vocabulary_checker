@@ -35,7 +35,7 @@ const Button = ({
       className={cn(variants({ className, kind }), {
         "cursor-none bg-base-main": kind === "next" && isSpeechReady === false,
         "border-accent-shade bg-neutral-shade hover:-translate-y-1 hover:translate-x-1":
-          isSpeechReady === true,
+          kind === "next" && isSpeechReady === true,
       })}
       disabled={kind === "next" && !isSpeechReady}
       {...props}
