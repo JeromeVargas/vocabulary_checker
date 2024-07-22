@@ -6,7 +6,7 @@ import randomNumber from "../lib/utils/random";
 import speechUtterance from "../lib/utils/speech";
 import pathToCamelCase from "../lib/utils/path";
 
-export const useImages = () => {
+const useImages = () => {
   const { pathname } = useLocation();
   const path = pathToCamelCase(pathname);
   const [images, setImages] = useState(
@@ -52,3 +52,5 @@ export const useImages = () => {
     handleSpeech,
   };
 };
+
+export default useImages;

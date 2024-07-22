@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import { useImages } from "../../hooks/useImages";
+import useImages from "../../hooks/useImages";
 import useLoad from "../../hooks/useLoad";
 
 import TextSection from "./components/TextSection/TextSection";
