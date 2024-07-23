@@ -1,4 +1,6 @@
 import { lazy, Suspense } from "react";
+import { useLocation } from "react-router-dom";
+
 import useImages from "../../hooks/useImages";
 import useLoad from "../../hooks/useLoad";
 
@@ -18,6 +20,7 @@ type InterfaceProps = {
 };
 
 function Interface({ isShowText, handleIsShowText }: InterfaceProps) {
+  const { pathname } = useLocation();
   const { isLoaded, handleSetIsLoaded } = useLoad();
   const {
     images,
@@ -28,7 +31,7 @@ function Interface({ isShowText, handleIsShowText }: InterfaceProps) {
     handleNext,
     handleReset,
     handleSpeech,
-  } = useImages();
+  } = useImages({ pathname });
 
   return (
     <ErrorBoundary fallback={<ErrorPage />}>

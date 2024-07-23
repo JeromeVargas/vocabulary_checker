@@ -1,13 +1,15 @@
 import { useMemo, useState } from "react";
 
 import data from "../data/attributesSchema.json";
-import { useLocation } from "react-router-dom";
 import randomNumber from "../lib/utils/random";
 import speechUtterance from "../lib/utils/speech";
 import pathToCamelCase from "../lib/utils/path";
 
-const useImages = () => {
-  const { pathname } = useLocation();
+type useImagesProps = {
+  pathname: string;
+};
+
+const useImages = ({ pathname }: useImagesProps) => {
   const path = pathToCamelCase(pathname);
   const [images, setImages] = useState(
     data[path as keyof typeof data].metadata,
