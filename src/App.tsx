@@ -5,10 +5,10 @@ import Interface from "./pages/interface/Interface";
 import Error404Page from "./pages/Error404Page";
 
 import useDarkMode from "./hooks/useDarkMode";
-import useData from "./hooks/useData";
+import useShowText from "./hooks/useShowText";
 
 function App() {
-  const { isShowText, pathsFromJson, handleIsShowText } = useData();
+  const { isShowText, pathsFromJson, handleIsShowText } = useShowText();
   const { theme, handleChangeTheme } = useDarkMode();
 
   return (

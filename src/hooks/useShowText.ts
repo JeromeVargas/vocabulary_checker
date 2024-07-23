@@ -1,7 +1,7 @@
 import { useState } from "react";
 import data from "../data/attributesSchema.json";
 
-const useData = () => {
+const useShowText = () => {
   const [isShowText, setIsShowText] = useState(true);
   const pathsFromJson = Object.keys(data);
   const handleIsShowText = () =>
@@ -9,4 +9,4 @@ const useData = () => {
   return { isShowText, pathsFromJson, handleIsShowText };
 };
 
-export default useData;
+export default useShowText;
