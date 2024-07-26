@@ -23,7 +23,7 @@ const useImages = ({ data, pathname }: useImagesProps) => {
   }, [images.length]);
 
   const text = images.length > 0 ? images[index].word : "";
-  const currentImage = images.length > 0 ? images[index].translation : "";
+  const currentImage = images.length > 0 ? images[index].fileName : "";
 
   const highlights = data[path as keyof typeof data].wordsToHighlight;
 

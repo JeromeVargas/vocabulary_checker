@@ -17,14 +17,14 @@ const ImageSection = ({
       <section className="grid rounded-3xl border-8 border-accent-shade bg-base-main p-4">
         {images.map((image) => {
           const imageUrl: string = new URL(
-            `../../../../images/${image.translation}.jpg`,
+            `../../../../images/${image.fileName}.jpg`,
             import.meta.url,
           ).href;
           return (
             <Image
-              key={image.translation}
+              key={image.fileName}
               imageUrl={imageUrl}
-              imageTranslation={image.translation}
+              imageTranslation={image.fileName}
               currentImage={currentImage}
               handleSetIsLoaded={handleSetIsLoaded}
             />

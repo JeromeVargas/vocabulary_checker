@@ -2,23 +2,23 @@
   "instructions": {
     "translation": "しょるい",
     "metadata": [
-      { "word": "はなしましょう", "translation": "hanashimashou" },
-      { "word": "かいわ", "translation": "kaiwa" },
-      { "word": "きくれんしゅう", "translation": "kikurenshou" },
-      { "word": "たんごひょう", "translation": "tangohyou" }
+      { "word": "はなしましょう", "fileName": "hanashimashou" },
+      { "word": "かいわ", "fileName": "kaiwa" },
+      { "word": "きくれんしゅう", "fileName": "kikurenshou" },
+      { "word": "たんごひょう", "fileName": "tangohyou" }
     ],
     "wordsToHighlight": []
   },
   "greetings": {
     "translation": "あいさつ",
     "metadata": [
-      { "word": "おはようございます", "translation": "ohayou_gozaimasu" },
-      { "word": "こんにちは", "translation": "konnichiwa" },
-      { "word": "こんばんは", "translation": "konbanwa" },
-      { "word": "おやすみなさい", "translation": "oyasumi_nasai" },
-      { "word": "さよなら", "translation": "sayonara" },
-      { "word": "じゃあまたね", "translation": "ja_mata_ne" },
-      { "word": "またあした", "translation": "mata_ashita" }
+      { "word": "おはようございます", "fileName": "ohayou_gozaimasu" },
+      { "word": "こんにちは", "fileName": "konnichiwa" },
+      { "word": "こんばんは", "fileName": "konbanwa" },
+      { "word": "おやすみなさい", "fileName": "oyasumi_nasai" },
+      { "word": "さよなら", "fileName": "sayonara" },
+      { "word": "じゃあまたね", "fileName": "ja_mata_ne" },
+      { "word": "またあした", "fileName": "mata_ashita" }
     ],
     "wordsToHighlight": []
   }
