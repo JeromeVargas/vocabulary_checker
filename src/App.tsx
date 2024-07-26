@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 
 import Home from "./pages/home/Home";
 import Interface from "./pages/interface/Interface";
-import Error404Page from "./pages/Error404Page/Error404Page";
+import Error404 from "./pages/error404/Error404";
 
 import useDarkMode from "./hooks/useDarkMode";
 import useShowText from "./hooks/useShowText";
@@ -29,7 +29,7 @@ function App() {
           }
         />
       ))}
-      <Route path="/*" element={<Error404Page />} />
+      <Route path="/*" element={<Error404 />} />
     </Routes>
   );
 }

@@ -8,7 +8,7 @@ import TextSection from "./components/TextSection/TextSection";
 import ButtonsSection from "./components/buttonsSection/ButtonsSection";
 import Loader from "../../components/Loader";
 import ErrorBoundary from "../../components/ErrorBoundary";
-import Error404Page from "../Error404Page/Error404Page";
+import Error404Page from "../error404/Error404";
 
 const ImageSection = lazy(
   () => import("./components/imageSection/ImageSection"),
