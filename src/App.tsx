@@ -7,8 +7,11 @@ import Error404 from "./pages/error404/Error404";
 import useDarkMode from "./hooks/useDarkMode";
 import useShowText from "./hooks/useShowText";
 
+import dataFetcher from "./services/dataFetcher";
+
 function App() {
-  const { isShowText, pathsFromJson, handleIsShowText } = useShowText();
+  const { titles: pathsFromJson } = dataFetcher();
+  const { isShowText, handleIsShowText } = useShowText();
   const { theme, handleChangeTheme } = useDarkMode();
 
   return (
