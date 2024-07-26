@@ -16,7 +16,7 @@ const topics: { title: string; translation: string }[] = titles.map(
   },
 );
 
-function TopicsIndex({ theme, handleChangeTheme }: TopicsIndexProps) {
+const Home = ({ theme, handleChangeTheme }: TopicsIndexProps) => {
   return (
     <main className="flex min-h-screen flex-col items-center bg-base-main p-2 text-center text-5xl font-black text-font-main">
       <ThemeButton theme={theme} handleChangeTheme={handleChangeTheme} />
@@ -36,6 +36,6 @@ function TopicsIndex({ theme, handleChangeTheme }: TopicsIndexProps) {
       </section>
     </main>
   );
-}
+};
 
-export default TopicsIndex;
+export default Home;

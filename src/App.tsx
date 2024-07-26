@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 
-import TopicsIndex from "./pages/topicsIndex/TopicsIndex";
+import Home from "./pages/home/Home";
 import Interface from "./pages/interface/Interface";
 import Error404Page from "./pages/Error404Page/Error404Page";
 
@@ -15,9 +15,7 @@ function App() {
     <Routes>
       <Route
         index
-        element={
-          <TopicsIndex theme={theme} handleChangeTheme={handleChangeTheme} />
-        }
+        element={<Home theme={theme} handleChangeTheme={handleChangeTheme} />}
       />
       {pathsFromJson.map((path) => (
         <Route
