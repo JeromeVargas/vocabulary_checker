@@ -1,5 +1,5 @@
 import { useState } from "react";
-import data from "../data/attributesSchema.json";
+import data from "../data/meta-data.json";
 
 const useShowText = () => {
   const [isShowText, setIsShowText] = useState(true);

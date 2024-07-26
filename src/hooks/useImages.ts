@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 
-import data from "../data/attributesSchema.json";
+import data from "../data/meta-data.json";
 import randomNumber from "../lib/utils/random";
 import speechUtterance from "../lib/utils/speech";
 import pathToCamelCase from "../lib/utils/path";

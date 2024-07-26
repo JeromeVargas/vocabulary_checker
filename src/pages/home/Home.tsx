@@ -1,4 +1,4 @@
-import data from "../../data/attributesSchema.json";
+import data from "../../data/meta-data.json";
 import { Link } from "react-router-dom";
 import ThemeButton from "./components/ThemeButton";
 
