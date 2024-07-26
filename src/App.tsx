@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 
 import TopicsIndex from "./pages/topicsIndex/TopicsIndex";
 import Interface from "./pages/interface/Interface";
-import Error404Page from "./pages/Error404Page";
+import Error404Page from "./pages/Error404Page/Error404Page";
 
 import useDarkMode from "./hooks/useDarkMode";
 import useShowText from "./hooks/useShowText";

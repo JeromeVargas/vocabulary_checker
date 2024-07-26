@@ -8,7 +8,7 @@ import TextSection from "./components/TextSection/TextSection";
 import ButtonsSection from "./components/buttonsSection/ButtonsSection";
 import Loader from "../../components/Loader";
 import ErrorBoundary from "../../components/ErrorBoundary";
-import ErrorPage from "../Error404Page";
+import Error404Page from "../Error404Page/Error404Page";
 
 const ImageSection = lazy(
   () => import("./components/imageSection/ImageSection"),
@@ -34,7 +34,7 @@ function Interface({ isShowText, handleIsShowText }: InterfaceProps) {
   } = useImages({ pathname });
 
   return (
-    <ErrorBoundary fallback={<ErrorPage />}>
+    <ErrorBoundary fallback={<Error404Page />}>
       <Suspense fallback={<Loader />}>
         <main className="flex h-screen flex-col items-center justify-evenly bg-base-main text-5xl">
           {images.length > 0 ? (
