@@ -24,7 +24,7 @@ const ButtonsSection = ({
         <>
           <ButtonHandleSpeech handleSpeech={handleSpeech} />
           <Button
-            kind="next"
+            kind="action"
             isSpeechReady={isSpeechReady}
             onClick={handleNext}
           />
