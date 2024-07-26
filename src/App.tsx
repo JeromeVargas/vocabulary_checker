@@ -10,7 +10,7 @@ import useShowText from "./hooks/useShowText";
 import dataFetcher from "./services/dataFetcher";
 
 function App() {
-  const { data, titles: pathsFromJson } = dataFetcher();
+  const { data, keys: topicsToRenderHome } = dataFetcher();
   const { isShowText, handleIsShowText } = useShowText();
   const { theme, handleChangeTheme } = useDarkMode();
 
@@ -20,7 +20,7 @@ function App() {
         index
         element={<Home theme={theme} handleChangeTheme={handleChangeTheme} />}
       />
-      {pathsFromJson.map((path) => (
+      {topicsToRenderHome.map((path) => (
         <Route
           key={path}
           path={path}
