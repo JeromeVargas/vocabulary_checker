@@ -10,7 +10,7 @@ import useShowText from "./hooks/useShowText";
 import dataFetcher from "./services/dataFetcher";
 
 function App() {
-  const { titles: pathsFromJson } = dataFetcher();
+  const { data, titles: pathsFromJson } = dataFetcher();
   const { isShowText, handleIsShowText } = useShowText();
   const { theme, handleChangeTheme } = useDarkMode();
 
@@ -26,6 +26,7 @@ function App() {
           path={path}
           element={
             <Interface
+              data={data}
               isShowText={isShowText}
               handleIsShowText={handleIsShowText}
             />

@@ -1,5 +1,7 @@
 import data from "../data/meta-data.json";
 
+export type metaData = typeof data;
+
 const dataFetcher = () => {
   const titles = Object.keys(data);
   const values = Object.values(data);
@@ -10,7 +12,7 @@ const dataFetcher = () => {
     },
   );
 
-  return { titles, values, topics };
+  return { data, titles, topics };
 };
 
 export default dataFetcher;

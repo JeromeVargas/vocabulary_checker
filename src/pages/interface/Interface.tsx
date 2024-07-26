@@ -14,12 +14,15 @@ const ImageSection = lazy(
   () => import("./components/imageSection/ImageSection"),
 );
 
+import { type metaData } from "../../services/dataFetcher";
+
 type InterfaceProps = {
+  data: metaData;
   isShowText: boolean;
   handleIsShowText: () => void;
 };
 
-function Interface({ isShowText, handleIsShowText }: InterfaceProps) {
+function Interface({ data, isShowText, handleIsShowText }: InterfaceProps) {
   const { pathname } = useLocation();
   const { isLoaded, handleSetIsLoaded } = useLoad();
   const {
@@ -31,7 +34,7 @@ function Interface({ isShowText, handleIsShowText }: InterfaceProps) {
     handleNext,
     handleReset,
     handleSpeech,
-  } = useImages({ pathname });
+  } = useImages({ data, pathname });
 
   return (
     <ErrorBoundary fallback={<Error404Page />}>

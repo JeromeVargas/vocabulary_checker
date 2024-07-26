@@ -1,15 +1,17 @@
 import { useMemo, useState } from "react";
 
-import data from "../data/meta-data.json";
 import randomNumber from "../lib/utils/random";
 import speechUtterance from "../lib/utils/speech";
 import pathToCamelCase from "../lib/utils/path";
 
+import { type metaData } from "../services/dataFetcher";
+
 type useImagesProps = {
+  data: metaData;
   pathname: string;
 };
 
-const useImages = ({ pathname }: useImagesProps) => {
+const useImages = ({ data, pathname }: useImagesProps) => {
   const path = pathToCamelCase(pathname);
   const [images, setImages] = useState(
     data[path as keyof typeof data].metadata,
