@@ -44,4 +44,5 @@ const ThemeButton = ({ theme, handleChangeTheme }: ThemeButtonProps) => {
     </button>
   );
 };
+
 export default ThemeButton;

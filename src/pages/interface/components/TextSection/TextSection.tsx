@@ -1,5 +1,6 @@
-import { type image } from "../../../../types";
 import Text from "./components/Text";
+
+import { type image } from "../../../../types";
 
 type TextSectionProps = {
   images: image[];
@@ -29,4 +30,5 @@ const TextSection = ({
     </section>
   );
 };
+
 export default TextSection;

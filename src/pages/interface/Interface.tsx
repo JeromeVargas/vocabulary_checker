@@ -1,14 +1,14 @@
 import { lazy, Suspense } from "react";
 import { useLocation } from "react-router-dom";
 
-import useImages from "../../hooks/useImages";
-import useLoad from "../../hooks/useLoad";
-
 import TextSection from "./components/TextSection/TextSection";
 import ButtonsSection from "./components/buttonsSection/ButtonsSection";
 import Loader from "../../components/Loader";
 import ErrorBoundary from "../../components/ErrorBoundary";
 import Error404Page from "../error404/Error404";
+
+import useImages from "../../hooks/useImages";
+import useLoad from "../../hooks/useLoad";
 
 const ImageSection = lazy(
   () => import("./components/imageSection/ImageSection"),

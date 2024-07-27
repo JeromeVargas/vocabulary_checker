@@ -1,7 +1,6 @@
-import { type HTMLAttributes } from "react";
-import { cn } from "../../../../../lib/classMerge";
-import { VariantProps, cva } from "class-variance-authority";
+import { type VariantProps, cva } from "class-variance-authority";
 
+import { cn } from "../../../../../lib/classMerge";
 const variants = cva("border-4 px-10 py-4 text-center text-font-main", {
   variants: {
     kind: {
@@ -14,6 +13,8 @@ const variants = cva("border-4 px-10 py-4 text-center text-font-main", {
     kind: "action",
   },
 });
+
+import { type HTMLAttributes } from "react";
 
 interface ButtonProps
   extends HTMLAttributes<HTMLButtonElement>,

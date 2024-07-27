@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
-import { type image } from "../../../../types";
+
 import ButtonHandleSpeech from "./components/ButtonHandleSpeech";
 import Button from "./components/Button";
+
+import { type image } from "../../../../types";
 
 type ButtonsSectionProps = {
   images: image[];
@@ -43,4 +45,5 @@ const ButtonsSection = ({
     </>
   );
 };
+
 export default ButtonsSection;

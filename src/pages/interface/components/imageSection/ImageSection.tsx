@@ -1,4 +1,5 @@
 import Image from "./components/Image";
+
 import { type image } from "../../../../types";
 
 type ImageSectionProps = {
@@ -34,4 +35,5 @@ const ImageSection = ({
     </>
   );
 };
+
 export default ImageSection;

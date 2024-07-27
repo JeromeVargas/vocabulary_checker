@@ -1,5 +1,6 @@
-import useImage from "../../../../../hooks/useImage";
 import { cn } from "../../../../../lib/classMerge";
+
+import useImage from "../../../../../hooks/useImage";
 
 type ImageProps = {
   imageUrl: string;
@@ -20,7 +21,7 @@ const Image = ({
       {error && errorThrower()}
       <img
         className={cn("col-start-1 row-start-1 h-full w-full text-sm", {
-          "invisible ": imageTranslation !== currentImage,
+          invisible: imageTranslation !== currentImage,
         })}
         ref={imgEl}
         src={imageUrl}
@@ -29,4 +30,5 @@ const Image = ({
     </>
   );
 };
+
 export default Image;

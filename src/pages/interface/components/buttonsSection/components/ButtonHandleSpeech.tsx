@@ -36,4 +36,5 @@ const ButtonHandleSpeech = ({ handleSpeech }: ButtonHandleSpeechProps) => {
     </button>
   );
 };
+
 export default ButtonHandleSpeech;

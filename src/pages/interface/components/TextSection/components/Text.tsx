@@ -41,4 +41,5 @@ const Text = ({
     </h1>
   );
 };
+
 export default Text;
