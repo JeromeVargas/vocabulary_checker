@@ -8,11 +8,9 @@ const dataFetcher = () => {
   const values = Object.values(data);
 
   // maps the keys (paths in original language) and its translations (topics in target language)
-  const topics: { title: string; translation: string }[] = keys.map(
-    (title, index) => {
-      return { title, translation: values[index].translation };
-    },
-  );
+  const topics = keys.map((title, index) => {
+    return { title, translation: values[index].translation };
+  });
 
   return { data, keys, topics };
 };
