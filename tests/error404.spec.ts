@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-const LOCAL_HOST_URL = "http://localhost:5173/xxxxxxx";
+const LOCAL_HOST_URL = "http://localhost:4173/xxxxxxx";
 
 test.describe("404 page", () => {
   test.beforeEach(async ({ page }) => {
