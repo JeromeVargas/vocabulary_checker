@@ -20,7 +20,7 @@ const Text = ({
     >
       {/* text */}
       {isShowText ? (
-        <div>
+        <p>
           {text.split(" ").map((item, index) =>
             highlights.includes(index) ? (
               // highlighted words
@@ -34,7 +34,7 @@ const Text = ({
               </span>
             ),
           )}
-        </div>
+        </p>
       ) : (
         <TextPlaceHolder />
       )}
