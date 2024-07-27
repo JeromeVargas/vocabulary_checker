@@ -23,6 +23,7 @@ type InterfaceProps = {
 };
 
 function Interface({ data, isShowText, handleIsShowText }: InterfaceProps) {
+  // gets url url path
   const { pathname } = useLocation();
   const { isLoaded, handleSetIsLoaded } = useLoad();
   const {
@@ -40,6 +41,7 @@ function Interface({ data, isShowText, handleIsShowText }: InterfaceProps) {
     <ErrorBoundary fallback={<Error404Page />}>
       <Suspense fallback={<Loader />}>
         <main className="flex h-screen flex-col items-center justify-evenly bg-base-main text-5xl">
+          {/* content area */}
           {images.length > 0 ? (
             <>
               <TextSection
@@ -60,6 +62,7 @@ function Interface({ data, isShowText, handleIsShowText }: InterfaceProps) {
               Congrats!
             </p>
           )}
+          {/* buttons */}
           <ButtonsSection
             images={images}
             isSpeechReady={isSpeechReady}

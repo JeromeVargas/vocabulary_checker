@@ -12,12 +12,16 @@ type useImagesProps = {
 };
 
 const useImages = ({ data, pathname }: useImagesProps) => {
+  // transforms the kebab-case interface url address to camel-case
   const path = pathToCamelCase(pathname);
+
+  // state
   const [images, setImages] = useState(
     data[path as keyof typeof data].metadata,
   );
   const [isSpeechReady, setIsSpeechReady] = useState(false);
 
+  // sets the images array item index to show its text, image file name and the words to highlight
   const index = useMemo(() => {
     return randomNumber(0, images.length - 1);
   }, [images.length]);
@@ -27,6 +31,7 @@ const useImages = ({ data, pathname }: useImagesProps) => {
 
   const highlights = data[path as keyof typeof data].wordsToHighlight;
 
+  // state handlers
   const handleNext = () => {
     setIsSpeechReady(false);
     setImages((prevArray) =>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 const useDarkMode = () => {
+  // gets from local storage
   const [theme, setTheme] = useState(() => {
     const localTheme = window.localStorage.getItem("theme");
     if (localTheme) return localTheme;
@@ -12,10 +13,12 @@ const useDarkMode = () => {
     }
   });
 
+  // toggles theme
   const handleChangeTheme = () => {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
 
+  // changes theme depending on theme state
   useEffect(() => {
     if (theme === "dark") {
       document.querySelector("html")?.setAttribute("data-theme", "dark");

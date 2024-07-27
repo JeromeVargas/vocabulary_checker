@@ -16,10 +16,12 @@ function App() {
 
   return (
     <Routes>
+      {/* home */}
       <Route
         index
         element={<Home theme={theme} handleChangeTheme={handleChangeTheme} />}
       />
+      {/* interface */}
       {topicsToRenderHome.map((path) => (
         <Route
           key={path}
@@ -33,6 +35,7 @@ function App() {
           }
         />
       ))}
+      {/* 404 */}
       <Route path="/*" element={<Error404 />} />
     </Routes>
   );

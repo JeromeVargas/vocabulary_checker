@@ -10,6 +10,7 @@ type TopicsIndexProps = {
 
 const Home = ({ theme, handleChangeTheme }: TopicsIndexProps) => {
   const { topics } = dataFetcher();
+
   return (
     <main className="flex min-h-screen flex-col items-center bg-base-main p-2 text-center text-5xl font-black text-font-main">
       <ThemeButton theme={theme} handleChangeTheme={handleChangeTheme} />
