@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 
 import randomNumber from "../lib/utils/random";
 import speechUtterance from "../lib/utils/speech";
-import pathToCamelCase from "../lib/utils/path";
+import pathSlashRemover from "../lib/utils/path";
 
 import { type metaData } from "../services/dataFetcher";
 
@@ -12,8 +12,8 @@ type useImagesProps = {
 };
 
 const useImages = ({ data, pathname }: useImagesProps) => {
-  // transforms the kebab-case interface url address to camel-case
-  const path = pathToCamelCase(pathname);
+  // formats the path from url
+  const path = pathSlashRemover(pathname);
 
   // state
   const [images, setImages] = useState(
