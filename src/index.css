@@ -7,6 +7,10 @@
     @apply transition-colors duration-200;
   }
 
+  body {
+    @apply flex min-h-screen flex-col items-center bg-base-main text-center text-5xl font-black;
+  }
+
   @media (prefers-color-scheme: dark) {
     :root {
       --color-base-main: 31 27 36;
