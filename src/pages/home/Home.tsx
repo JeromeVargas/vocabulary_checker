@@ -17,14 +17,14 @@ const Home = ({ theme, handleChangeTheme }: TopicsIndexProps) => {
       <ThemeButton theme={theme} handleChangeTheme={handleChangeTheme} />
       <h1 className="mt-10">シャドーイング アプリ</h1>
       <section className="m-12 flex flex-col gap-6">
-        {topics.map(({ title, translation }) => {
+        {topics.map(({ topic, linkText }) => {
           return (
             <Link
-              key={title}
+              key={topic}
               className="rounded-xl border-4 bg-accent-main px-10 py-4 text-center text-2xl font-normal text-font-main opacity-90 hover:-translate-y-1 hover:translate-x-1 hover:bg-neutral-shade md:text-5xl"
-              to={`/${title}`}
+              to={`/${topic}`}
             >
-              {translation}
+              {linkText}
             </Link>
           );
         })}

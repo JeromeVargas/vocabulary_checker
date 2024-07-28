@@ -7,9 +7,9 @@ const dataFetcher = () => {
   const keys = Object.keys(data);
   const values = Object.values(data);
 
-  // maps the keys (paths in original language) and its translations (topics in target language)
-  const topics = keys.map((title, index) => {
-    return { title, translation: values[index].translation };
+  // maps the keys (paths in original language) as topic and its translations (topics in target language) as link text
+  const topics = keys.map((topic, index) => {
+    return { topic, linkText: values[index].translation };
   });
 
   return { data, keys, topics };
