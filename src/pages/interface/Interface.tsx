@@ -7,7 +7,7 @@ import Loader from "../../components/Loader";
 import ErrorBoundary from "../../components/ErrorBoundary";
 import Error404Page from "../error404/Error404";
 
-import useImages from "../../hooks/useImages";
+import useMetaData from "../../hooks/useMetaData";
 import useLoad from "../../hooks/useLoad";
 
 const ImageSection = lazy(
@@ -35,7 +35,7 @@ function Interface({ data, isShowText, handleIsShowText }: InterfaceProps) {
     handleNext,
     handleReset,
     handleSpeech,
-  } = useImages({ data, pathname });
+  } = useMetaData({ data, pathname });
 
   return (
     <ErrorBoundary fallback={<Error404Page />}>

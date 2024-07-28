@@ -6,12 +6,12 @@ import pathSlashRemover from "../lib/utils/path";
 
 import { type metaData } from "../services/dataFetcher";
 
-type useImagesProps = {
+type useMetaDataProps = {
   data: metaData;
   pathname: string;
 };
 
-const useImages = ({ data, pathname }: useImagesProps) => {
+const useMetaData = ({ data, pathname }: useMetaDataProps) => {
   // formats the path from url
   const path = pathSlashRemover(pathname);
 
@@ -62,4 +62,4 @@ const useImages = ({ data, pathname }: useImagesProps) => {
   };
 };
 
-export default useImages;
+export default useMetaData;
