@@ -5,6 +5,7 @@ type ButtonHandleSpeechProps = {
 const ButtonHandleSpeech = ({ handleSpeech }: ButtonHandleSpeechProps) => {
   return (
     <button
+      aria-label="sound"
       className="rounded-full border-2 border-accent-shade bg-base-shade transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-100 hover:border-accent-contrast"
       type="button"
       onClick={handleSpeech}

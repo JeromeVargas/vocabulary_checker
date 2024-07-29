@@ -5,7 +5,11 @@ type ThemeButtonProps = {
 
 const ThemeButton = ({ theme, handleChangeTheme }: ThemeButtonProps) => {
   return (
-    <button className="absolute right-0 top-0 p-2" onClick={handleChangeTheme}>
+    <button
+      aria-label="theme"
+      className="absolute right-0 top-0 p-2"
+      onClick={handleChangeTheme}
+    >
       {theme === "dark" ? (
         <svg
           className="h-12 w-12 text-white transition-none"
