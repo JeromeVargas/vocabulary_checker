@@ -9,7 +9,9 @@
     "test": "npx playwright test",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "npm run build && vite preview",
-    "clean": "rm -rf dist/ playwright-report/ test-results/"
+    "clean": "rm -rf dist/ playwright-report/ test-results/",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "class-variance-authority": "0.7.0",
@@ -20,7 +22,16 @@
     "tailwind-merge": "2.4.0"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "1.6.1",
     "@playwright/test": "1.45.3",
+    "@storybook/addon-essentials": "8.2.6",
+    "@storybook/addon-interactions": "8.2.6",
+    "@storybook/addon-links": "8.2.6",
+    "@storybook/addon-onboarding": "8.2.6",
+    "@storybook/blocks": "8.2.6",
+    "@storybook/react": "8.2.6",
+    "@storybook/react-vite": "8.2.6",
+    "@storybook/test": "8.2.6",
     "@types/node": "20.14.12",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
@@ -31,8 +42,11 @@
     "eslint": "8.57.0",
     "eslint-plugin-react-hooks": "4.6.2",
     "eslint-plugin-react-refresh": "0.4.9",
+    "eslint-plugin-storybook": "0.8.0",
     "postcss": "8.4.40",
     "prettier-plugin-tailwindcss": "0.6.5",
+    "storybook": "8.2.6",
+    "storybook-dark-mode": "4.0.2",
     "tailwindcss": "3.4.7",
     "typescript": "5.5.4",
     "vite": "5.3.5"
