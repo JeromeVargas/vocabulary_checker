@@ -26,5 +26,6 @@ export default {
       },
     },
   },
+  darkMode: ['[data-theme="dark"]'],
   plugins: [],
 };
