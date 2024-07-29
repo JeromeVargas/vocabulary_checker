@@ -25,7 +25,7 @@ const Image = ({
         })}
         ref={imgEl}
         src={imageUrl}
-        alt={imageTranslation}
+        alt={`${imageTranslation}.`}
       />
     </>
   );
