@@ -22,18 +22,12 @@ interface ButtonProps
   isSpeechReady?: boolean;
 }
 
-const Button = ({
-  className,
-  kind,
-  isSpeechReady,
-  onClick,
-  ...props
-}: ButtonProps) => {
+const Button = ({ kind, isSpeechReady, onClick, ...props }: ButtonProps) => {
   const nextText = isSpeechReady === false ? "Listen" : "Next";
   return (
     <button
       onClick={onClick}
-      className={cn(variants({ className, kind }), {
+      className={cn(variants({ kind }), {
         "cursor-none bg-base-main":
           kind === "action" && isSpeechReady === false,
         "border-accent-shade bg-neutral-shade hover:-translate-y-1 hover:translate-x-1":
