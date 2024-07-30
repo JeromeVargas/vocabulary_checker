@@ -9,7 +9,7 @@
     "test": "npx playwright test",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "npm run build && vite preview",
-    "clean": "rm -rf dist/ playwright-report/ test-results/",
+    "clean": "rm -rf dist/ playwright-report/ test-results/ storybook-static",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
