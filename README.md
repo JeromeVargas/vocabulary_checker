@@ -1,4 +1,4 @@
-![banner](assets/banner.png)
+![banner](assets/images/banner.png)
 
 <br/>
 <br/>
@@ -17,7 +17,7 @@ This is an app that allows the user to do pronunciation shadowing on vocabulary 
 
 The user can choose the topic in the home page to move the interface area
 
-![home_page](assets/sections/home_page.png)
+![home_page](assets/images/sections/home_page.png)
 
 ### **Interface**:
 
@@ -25,14 +25,14 @@ The user can choose the topic in the home page to move the interface area
 
 This is the word or words to study, you can click on the text to hide it:
 
-![interface_text_area_1](assets/sections/interface_text_section_1.png)
-![interface_text_area_2](assets/sections/interface_text_section_2.png)
+![interface_text_area_1](assets/images/sections/interface_text_section_1.png)
+![interface_text_area_2](assets/images/sections/interface_text_section_2.png)
 
 #### Image section:
 
 It shows what the graphic representation of the word or words is:
 
-![interface_image_area](assets/sections/interface_image_section.png)
+![interface_image_area](assets/images/sections/interface_image_section.png)
 
 #### Button section:
 
@@ -42,20 +42,20 @@ It contains the calls to action:
 
 The speaker button is a speech handler, it triggers the speech and allows the user to change the state from **_Listen_** to **_Next_**:
 
-![interface_button_section_1](assets/sections/interface_button_section_1.png)
-![interface_button_section_2](assets/sections/interface_button_section_2.png)
+![interface_button_section_1](assets/images/sections/interface_button_section_1.png)
+![interface_button_section_2](assets/images/sections/interface_button_section_2.png)
 
 #### Reset / Exit area
 
 Once the user go through all the words for the topic the user can choose between either reset the same topic by clicking on **_Try Again_** or to try other topic by clicking on **_New Exercise_**:
 
-![interface_button_section_3](assets/sections/interface_button_section_3.png)
+![interface_button_section_3](assets/images/sections/interface_button_section_3.png)
 
 ### **Dark mode**:
 
 The user can access dark mode by clicking on the right hand side top corner theme icon:
 
-![dark_mode](assets/sections/dark_mode.png)
+![dark_mode](assets/images/sections/dark_mode.png)
 
 <br/>
 
@@ -67,15 +67,15 @@ The user can access dark mode by clicking on the right hand side top corner them
 
 - **Vite**:
 
-![vite_scripts](assets/scripts/vite_scripts.png)
+![vite_scripts](assets/images/scripts/vite_scripts.png)
 
 - **Playwright**:
 
-![playwright_scripts](assets/scripts/playwright_scripts.png)
+![playwright_scripts](assets/images/scripts/playwright_scripts.png)
 
 - **Storybook**
 
-![storybook_scripts](assets/scripts/storybook_scripts.png)
+![storybook_scripts](assets/images/scripts/storybook_scripts.png)
 
 <br/>
 
@@ -101,19 +101,19 @@ main object keys = topics from origin language, these must be in kebab-case, e.g
 - meta-data: topic meta-data
 - wordsToHighlight: words with special highlighting styles
 
-![meta-data-json](assets/source_files/meta-data-json.png)
+![meta-data-json](assets/images/source_files/meta-data-json.png)
 
 ### images folder:
 
 the images files are referenced in the meta-data objects file name field
 
-![meta-data-json](assets/source_files/images_folder.png)
+![meta-data-json](assets/images/source_files/images_folder.png)
 
 ### **Build**
 
 - after each test run **_npm clean_** to remove build files
 
-![clean_scripts](assets/scripts/clean_scripts.png)
+![clean_scripts](assets/images/scripts/clean_scripts.png)
 
 <br/>
 
@@ -123,11 +123,11 @@ the images files are referenced in the meta-data objects file name field
 
 - sometimes there is failing test in webkit, just run again
 
-![sometimes_not_passing_test](assets/test/sometimes_not_passing_test.png)
+![sometimes_not_passing_test](assets/images/testing/sometimes_not_passing_test.png)
 
 - run on vite preview in dev mode
 
-![storybook_scripts](assets/scripts/preview_scripts.png)
+![storybook_scripts](assets/images/scripts/preview_scripts.png)
 
 ### **Storybook**
 
@@ -135,8 +135,8 @@ types had to be adapted in the dark mode add-on migration
 
 #### preview.ts
 
-![storybook_adapted_types](assets/storybook/storybook_adapted_types_1.png)
+![storybook_adapted_types](assets/images/storybook/storybook_adapted_types_1.png)
 
 #### index.d.ts
 
-![storybook_adapted_types](assets/storybook/storybook_adapted_types_2.png)
+![storybook_adapted_types](assets/images/storybook/storybook_adapted_types_2.png)
