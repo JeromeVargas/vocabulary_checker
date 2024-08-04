@@ -4,7 +4,7 @@ const Error404Page = () => {
   return (
     <main className="flex h-screen w-full flex-col items-center justify-center bg-base-main text-center text-5xl font-black text-font-main">
       <Link
-        className="text-neutral-contrast w-10/12 rounded-xl border-4 bg-neutral-shade py-4 text-center font-bold hover:bg-accent-main"
+        className="text-neutral-contrast w-10/12 rounded-xl border-4 bg-neutral-shade p-4 text-center font-bold hover:bg-accent-main lg:w-auto"
         to="/"
       >
         Please go back to the home page
