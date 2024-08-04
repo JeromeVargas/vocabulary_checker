@@ -7,7 +7,7 @@ const ThemeButton = ({ theme, handleChangeTheme }: ThemeButtonProps) => {
   return (
     <button
       aria-label="theme"
-      className="absolute right-0 top-0 p-2"
+      className="absolute right-0 top-0 p-2 hover:-translate-x-1 hover:translate-y-1"
       onClick={handleChangeTheme}
     >
       {theme === "dark" ? (
