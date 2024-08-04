@@ -13,6 +13,7 @@ type useMetaDataProps = {
 
 const useMetaData = ({ data, pathname }: useMetaDataProps) => {
   // formats the path from url
+  // TODO: continue here -> maybe pass the path down to have a reference to the folder
   const path = pathSlashRemover(pathname);
 
   // state
@@ -55,6 +56,7 @@ const useMetaData = ({ data, pathname }: useMetaDataProps) => {
     text,
     currentImage,
     highlights,
+    path,
     isSpeechReady,
     handleNext,
     handleReset,

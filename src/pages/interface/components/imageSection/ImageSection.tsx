@@ -5,12 +5,14 @@ import { type image } from "../../../../types";
 type ImageSectionProps = {
   images: image[];
   currentImage: string;
+  path: string;
   handleSetIsLoaded: () => void;
 };
 
 const ImageSection = ({
   images,
   currentImage,
+  path,
   handleSetIsLoaded,
 }: ImageSectionProps) => {
   return (
@@ -18,7 +20,7 @@ const ImageSection = ({
       <section className="grid rounded-3xl border-8 border-accent-shade bg-base-main p-4">
         {images.map((image) => {
           const imageUrl: string = new URL(
-            `../../../../images/${image.fileName}.jpg`,
+            `../../../../images/${path}/${image.fileName}.jpg`,
             import.meta.url,
           ).href;
           return (

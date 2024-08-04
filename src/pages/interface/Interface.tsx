@@ -31,6 +31,7 @@ function Interface({ data, isShowText, handleIsShowText }: InterfaceProps) {
     text,
     currentImage,
     highlights,
+    path,
     isSpeechReady,
     handleNext,
     handleReset,
@@ -54,6 +55,7 @@ function Interface({ data, isShowText, handleIsShowText }: InterfaceProps) {
               <ImageSection
                 images={images}
                 currentImage={currentImage}
+                path={path}
                 handleSetIsLoaded={handleSetIsLoaded}
               />
             </>

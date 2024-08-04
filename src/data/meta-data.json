@@ -1,5 +1,5 @@
 {
-  "instructions": {
+  "base-instructions": {
     "translation": "しょるい",
     "metadata": [
       { "word": "はなしましょう", "fileName": "hanashimashou" },
@@ -9,7 +9,7 @@
     ],
     "wordsToHighlight": []
   },
-  "greetings": {
+  "basic-greetings": {
     "translation": "あいさつ",
     "metadata": [
       { "word": "おはようございます", "fileName": "ohayou_gozaimasu" },

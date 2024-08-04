@@ -93,7 +93,7 @@ The user can access dark mode by clicking on the right hand side top corner them
 
 #### JSON file - meta data:
 
-main object keys = topics from origin language, these must be in kebab-case, e.g. **instructions**, **greetings** ...
+main object keys = topics from origin language, these must be in kebab-case, e.g. **base-instructions**, **basic-greetings** ...
 
 #### Nested objects keys:
 
@@ -105,7 +105,7 @@ main object keys = topics from origin language, these must be in kebab-case, e.g
 
 ### images folder:
 
-the images files are referenced in the meta-data objects file name field
+the images files are referenced in the meta-data objects file name field, these must also be in kebab-case, e.g. **base-instructions**, **basic-greetings** since they are referenced in the meta-data json object keys
 
 ![meta-data-json](assets/images/source_files/images_folder.png)
 
