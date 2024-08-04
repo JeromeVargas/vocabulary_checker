@@ -20,7 +20,7 @@ const ImageSection = ({
       <section className="grid rounded-3xl border-8 border-accent-shade bg-base-main p-4">
         {images.map((image) => {
           const imageUrl: string = new URL(
-            `../../../../images/${path}/${image.fileName}.jpg`,
+            `../../../../assets/images/${path}/${image.fileName}.jpg`,
             import.meta.url,
           ).href;
           return (
