@@ -1,16 +1,40 @@
-import { useRef, useEffect, useState } from "react";
+import { useEffect, useReducer, useRef } from "react";
 
-type useImageProps = {
+const initialState = {
+  error: false,
+};
+
+const enum REDUCER_ACTIONS_TYPES {
+  TOGGLE_ERROR,
+}
+
+type ReducerAction = {
+  type: REDUCER_ACTIONS_TYPES;
+};
+
+const reducer = (
+  state: typeof initialState,
+  action: ReducerAction,
+): typeof initialState => {
+  switch (action.type) {
+    case REDUCER_ACTIONS_TYPES.TOGGLE_ERROR:
+      return { ...state, error: true };
+    default:
+      throw new Error("There is not such action");
+  }
+};
+
+type useImageReducerProps = {
   handleSetIsLoaded: () => void;
 };
 
-const useImage = ({ handleSetIsLoaded }: useImageProps) => {
+const useImageReducer = ({ handleSetIsLoaded }: useImageReducerProps) => {
   const imgEl = useRef<HTMLImageElement>(null);
-  const [error, setError] = useState(false);
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   // sets the error state and helps throw error in component
   const handleSetError = () => {
-    setError(true);
+    return dispatch({ type: REDUCER_ACTIONS_TYPES.TOGGLE_ERROR });
   };
 
   const errorThrower = () => {
@@ -40,7 +64,7 @@ const useImage = ({ handleSetIsLoaded }: useImageProps) => {
     }
   }, [imgEl, handleSetIsLoaded]);
 
-  return { error, imgEl, errorThrower };
+  return { state, imgEl, errorThrower };
 };
 
-export default useImage;
+export default useImageReducer;

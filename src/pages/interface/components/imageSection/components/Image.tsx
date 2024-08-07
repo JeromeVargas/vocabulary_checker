@@ -1,6 +1,6 @@
 import { cn } from "../../../../../lib/classMerge";
 
-import useImage from "../../../../../hooks/useImage";
+import useImageReducer from "../../../../../context/ImageReducer";
 
 type ImageProps = {
   imageUrl: string;
@@ -15,7 +15,11 @@ const Image = ({
   currentImage,
   handleSetIsLoaded,
 }: ImageProps) => {
-  const { error, imgEl, errorThrower } = useImage({ handleSetIsLoaded });
+  const {
+    state: { error },
+    imgEl,
+    errorThrower,
+  } = useImageReducer({ handleSetIsLoaded });
   return (
     <>
       {error && errorThrower()}

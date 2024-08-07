@@ -7,53 +7,48 @@ import Loader from "../../components/Loader";
 import ErrorBoundary from "../../components/ErrorBoundary";
 import Error404Page from "../error404/Error404";
 
-import useMetaData from "../../hooks/useMetaData";
-import useLoad from "../../hooks/useLoad";
+import useInterfaceReducer from "../../context/InterfaceReducer";
 
 const ImageSection = lazy(
   () => import("./components/imageSection/ImageSection"),
 );
 
-import { type metaData } from "../../services/dataFetcher";
-
 type InterfaceProps = {
-  data: metaData;
   isShowText: boolean;
   handleIsShowText: () => void;
 };
 
-function Interface({ data, isShowText, handleIsShowText }: InterfaceProps) {
-  // gets url url path
+function Interface({ isShowText, handleIsShowText }: InterfaceProps) {
+  // gets url path
   const { pathname } = useLocation();
-  const { isLoaded, handleSetIsLoaded } = useLoad();
   const {
-    images,
+    state: { imagesData, isSpeechReady, isLoaded },
     text,
     currentImage,
     highlights,
     path,
-    isSpeechReady,
     handleNext,
     handleReset,
     handleSpeech,
-  } = useMetaData({ data, pathname });
+    handleSetIsLoaded,
+  } = useInterfaceReducer({ pathname });
 
   return (
     <ErrorBoundary fallback={<Error404Page />}>
       <Suspense fallback={<Loader />}>
         <main className="flex h-screen flex-col items-center justify-evenly bg-base-main text-5xl">
           {/* content area */}
-          {images.length > 0 ? (
+          {imagesData.length > 0 ? (
             <>
               <TextSection
-                images={images}
+                images={imagesData}
                 text={text}
                 highlights={highlights}
                 handleIsShowText={handleIsShowText}
                 isShowText={isShowText}
               />
               <ImageSection
-                images={images}
+                images={imagesData}
                 currentImage={currentImage}
                 path={path}
                 handleSetIsLoaded={handleSetIsLoaded}
@@ -66,7 +61,7 @@ function Interface({ data, isShowText, handleIsShowText }: InterfaceProps) {
           )}
           {/* buttons */}
           <ButtonsSection
-            images={images}
+            images={imagesData}
             isSpeechReady={isSpeechReady}
             handleNext={handleNext}
             handleReset={handleReset}
