@@ -9,7 +9,7 @@ import useAppReducer from "./context/appReducer";
 import dataFetcher from "./services/dataFetcher";
 
 function App() {
-  const { keys: topicsToRenderHome } = dataFetcher();
+  const { keys: topicsToRenderInterfaceInstance } = dataFetcher();
   const {
     state: { theme, isShowText },
     handleIsShowText,
@@ -24,7 +24,7 @@ function App() {
         element={<Home theme={theme} handleChangeTheme={handleChangeTheme} />}
       />
       {/* interface */}
-      {topicsToRenderHome.map((path) => (
+      {topicsToRenderInterfaceInstance.map((path) => (
         <Route
           key={path}
           path={path}
