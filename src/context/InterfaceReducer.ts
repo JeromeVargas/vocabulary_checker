@@ -87,7 +87,7 @@ const useInterfaceReducer = ({ pathname }: useInterfaceReducerProps) => {
         type: REDUCER_ACTIONS_TYPES.SET_IMAGES_DATA,
         payload: path,
       }),
-    [],
+    [path],
   );
 
   const text = state.imagesData.length > 0 ? state.imagesData[index].word : "";
