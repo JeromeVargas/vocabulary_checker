@@ -5,11 +5,13 @@ import Home from "./pages/home/Home";
 import Interface from "./pages/interface/Interface";
 import Error404 from "./pages/error404/Error404";
 
-import dataFetcher from "./services/dataFetcher";
+import useAppData from "./hooks/useAppData";
 
 function App() {
-  const { keys: topicsToRenderInterfaceInstance } = dataFetcher();
+  const { metaData } = useAppData();
   const { pathname } = useLocation();
+
+  const topicsToRenderInterfaceInstance = Object.keys(metaData);
 
   return (
     <Routes>

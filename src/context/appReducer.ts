@@ -1,18 +1,25 @@
 import { useEffect, useReducer } from "react";
 
+import data from "../data/meta-data.json";
+
 import getLocalStorageTheme from "../lib/utils/getLocalStorage";
 
+export type MetaDataType = typeof data;
+
 export type StateType = {
+  metaData: MetaDataType;
   isShowText: boolean;
   theme: string;
 };
 
 export const initialState: StateType = {
+  metaData: data,
   isShowText: true,
   theme: getLocalStorageTheme(),
 };
 
 const enum REDUCER_ACTIONS_TYPES {
+  SET_META_DATA,
   TOGGLE_IS_SHOW_TEXT,
   TOGGLE_DARK_MODE,
 }

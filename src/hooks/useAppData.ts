@@ -1,7 +1,10 @@
 import { useContext } from "react";
 import { AppDataContext } from "../context/AppContext";
 
+import { type MetaDataType } from "../context/appReducer";
+
 type UseAppDataHookType = {
+  metaData: MetaDataType;
   theme: string;
   isShowText: boolean;
   handleIsShowText: () => void;
@@ -10,12 +13,12 @@ type UseAppDataHookType = {
 
 const useAppData = (): UseAppDataHookType => {
   const {
-    state: { theme, isShowText },
+    state: { metaData, theme, isShowText },
     handleChangeTheme,
     handleIsShowText,
   } = useContext(AppDataContext);
 
-  return { theme, isShowText, handleChangeTheme, handleIsShowText };
+  return { metaData, theme, isShowText, handleChangeTheme, handleIsShowText };
 };
 
 export default useAppData;
