@@ -2,24 +2,16 @@ import { Link } from "react-router-dom";
 
 import ButtonHandleSpeech from "./components/ButtonHandleSpeech";
 import Button from "./components/Button";
+import useInterfaceData from "../../../../hooks/useInterfaceData";
 
-import { type image } from "../../../../types";
-
-type ButtonsSectionProps = {
-  images: image[];
-  isSpeechReady: boolean;
-  handleNext: () => void;
-  handleReset: () => void;
-  handleSpeech: () => void;
-};
-
-const ButtonsSection = ({
-  images,
-  isSpeechReady,
-  handleNext,
-  handleReset,
-  handleSpeech,
-}: ButtonsSectionProps) => {
+const ButtonsSection = () => {
+  const {
+    imagesData: images,
+    isSpeechReady,
+    handleNext,
+    handleReset,
+    handleSpeech,
+  } = useInterfaceData();
   return (
     <>
       {images.length > 0 ? (

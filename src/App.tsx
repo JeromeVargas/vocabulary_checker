@@ -1,38 +1,29 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 
+import { InterfaceDataProvider } from "./context/InterfaceContext";
 import Home from "./pages/home/Home";
 import Interface from "./pages/interface/Interface";
 import Error404 from "./pages/error404/Error404";
-
-import useAppReducer from "./context/appReducer";
 
 import dataFetcher from "./services/dataFetcher";
 
 function App() {
   const { keys: topicsToRenderInterfaceInstance } = dataFetcher();
-  const {
-    state: { theme, isShowText },
-    handleIsShowText,
-    handleChangeTheme,
-  } = useAppReducer();
+  const { pathname } = useLocation();
 
   return (
     <Routes>
       {/* home */}
-      <Route
-        index
-        element={<Home theme={theme} handleChangeTheme={handleChangeTheme} />}
-      />
+      <Route index element={<Home />} />
       {/* interface */}
       {topicsToRenderInterfaceInstance.map((path) => (
         <Route
           key={path}
           path={path}
           element={
-            <Interface
-              isShowText={isShowText}
-              handleIsShowText={handleIsShowText}
-            />
+            <InterfaceDataProvider pathname={pathname}>
+              <Interface />
+            </InterfaceDataProvider>
           }
         />
       ))}

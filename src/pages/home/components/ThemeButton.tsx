@@ -1,9 +1,7 @@
-type ThemeButtonProps = {
-  theme: string;
-  handleChangeTheme: () => void;
-};
+import useAppData from "../../../hooks/useAppData";
 
-const ThemeButton = ({ theme, handleChangeTheme }: ThemeButtonProps) => {
+const ThemeButton = () => {
+  const { theme, handleChangeTheme } = useAppData();
   return (
     <button
       aria-label="theme"

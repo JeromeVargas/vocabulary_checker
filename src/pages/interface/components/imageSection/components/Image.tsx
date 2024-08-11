@@ -1,25 +1,23 @@
 import { cn } from "../../../../../lib/classMerge";
 
-import useImageReducer from "../../../../../context/ImageReducer";
+import errorThrower from "../../../../../lib/utils/errorThrower";
+import useImageData from "../../../../../hooks/useImageData";
 
 type ImageProps = {
   imageUrl: string;
   imageTranslation: string;
   currentImage: string;
+  imgRef: React.RefObject<HTMLImageElement>;
   handleSetIsLoaded: () => void;
 };
 
 const Image = ({
+  imgRef,
   imageUrl,
   imageTranslation,
   currentImage,
-  handleSetIsLoaded,
 }: ImageProps) => {
-  const {
-    state: { error },
-    imgEl,
-    errorThrower,
-  } = useImageReducer({ handleSetIsLoaded });
+  const { error } = useImageData();
   return (
     <>
       {error && errorThrower()}
@@ -27,7 +25,7 @@ const Image = ({
         className={cn("col-start-1 row-start-1 h-full w-full text-sm", {
           invisible: imageTranslation !== currentImage,
         })}
-        ref={imgEl}
+        ref={imgRef}
         src={imageUrl}
         alt={`${imageTranslation}.`}
       />

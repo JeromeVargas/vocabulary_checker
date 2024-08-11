@@ -4,18 +4,13 @@ import ThemeButton from "./components/ThemeButton";
 
 import dataFetcher from "../../services/dataFetcher";
 
-type TopicsIndexProps = {
-  theme: string;
-  handleChangeTheme: () => void;
-};
-
-const Home = ({ theme, handleChangeTheme }: TopicsIndexProps) => {
+const Home = () => {
   const { topics } = dataFetcher();
 
   return (
     <>
       <header className="mt-16">
-        <ThemeButton theme={theme} handleChangeTheme={handleChangeTheme} />
+        <ThemeButton />
         <h1 className="text-font-main">シャドーイング アプリ</h1>
       </header>
       <main>

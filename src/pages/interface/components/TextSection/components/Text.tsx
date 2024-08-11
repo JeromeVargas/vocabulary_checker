@@ -1,18 +1,10 @@
+import useAppData from "../../../../../hooks/useAppData";
+import useInterfaceData from "../../../../../hooks/useInterfaceData";
 import TextPlaceHolder from "./../components/TextPlaceHolder";
 
-type TextProps = {
-  text: string;
-  highlights: number[];
-  isShowText: boolean;
-  handleIsShowText: () => void;
-};
-
-const Text = ({
-  text,
-  highlights,
-  isShowText,
-  handleIsShowText,
-}: TextProps) => {
+const Text = () => {
+  const { isShowText, handleIsShowText } = useAppData();
+  const { text, highlights } = useInterfaceData();
   return (
     <h1
       onClick={handleIsShowText}

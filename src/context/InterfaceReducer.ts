@@ -9,13 +9,13 @@ import { type image } from "../types";
 
 const { data } = dataFetcher();
 
-type initialState = {
+export type StateType = {
   imagesData: image[];
   isSpeechReady: boolean;
   isLoaded: boolean;
 };
 
-const initialState: initialState = {
+export const initialState: StateType = {
   imagesData: [],
   isSpeechReady: false,
   isLoaded: false,
@@ -34,10 +34,7 @@ type ReducerAction =
   | { type: REDUCER_ACTIONS_TYPES.TOGGLE_IS_SPEECH_READY; payload: boolean }
   | { type: REDUCER_ACTIONS_TYPES.TOGGLE_IS_LOADED };
 
-const reducer = (
-  state: typeof initialState,
-  action: ReducerAction,
-): typeof initialState => {
+const reducer = (state: StateType, action: ReducerAction): StateType => {
   switch (action.type) {
     case REDUCER_ACTIONS_TYPES.SET_IMAGES_DATA:
       return {
@@ -74,8 +71,6 @@ const useInterfaceReducer = ({ pathname }: useInterfaceReducerProps) => {
   // formats the path from url
   const path = pathSlashRemover(pathname);
 
-  // let images = state.data[path as keyof typeof data].metadata;
-
   // sets the images array item index to show its text, image file name and the words to highlight
   const index = useMemo(() => {
     return randomNumber(0, state.imagesData.length - 1);
@@ -93,7 +88,6 @@ const useInterfaceReducer = ({ pathname }: useInterfaceReducerProps) => {
   const text = state.imagesData.length > 0 ? state.imagesData[index].word : "";
   const currentImage =
     state.imagesData.length > 0 ? state.imagesData[index].fileName : "";
-
   const highlights = data[path as keyof typeof data].wordsToHighlight;
 
   // state handlers

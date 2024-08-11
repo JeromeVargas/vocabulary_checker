@@ -2,7 +2,12 @@ import { useEffect, useReducer } from "react";
 
 import getLocalStorageTheme from "../lib/utils/getLocalStorage";
 
-const initialState = {
+export type StateType = {
+  isShowText: boolean;
+  theme: string;
+};
+
+export const initialState: StateType = {
   isShowText: true,
   theme: getLocalStorageTheme(),
 };
@@ -18,7 +23,7 @@ type ReducerAction = {
 };
 
 const reducer = (
-  state: typeof initialState,
+  state: StateType,
   action: ReducerAction,
 ): typeof initialState => {
   switch (action.type) {

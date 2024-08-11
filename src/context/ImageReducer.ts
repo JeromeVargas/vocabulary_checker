@@ -1,6 +1,10 @@
-import { useEffect, useReducer, useRef } from "react";
+import { useEffect, useReducer } from "react";
 
-const initialState = {
+export type StateType = {
+  error: boolean;
+};
+
+export const initialState: StateType = {
   error: false,
 };
 
@@ -12,10 +16,7 @@ type ReducerAction = {
   type: REDUCER_ACTIONS_TYPES;
 };
 
-const reducer = (
-  state: typeof initialState,
-  action: ReducerAction,
-): typeof initialState => {
+const reducer = (state: StateType, action: ReducerAction): StateType => {
   switch (action.type) {
     case REDUCER_ACTIONS_TYPES.TOGGLE_ERROR:
       return { ...state, error: true };
@@ -25,11 +26,14 @@ const reducer = (
 };
 
 type useImageReducerProps = {
+  imgRef: React.RefObject<HTMLImageElement>;
   handleSetIsLoaded: () => void;
 };
 
-const useImageReducer = ({ handleSetIsLoaded }: useImageReducerProps) => {
-  const imgEl = useRef<HTMLImageElement>(null);
+const useImageReducer = ({
+  imgRef,
+  handleSetIsLoaded,
+}: useImageReducerProps) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   // sets the error state and helps throw error in component
@@ -37,13 +41,9 @@ const useImageReducer = ({ handleSetIsLoaded }: useImageReducerProps) => {
     return dispatch({ type: REDUCER_ACTIONS_TYPES.TOGGLE_ERROR });
   };
 
-  const errorThrower = () => {
-    throw new Error("Image did not upload");
-  };
-
   // sets this hook error state and prop load state as each img is passed
   useEffect(() => {
-    const imgElCurrent = imgEl.current;
+    const imgElCurrent = imgRef.current;
 
     if (imgElCurrent) {
       imgElCurrent.addEventListener("error", (e) => {
@@ -62,9 +62,9 @@ const useImageReducer = ({ handleSetIsLoaded }: useImageReducerProps) => {
         imgElCurrent.removeEventListener("error", handleSetError);
       };
     }
-  }, [imgEl, handleSetIsLoaded]);
+  }, [imgRef, handleSetIsLoaded]);
 
-  return { state, imgEl, errorThrower };
+  return { state };
 };
 
 export default useImageReducer;
