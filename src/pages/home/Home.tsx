@@ -5,7 +5,15 @@ import ThemeButton from "./components/ThemeButton";
 import dataFetcher from "../../services/dataFetcher";
 
 const Home = () => {
-  const { topics } = dataFetcher();
+  const data = dataFetcher();
+
+  const keys = Object.keys(data);
+  const values = Object.values(data);
+
+  // maps the keys (paths in original language) as topic and its translations (topics in target language) as link text
+  const topics = keys.map((topic, index) => {
+    return { topic, topicTargetLanguage: values[index].translation };
+  });
 
   return (
     <>

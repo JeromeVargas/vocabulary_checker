@@ -8,8 +8,10 @@ import Error404 from "./pages/error404/Error404";
 import dataFetcher from "./services/dataFetcher";
 
 function App() {
-  const { keys: topicsToRenderInterfaceInstance } = dataFetcher();
+  const data = dataFetcher();
   const { pathname } = useLocation();
+
+  const topicsToRenderInterfaceInstance = Object.keys(data);
 
   return (
     <Routes>

@@ -7,7 +7,7 @@ import speechUtterance from "../lib/utils/speech";
 
 import { type image } from "../types";
 
-const { data } = dataFetcher();
+const data = dataFetcher();
 
 export type StateType = {
   imagesData: image[];
