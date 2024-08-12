@@ -1,11 +1,13 @@
 import { useEffect, useMemo, useReducer } from "react";
-import data from "../data/meta-data.json";
 
 import pathSlashRemover from "../lib/utils/path";
+import dataFetcher from "../services/dataFetcher";
 import randomNumber from "../lib/utils/random";
 import speechUtterance from "../lib/utils/speech";
 
 import { type image } from "../types";
+
+const { data } = dataFetcher();
 
 export type StateType = {
   imagesData: image[];

@@ -1,18 +1,11 @@
 import { Link } from "react-router-dom";
 
 import ThemeButton from "./components/ThemeButton";
-import useAppData from "../../hooks/useAppData";
+
+import dataFetcher from "../../services/dataFetcher";
 
 const Home = () => {
-  const { metaData } = useAppData();
-
-  const keys = Object.keys(metaData);
-  const values = Object.values(metaData);
-
-  // maps the keys (paths in original language) as topic and its translations (topics in target language) as link text
-  const topics = keys.map((topic, index) => {
-    return { topic, topicTargetLanguage: values[index].translation };
-  });
+  const { topics } = dataFetcher();
 
   return (
     <>
