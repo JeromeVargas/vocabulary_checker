@@ -6,12 +6,24 @@
   "language": "en",
   // words - list of words to be always considered correct
   "words": [
+    "ashita",
+    "autodocs",
+    "clsx",
+    "gozaimasu",
     "hanashimashou",
     "hyou",
     "kaiwa",
     "kiku",
+    "kikurenshou",
+    "konbanwa",
+    "konnichiwa",
+    "mata",
+    "nasai",
+    "ohayou",
+    "oyasumi",
     "renshou",
     "tailwindcss",
+    "tangohyou",
     "verbtobe"
   ]
 }

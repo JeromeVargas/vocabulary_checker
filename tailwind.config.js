@@ -5,19 +5,27 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "#60A5FA",
-        text: {
-          base: "#FFFFFF",
-          highlight: "#4ADE80",
+        base: {
+          main: "rgb(var(--color-base-main))",
+          shade: "rgb(var(--color-base-shade))", // blue - black
+        },
+        font: {
+          main: "rgb(var(--color-font-main))", // white
         },
         neutral: {
-          main: "#D1D5DB",
-          shade: "#99A3AF",
-          contrast: "#1F2937",
+          main: "rgb(var(--color-neutral-main))",
+          shade: "rgb(var(--color-neutral-shade))",
+          light: "rgb(var(--color-neutral-light))", // green - gray
         },
-        accent: "#FB923C",
+
+        accent: {
+          main: "rgb(var(--color-accent-main))", // orange - green
+          shade: "rgb(var(--color-accent-shade))",
+          contrast: "rgb(var(--color-accent-contrast))", // red
+        },
       },
     },
   },
+  darkMode: ['[data-theme="dark"]'],
   plugins: [],
 };

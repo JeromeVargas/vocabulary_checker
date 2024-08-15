@@ -1,3 +1,61 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply flex min-h-screen flex-col items-center bg-base-main text-center text-5xl font-black;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-base-main: 31 27 36;
+      --color-base-shade: 18 18 18;
+      --color-font-main: 255 255 255;
+      --color-neutral-main: 121 121 121;
+      --color-neutral-shade: 80 80 80;
+      --color-neutral-light: 12 12 12;
+      --color-accent-main: 60 251 146;
+      --color-accent-shade: 149 204 199;
+      --color-accent-contrast: 248 113 113;
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --color-base-main: 96 165 250;
+      --color-base-shade: 147 197 253;
+      --color-font-main: 255 255 255;
+      --color-neutral-main: 74 222 128;
+      --color-neutral-shade: 134 239 172;
+      --color-neutral-light: 187 247 208;
+      --color-accent-main: 251 146 60;
+      --color-accent-shade: 253 186 116;
+      --color-accent-contrast: 248 113 113;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --color-base-main: 31 27 36;
+    --color-base-shade: 18 18 18;
+    --color-font-main: 255 255 255;
+    --color-neutral-main: 121 121 121;
+    --color-neutral-shade: 80 80 80;
+    --color-neutral-light: 12 12 12;
+    --color-accent-main: 60 251 146;
+    --color-accent-shade: 149 204 199;
+    --color-accent-contrast: 248 113 113;
+  }
+
+  :root[data-theme="light"] {
+    --color-base-main: 96 165 250;
+    --color-base-shade: 147 197 253;
+    --color-font-main: 255 255 255;
+    --color-neutral-main: 74 222 128;
+    --color-neutral-shade: 134 239 172;
+    --color-neutral-light: 187 247 208;
+    --color-accent-main: 251 146 60;
+    --color-accent-shade: 253 186 116;
+    --color-accent-contrast: 248 113 113;
+  }
+}

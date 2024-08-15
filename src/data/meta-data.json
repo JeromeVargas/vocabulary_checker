@@ -1,0 +1,34 @@
+{
+  "articles": {
+    "translation": "Articles",
+    "metadata": [
+      { "word": "a car", "fileName": "car" },
+      { "word": "a dog", "fileName": "dog" },
+      { "word": "a cat", "fileName": "cat" },
+      { "word": "a house", "fileName": "house" },
+      { "word": "a teacher", "fileName": "teacher" },
+      { "word": "an elephant", "fileName": "elephant" },
+      { "word": "an egg", "fileName": "egg" },
+      { "word": "an apple", "fileName": "apple" },
+      { "word": "an orange", "fileName": "orange" },
+      { "word": "an office", "fileName": "office" }
+    ],
+    "wordsToHighlight": [0]
+  },
+  "adjectives": {
+    "translation": "Adjectives",
+    "metadata": [
+      { "word": "a fast car", "fileName": "car" },
+      { "word": "a small dog", "fileName": "dog" },
+      { "word": "a funny cat", "fileName": "cat" },
+      { "word": "a beautiful house", "fileName": "house" },
+      { "word": "a young teacher", "fileName": "teacher" },
+      { "word": "a big elephant", "fileName": "elephant" },
+      { "word": "a white egg", "fileName": "egg" },
+      { "word": "a red apple", "fileName": "apple" },
+      { "word": "a round orange", "fileName": "orange" },
+      { "word": "a nice office", "fileName": "office" }
+    ],
+    "wordsToHighlight": [1]
+  }
+}
