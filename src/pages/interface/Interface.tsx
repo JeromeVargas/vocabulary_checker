@@ -17,7 +17,7 @@ function Interface() {
   return (
     <ErrorBoundary fallback={<Error404Page />}>
       <Suspense fallback={<Loader />}>
-        <main className="flex h-screen flex-col items-center justify-evenly bg-base-main text-5xl">
+        <main className="flex h-dvh flex-col items-center justify-evenly bg-base-main text-5xl">
           {/* content area */}
           {imagesData.length > 0 ? (
             <>
