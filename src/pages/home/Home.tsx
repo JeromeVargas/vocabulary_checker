@@ -23,12 +23,12 @@ const Home = () => {
       </header>
       <main>
         <section className="m-10 md:m-20">
-          <ul className="space-y-8 md:space-y-16">
+          <ul className="space-y-6 md:space-y-9">
             {topics.map(({ topic, topicTargetLanguage }) => {
               return (
-                <li key={topic}>
+                <li key={topic} className="flex flex-col items-center">
                   <Link
-                    className="rounded-xl border-4 bg-accent-main px-8 py-2 text-center text-2xl font-normal text-font-main opacity-90 hover:-translate-y-1 hover:translate-x-1 hover:bg-neutral-shade md:text-5xl"
+                    className="w-10/12 rounded-xl border-4 bg-accent-main px-8 py-4 text-center text-2xl font-normal text-font-main opacity-90 hover:-translate-y-1 hover:translate-x-1 hover:bg-neutral-shade md:text-5xl"
                     to={`/${topic}`}
                   >
                     {topicTargetLanguage}
