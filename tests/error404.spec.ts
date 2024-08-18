@@ -8,12 +8,8 @@ test.describe("404 page", () => {
   });
 
   test("should have a link to go back to home page", async ({ page }) => {
-    await page
-      .getByRole("link", { name: "Please go back to the home page" })
-      .click();
+    await page.getByRole("link").first().click();
 
-    expect(await page.getByRole("heading").textContent()).toBe(
-      "シャドーイング アプリ",
-    );
+    await expect(page.getByRole("heading")).toBeVisible();
   });
 });

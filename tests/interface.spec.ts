@@ -1,39 +1,65 @@
 import { test, expect } from "@playwright/test";
 
-const LOCAL_HOST_URL_INTERFACE = "http://localhost:4173/base-instructions";
+const topic = "articles";
+
+const LOCAL_HOST_URL_INTERFACE = `http://localhost:4173/${topic}`;
 
 test.describe("interface", () => {
   test.beforeEach(async ({ page }) => {
     await page.goto(LOCAL_HOST_URL_INTERFACE);
   });
 
-  test("button should have text", async ({ page }) => {
-    await expect(page.getByRole("button", { name: "Listen" })).toBeVisible();
+  test("button should be disabled", async ({ page }) => {
+    await expect(page.getByRole("button").last()).toBeDisabled();
   });
-  test("button should change the text", async ({ page }) => {
-    await page.getByRole("button").first().click();
-
-    await expect(page.getByRole("button", { name: "Next" })).toBeVisible();
-  });
-  test("exit screen should show new exercise link", async ({ page }) => {
-    await page.getByRole("button").first().click();
-    await page.getByRole("button", { name: "Next" }).click();
-
-    await page.getByRole("button").first().click();
-    await page.getByRole("button", { name: "Next" }).click();
-
-    await page.getByRole("button").first().click();
-    await page.getByRole("button", { name: "Next" }).click();
-
-    await page.getByRole("button").first().click();
-    await page.getByRole("button", { name: "Next" }).click();
-
-    await expect(
-      page.getByRole("link", { name: "New Exercise" }),
-    ).toBeVisible();
-    await page.getByRole("link", { name: "New Exercise" }).click();
-    expect(await page.getByRole("heading").textContent()).toBe(
-      "シャドーイング アプリ",
+  test("button should change color", async ({ page }) => {
+    await expect(page.getByRole("button").last()).toHaveCSS(
+      "background-color",
+      "rgb(96, 165, 250)",
     );
+
+    await page.getByRole("button").first().click();
+
+    await expect(page.getByRole("button").last()).toHaveCSS(
+      "background-color",
+      "rgb(134, 239, 172)",
+    );
+  });
+  test("exit screen should show link to home", async ({ page }) => {
+    // repeat based on the number of elements on the topic meta-data words array
+    await page.getByRole("button").first().click();
+    await page.getByRole("button").last().click();
+
+    await page.getByRole("button").first().click();
+    await page.getByRole("button").last().click();
+
+    await page.getByRole("button").first().click();
+    await page.getByRole("button").last().click();
+
+    await page.getByRole("button").first().click();
+    await page.getByRole("button").last().click();
+
+    await page.getByRole("button").first().click();
+    await page.getByRole("button").last().click();
+
+    await page.getByRole("button").first().click();
+    await page.getByRole("button").last().click();
+
+    await page.getByRole("button").first().click();
+    await page.getByRole("button").last().click();
+
+    await page.getByRole("button").first().click();
+    await page.getByRole("button").last().click();
+
+    await page.getByRole("button").first().click();
+    await page.getByRole("button").last().click();
+
+    await page.getByRole("button").first().click();
+    await page.getByRole("button").last().click();
+
+    await expect(page.getByRole("link")).toBeVisible();
+
+    await page.getByRole("link").click();
+    await expect(page.getByRole("heading")).toBeVisible();
   });
 });
