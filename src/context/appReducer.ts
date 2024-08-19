@@ -1,25 +1,28 @@
 import { useEffect, useReducer } from "react";
 
-import getLocalStorageTheme from "../lib/utils/getLocalStorage";
+import getLocalStorageTheme from "../lib/utils/getLocalStorageTheme";
+import getLocalStorageFirstAccess from "../lib/utils/getLocalStorageFirstAccess";
 
 export type StateType = {
   isShowText: boolean;
   theme: string;
+  isFirstAccess: boolean;
 };
 
 export const initialState: StateType = {
-  isShowText: true,
+  isShowText: false,
   theme: getLocalStorageTheme(),
+  isFirstAccess: getLocalStorageFirstAccess(),
 };
 
 const enum REDUCER_ACTIONS_TYPES {
   TOGGLE_IS_SHOW_TEXT,
   TOGGLE_DARK_MODE,
+  TOGGLE_IS_FIRST_ACCESS,
 }
 
 type ReducerAction = {
   type: REDUCER_ACTIONS_TYPES;
-  payload?: string;
 };
 
 const reducer = (
@@ -31,6 +34,8 @@ const reducer = (
       return { ...state, isShowText: !state.isShowText };
     case REDUCER_ACTIONS_TYPES.TOGGLE_DARK_MODE:
       return { ...state, theme: state.theme === "light" ? "dark" : "light" };
+    case REDUCER_ACTIONS_TYPES.TOGGLE_IS_FIRST_ACCESS:
+      return { ...state, isFirstAccess: false };
     default:
       throw new Error("There is not such action");
   }
@@ -58,7 +63,13 @@ const useAppReducer = () => {
     return dispatch({ type: REDUCER_ACTIONS_TYPES.TOGGLE_DARK_MODE });
   };
 
-  return { state, handleIsShowText, handleChangeTheme };
+  const handleIsFirstAccess = () => {
+    if (state.isFirstAccess === true)
+      localStorage.setItem("first_access", "false");
+    return dispatch({ type: REDUCER_ACTIONS_TYPES.TOGGLE_IS_FIRST_ACCESS });
+  };
+
+  return { state, handleIsShowText, handleChangeTheme, handleIsFirstAccess };
 };
 
 export default useAppReducer;

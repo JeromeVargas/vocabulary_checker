@@ -8,6 +8,7 @@ const initialContextState: UseAppDataContextType = {
   state: initialState,
   handleIsShowText: () => {},
   handleChangeTheme: () => {},
+  handleIsFirstAccess: () => {},
 };
 
 export const AppDataContext =
