@@ -7,7 +7,7 @@ const TextPlaceHolder = () => {
     <div
       onClick={handleIsFirstAccess}
       className={cn(
-        "flex size-20 items-center justify-center rounded-full border-4 font-medium text-font-main",
+        "flex size-20 cursor-pointer items-center justify-center rounded-full border-4 font-medium text-font-main",
         {
           "animate-bounce": isFirstAccess === true,
         },
