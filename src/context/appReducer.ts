@@ -4,19 +4,16 @@ import getLocalStorageTheme from "../lib/utils/getLocalStorageTheme";
 import getLocalStorageFirstAccess from "../lib/utils/getLocalStorageFirstAccess";
 
 export type StateType = {
-  isShowText: boolean;
   theme: string;
   isFirstAccess: boolean;
 };
 
 export const initialState: StateType = {
-  isShowText: false,
   theme: getLocalStorageTheme(),
   isFirstAccess: getLocalStorageFirstAccess(),
 };
 
 const enum REDUCER_ACTIONS_TYPES {
-  TOGGLE_IS_SHOW_TEXT,
   TOGGLE_DARK_MODE,
   TOGGLE_IS_FIRST_ACCESS,
 }
@@ -30,8 +27,6 @@ const reducer = (
   action: ReducerAction,
 ): typeof initialState => {
   switch (action.type) {
-    case REDUCER_ACTIONS_TYPES.TOGGLE_IS_SHOW_TEXT:
-      return { ...state, isShowText: !state.isShowText };
     case REDUCER_ACTIONS_TYPES.TOGGLE_DARK_MODE:
       return { ...state, theme: state.theme === "light" ? "dark" : "light" };
     case REDUCER_ACTIONS_TYPES.TOGGLE_IS_FIRST_ACCESS:
@@ -55,10 +50,6 @@ const useAppReducer = () => {
     }
   }, [state.theme]);
 
-  const handleIsShowText = () => {
-    return dispatch({ type: REDUCER_ACTIONS_TYPES.TOGGLE_IS_SHOW_TEXT });
-  };
-
   const handleChangeTheme = () => {
     return dispatch({ type: REDUCER_ACTIONS_TYPES.TOGGLE_DARK_MODE });
   };
@@ -69,7 +60,7 @@ const useAppReducer = () => {
     return dispatch({ type: REDUCER_ACTIONS_TYPES.TOGGLE_IS_FIRST_ACCESS });
   };
 
-  return { state, handleIsShowText, handleChangeTheme, handleIsFirstAccess };
+  return { state, handleChangeTheme, handleIsFirstAccess };
 };
 
 export default useAppReducer;

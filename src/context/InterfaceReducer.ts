@@ -11,12 +11,14 @@ const data = dataFetcher();
 
 export type StateType = {
   imagesData: image[];
+  isShowText: boolean;
   isSpeechReady: boolean;
   isLoaded: boolean;
 };
 
 export const initialState: StateType = {
   imagesData: [],
+  isShowText: false,
   isSpeechReady: false,
   isLoaded: false,
 };
@@ -24,6 +26,7 @@ export const initialState: StateType = {
 const enum REDUCER_ACTIONS_TYPES {
   SET_IMAGES_DATA,
   FILTER_IMAGES_DATA,
+  TOGGLE_IS_SHOW_TEXT,
   TOGGLE_IS_SPEECH_READY,
   TOGGLE_IS_LOADED,
 }
@@ -31,6 +34,7 @@ const enum REDUCER_ACTIONS_TYPES {
 type ReducerAction =
   | { type: REDUCER_ACTIONS_TYPES.SET_IMAGES_DATA; payload: string }
   | { type: REDUCER_ACTIONS_TYPES.FILTER_IMAGES_DATA; payload: number }
+  | { type: REDUCER_ACTIONS_TYPES.TOGGLE_IS_SHOW_TEXT }
   | { type: REDUCER_ACTIONS_TYPES.TOGGLE_IS_SPEECH_READY; payload: boolean }
   | { type: REDUCER_ACTIONS_TYPES.TOGGLE_IS_LOADED };
 
@@ -48,6 +52,8 @@ const reducer = (state: StateType, action: ReducerAction): StateType => {
           (image) => image !== state.imagesData[action.payload as number],
         ),
       };
+    case REDUCER_ACTIONS_TYPES.TOGGLE_IS_SHOW_TEXT:
+      return { ...state, isShowText: !state.isShowText };
     case REDUCER_ACTIONS_TYPES.TOGGLE_IS_SPEECH_READY:
       return {
         ...state,
@@ -109,6 +115,10 @@ const useInterfaceReducer = ({ pathname }: useInterfaceReducerProps) => {
     });
   };
 
+  const handleIsShowText = () => {
+    return dispatch({ type: REDUCER_ACTIONS_TYPES.TOGGLE_IS_SHOW_TEXT });
+  };
+
   const handleSpeech = () => {
     setTimeout(() => {
       dispatch({
@@ -132,6 +142,7 @@ const useInterfaceReducer = ({ pathname }: useInterfaceReducerProps) => {
     path,
     handleNext,
     handleReset,
+    handleIsShowText,
     handleSpeech,
     handleSetIsLoaded,
   };

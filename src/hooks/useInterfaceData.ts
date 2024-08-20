@@ -7,6 +7,7 @@ type UseInterfaceDataHookType = {
   imagesData: image[];
   isSpeechReady: boolean;
   isLoaded: boolean;
+  isShowText: boolean;
   text: string;
   currentImage: string;
   highlights: number[];
@@ -15,11 +16,12 @@ type UseInterfaceDataHookType = {
   handleReset: () => void;
   handleSpeech: () => void;
   handleSetIsLoaded: () => void;
+  handleIsShowText: () => void;
 };
 
 const useInterfaceData = (): UseInterfaceDataHookType => {
   const {
-    state: { imagesData, isSpeechReady, isLoaded },
+    state: { imagesData, isSpeechReady, isLoaded, isShowText },
     text,
     currentImage,
     highlights,
@@ -28,12 +30,14 @@ const useInterfaceData = (): UseInterfaceDataHookType => {
     handleReset,
     handleSpeech,
     handleSetIsLoaded,
+    handleIsShowText,
   } = useContext(InterfaceDataContext);
 
   return {
     imagesData,
     isSpeechReady,
     isLoaded,
+    isShowText,
     text,
     currentImage,
     highlights,
@@ -42,6 +46,7 @@ const useInterfaceData = (): UseInterfaceDataHookType => {
     handleReset,
     handleSpeech,
     handleSetIsLoaded,
+    handleIsShowText,
   };
 };
 

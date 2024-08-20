@@ -5,8 +5,7 @@ import useAppReducer, { initialState } from "./appReducer";
 type UseAppDataContextType = ReturnType<typeof useAppReducer>;
 
 const initialContextState: UseAppDataContextType = {
-  state: initialState,
-  handleIsShowText: () => {},
+  state: initialState,  
   handleChangeTheme: () => {},
   handleIsFirstAccess: () => {},
 };

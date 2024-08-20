@@ -12,6 +12,7 @@ const initialContextState: UseInterfaceDataContextType = {
   path: "",
   handleNext: () => {},
   handleReset: () => {},
+  handleIsShowText: () => {},
   handleSpeech: () => {},
   handleSetIsLoaded: () => {},
 };
