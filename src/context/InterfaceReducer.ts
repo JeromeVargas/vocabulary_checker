@@ -27,6 +27,7 @@ const enum REDUCER_ACTIONS_TYPES {
   SET_IMAGES_DATA,
   FILTER_IMAGES_DATA,
   TOGGLE_IS_SHOW_TEXT,
+  RESET_IS_SHOW_TEXT,
   TOGGLE_IS_SPEECH_READY,
   TOGGLE_IS_LOADED,
 }
@@ -35,6 +36,7 @@ type ReducerAction =
   | { type: REDUCER_ACTIONS_TYPES.SET_IMAGES_DATA; payload: string }
   | { type: REDUCER_ACTIONS_TYPES.FILTER_IMAGES_DATA; payload: number }
   | { type: REDUCER_ACTIONS_TYPES.TOGGLE_IS_SHOW_TEXT }
+  | { type: REDUCER_ACTIONS_TYPES.RESET_IS_SHOW_TEXT }
   | { type: REDUCER_ACTIONS_TYPES.TOGGLE_IS_SPEECH_READY; payload: boolean }
   | { type: REDUCER_ACTIONS_TYPES.TOGGLE_IS_LOADED };
 
@@ -54,6 +56,8 @@ const reducer = (state: StateType, action: ReducerAction): StateType => {
       };
     case REDUCER_ACTIONS_TYPES.TOGGLE_IS_SHOW_TEXT:
       return { ...state, isShowText: !state.isShowText };
+    case REDUCER_ACTIONS_TYPES.RESET_IS_SHOW_TEXT:
+      return { ...state, isShowText: false };
     case REDUCER_ACTIONS_TYPES.TOGGLE_IS_SPEECH_READY:
       return {
         ...state,
@@ -105,6 +109,9 @@ const useInterfaceReducer = ({ pathname }: useInterfaceReducerProps) => {
     dispatch({
       type: REDUCER_ACTIONS_TYPES.TOGGLE_IS_SPEECH_READY,
       payload: false,
+    });
+    dispatch({
+      type: REDUCER_ACTIONS_TYPES.RESET_IS_SHOW_TEXT,
     });
   };
 
