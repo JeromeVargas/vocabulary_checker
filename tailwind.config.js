@@ -24,6 +24,24 @@ export default {
           contrast: "rgb(var(--color-accent-contrast))", // red
         },
       },
+      animation: {
+        "pulse-slow": "wiggle 2s linear infinite",
+      },
+      keyframes: {
+        wiggle: {
+          "0%": {
+            // transform: "scale(0.95)",
+            "box-shadow": "0 0 0 0 rgba(229, 62, 62, 1)",
+          },
+          "100%": {
+            // transform: "scale(1)",
+            "box-shadow": "0 0 0 20px rgba(229, 62, 62, 0)",
+          },
+          // "100%": {
+          //   // transform: "scale(0.95)",
+          // },
+        },
+      },
     },
   },
   darkMode: ['[data-theme="dark"]'],

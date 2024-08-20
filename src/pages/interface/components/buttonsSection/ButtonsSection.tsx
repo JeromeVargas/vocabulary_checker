@@ -10,13 +10,12 @@ const ButtonsSection = () => {
     isSpeechReady,
     handleNext,
     handleReset,
-    handleSpeech,
   } = useInterfaceData();
   return (
     <>
       {images.length > 0 ? (
         <>
-          <ButtonHandleSpeech handleSpeech={handleSpeech} />
+          <ButtonHandleSpeech />
           <Button
             kind="action"
             isSpeechReady={isSpeechReady}

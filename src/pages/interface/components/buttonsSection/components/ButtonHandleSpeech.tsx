@@ -1,16 +1,25 @@
-type ButtonHandleSpeechProps = {
-  handleSpeech: () => void;
-};
+import useAppData from "../../../../../hooks/useAppData";
+import useInterfaceData from "../../../../../hooks/useInterfaceData";
 
-const ButtonHandleSpeech = ({ handleSpeech }: ButtonHandleSpeechProps) => {
+import { cn } from "../../../../../lib/classMerge";
+
+const ButtonHandleSpeech = () => {
+  const { isFirstAccess, handleIsFirstAccess } = useAppData();
+  const { handleSpeech } = useInterfaceData();
   return (
     <button
       aria-label="sound"
-      className="rounded-full border-2 border-accent-shade bg-base-shade transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-100 hover:border-accent-contrast"
+      className={cn(
+        "rounded-full border-2 border-accent-shade bg-base-shade transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-100 hover:border-accent-contrast",
+        {
+          "animate-pulse-slow": isFirstAccess === true,
+        },
+      )}
       type="button"
       onClick={handleSpeech}
     >
       <svg
+        onClick={handleIsFirstAccess}
         xmlns="http://www.w3.org/2000/svg"
         width="5.5rem"
         height="5.5rem"
