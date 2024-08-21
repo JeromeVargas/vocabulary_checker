@@ -32,7 +32,6 @@ const ImageSection = () => {
                 imageUrl={imageUrl}
                 imageTranslation={image.fileName}
                 currentImage={currentImage}
-                handleSetIsLoaded={handleSetIsLoaded}
               />
             );
           })}

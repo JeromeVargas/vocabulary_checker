@@ -8,7 +8,6 @@ type ImageProps = {
   imageTranslation: string;
   currentImage: string;
   imgRef: React.RefObject<HTMLImageElement>;
-  handleSetIsLoaded: () => void;
 };
 
 const Image = ({
