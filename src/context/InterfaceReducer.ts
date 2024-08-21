@@ -38,7 +38,7 @@ type ReducerAction =
   | { type: REDUCER_ACTIONS_TYPES.TOGGLE_IS_SHOW_TEXT }
   | { type: REDUCER_ACTIONS_TYPES.RESET_IS_SHOW_TEXT }
   | { type: REDUCER_ACTIONS_TYPES.TOGGLE_IS_SPEECH_READY; payload: boolean }
-  | { type: REDUCER_ACTIONS_TYPES.TOGGLE_IS_LOADED };
+  | { type: REDUCER_ACTIONS_TYPES.TOGGLE_IS_LOADED; payload: boolean };
 
 const reducer = (state: StateType, action: ReducerAction): StateType => {
   switch (action.type) {
@@ -64,7 +64,7 @@ const reducer = (state: StateType, action: ReducerAction): StateType => {
         isSpeechReady: action.payload,
       };
     case REDUCER_ACTIONS_TYPES.TOGGLE_IS_LOADED:
-      return { ...state, isLoaded: true };
+      return { ...state, isLoaded: action.payload };
     default:
       throw new Error("There is not such action");
   }
@@ -120,6 +120,10 @@ const useInterfaceReducer = ({ pathname }: useInterfaceReducerProps) => {
       type: REDUCER_ACTIONS_TYPES.SET_IMAGES_DATA,
       payload: path,
     });
+    dispatch({
+      type: REDUCER_ACTIONS_TYPES.TOGGLE_IS_LOADED,
+      payload: false,
+    });
   };
 
   const handleIsShowText = () => {
@@ -138,7 +142,10 @@ const useInterfaceReducer = ({ pathname }: useInterfaceReducerProps) => {
 
   /* isLoaded code */
   const handleSetIsLoaded = () => {
-    return dispatch({ type: REDUCER_ACTIONS_TYPES.TOGGLE_IS_LOADED });
+    dispatch({
+      type: REDUCER_ACTIONS_TYPES.TOGGLE_IS_LOADED,
+      payload: true,
+    });
   };
 
   return {
