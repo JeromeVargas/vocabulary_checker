@@ -121,7 +121,7 @@ the images files are referenced in the meta-data objects file name field, these 
 
 ### **Playwright**
 
-- sometimes there is failing test in webkit, just run again
+- sometimes there is an inconsistently failing test in webkit, then webkit was removed from the testing
 
 ![sometimes_not_passing_test](assets/images/testing/sometimes_not_passing_test.png)
 
