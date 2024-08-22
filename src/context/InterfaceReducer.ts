@@ -136,7 +136,7 @@ const useInterfaceReducer = ({ pathname }: useInterfaceReducerProps) => {
         type: REDUCER_ACTIONS_TYPES.TOGGLE_IS_SPEECH_READY,
         payload: true,
       });
-    }, 500);
+    }, 1000);
     speechUtterance(text);
   };
 
