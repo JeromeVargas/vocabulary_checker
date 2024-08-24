@@ -28,7 +28,7 @@ const Home = () => {
               return (
                 <li key={topic} className="flex flex-col items-center">
                   <Link
-                    className="w-10/12 rounded-xl border-4 bg-accent-main px-8 py-4 text-center text-2xl font-normal text-font-main opacity-90 hover:-translate-y-1 hover:translate-x-1 hover:bg-neutral-shade md:text-5xl"
+                    className="w-10/12 rounded-xl border-4 bg-accent-main py-4 text-center text-2xl font-normal text-font-main opacity-90 hover:-translate-y-1 hover:translate-x-1 hover:bg-neutral-shade md:w-1/2 md:text-5xl lg:w-1/3 xl:w-1/4 2xl:w-1/5"
                     to={`/${topic}`}
                   >
                     {topicTargetLanguage}

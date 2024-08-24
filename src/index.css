@@ -7,6 +7,10 @@
     @apply flex min-h-dvh flex-col items-center bg-base-main text-center text-5xl font-black;
   }
 
+  #root {
+    @apply min-w-full;
+  }
+
   @media (prefers-color-scheme: dark) {
     :root {
       --color-base-main: 31 27 36;
