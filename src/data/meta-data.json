@@ -68,5 +68,24 @@
       { "word": "your office is nice", "fileName": "office" }
     ],
     "wordsToHighlight": [0]
+  },
+  "plurals-1": {
+    "translation": "Plurals 1",
+    "metadata": [
+      { "word": "her cars are fast", "fileName": "car" },
+      { "word": "his dogs are small", "fileName": "dog" },
+      { "word": "your cats are funny", "fileName": "cat" },
+      {
+        "word": "our houses are beautiful",
+        "fileName": "house"
+      },
+      { "word": "their teachers are young", "fileName": "teacher" },
+      { "word": "our elephants are big", "fileName": "elephant" },
+      { "word": "their eggs are white", "fileName": "egg" },
+      { "word": "my apples are red", "fileName": "apple" },
+      { "word": "his oranges are good", "fileName": "orange" },
+      { "word": "your offices are nice", "fileName": "office" }
+    ],
+    "wordsToHighlight": [1]
   }
 }
