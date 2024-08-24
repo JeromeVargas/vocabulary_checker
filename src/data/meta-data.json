@@ -30,5 +30,21 @@
       { "word": "a nice office", "fileName": "office" }
     ],
     "wordsToHighlight": [1]
+  },
+  "verb-to-be": {
+    "translation": "Verb to be",
+    "metadata": [
+      { "word": "it is a fast car", "fileName": "car" },
+      { "word": "she is a small dog", "fileName": "dog" },
+      { "word": "he is a funny cat", "fileName": "cat" },
+      { "word": "it is a beautiful house", "fileName": "house" },
+      { "word": "she is a young teacher", "fileName": "teacher" },
+      { "word": "he is a big elephant", "fileName": "elephant" },
+      { "word": "it is a white egg", "fileName": "egg" },
+      { "word": "it is a red apple", "fileName": "apple" },
+      { "word": "it is a round orange", "fileName": "orange" },
+      { "word": "it is a nice office", "fileName": "office" }
+    ],
+    "wordsToHighlight": [0, 1]
   }
 }
