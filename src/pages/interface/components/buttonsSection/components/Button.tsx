@@ -1,5 +1,11 @@
 import { type VariantProps, cva } from "class-variance-authority";
 
+import {
+  ACTION_BUTTON_LISTEN,
+  ACTION_BUTTON_NEXT,
+  TRY_AGAIN_BUTTON,
+} from "../../../../../config/constants";
+
 import { cn } from "../../../../../lib/classMerge";
 const variants = cva("border-4 px-10 py-4 text-center text-font-main", {
   variants: {
@@ -23,7 +29,8 @@ interface ButtonProps
 }
 
 const Button = ({ kind, isSpeechReady, onClick, ...props }: ButtonProps) => {
-  const nextText = isSpeechReady === false ? "Listen" : "Next";
+  const nextText =
+    isSpeechReady === false ? ACTION_BUTTON_LISTEN : ACTION_BUTTON_NEXT;
   return (
     <button
       onClick={onClick}
@@ -37,7 +44,7 @@ const Button = ({ kind, isSpeechReady, onClick, ...props }: ButtonProps) => {
       {...props}
     >
       {kind === "action" && nextText}
-      {kind === "reset" && "Try Again"}
+      {kind === "reset" && TRY_AGAIN_BUTTON}
     </button>
   );
 };

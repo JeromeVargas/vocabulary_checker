@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { ERROR_MESSAGE_LINK } from "../../config/constants";
 
 const Error404Page = () => {
   return (
@@ -7,7 +8,7 @@ const Error404Page = () => {
         className="text-neutral-contrast w-10/12 rounded-xl border-4 bg-neutral-shade p-4 text-center font-bold hover:bg-accent-main lg:w-auto"
         to="/"
       >
-        Please go back to the home page
+        {ERROR_MESSAGE_LINK}
       </Link>
     </main>
   );

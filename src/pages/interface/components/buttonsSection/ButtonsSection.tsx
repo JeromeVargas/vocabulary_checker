@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { NEW_EXERCISE_LINK } from "../../../../config/constants";
 
 import ButtonHandleSpeech from "./components/ButtonHandleSpeech";
 import Button from "./components/Button";
@@ -29,7 +30,7 @@ const ButtonsSection = () => {
             className="w-10/12 rounded-xl border-4 bg-neutral-shade px-10 py-4 text-center font-normal text-font-main opacity-90 hover:-translate-y-1 hover:translate-x-1 hover:bg-accent-main md:w-auto"
             to="/"
           >
-            New Exercise
+            {NEW_EXERCISE_LINK}
           </Link>
         </>
       )}

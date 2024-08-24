@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import ThemeButton from "./components/ThemeButton";
 
 import dataFetcher from "../../services/dataFetcher";
+import { HOME_HEADING } from "../../config/constants";
 
 const Home = () => {
   const data = dataFetcher();
@@ -19,7 +20,7 @@ const Home = () => {
     <>
       <header className="mt-16">
         <ThemeButton />
-        <h1 className="text-font-main">Vocabulary Shadowing</h1>
+        <h1 className="text-font-main">{HOME_HEADING}</h1>
       </header>
       <main>
         <section className="m-10 md:m-20">
