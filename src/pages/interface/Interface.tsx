@@ -7,6 +7,8 @@ import ErrorBoundary from "../../components/ErrorBoundary";
 import Error404Page from "../error404/Error404";
 import useInterfaceData from "../../hooks/useInterfaceData";
 
+import { CONGRATS_MESSAGE } from "../../config/constants";
+
 const ImageSection = lazy(
   () => import("./components/imageSection/ImageSection"),
 );
@@ -26,7 +28,7 @@ function Interface() {
             </>
           ) : (
             <p className="text-center text-6xl font-bold text-font-main md:text-9xl">
-              Congrats!
+              {CONGRATS_MESSAGE}
             </p>
           )}
           {/* buttons */}
