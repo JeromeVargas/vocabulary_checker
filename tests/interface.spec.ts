@@ -1,8 +1,8 @@
 import { test, expect } from "@playwright/test";
 
-const topic = "articles";
+import { TOPIC, TOPIC_NUMBER_OF_WORDS } from "../src/config/constants";
 
-const LOCAL_HOST_URL_INTERFACE = `http://localhost:4173/${topic}`;
+const LOCAL_HOST_URL_INTERFACE = `http://localhost:4173/${TOPIC}`;
 
 test.describe("interface", () => {
   test.beforeEach(async ({ page }) => {
@@ -26,36 +26,11 @@ test.describe("interface", () => {
     );
   });
   test("exit screen should show link to home", async ({ page }) => {
-    // repeat based on the number of elements on the topic meta-data words array
-    await page.getByRole("button").first().click();
-    await page.getByRole("button").last().click();
-
-    await page.getByRole("button").first().click();
-    await page.getByRole("button").last().click();
-
-    await page.getByRole("button").first().click();
-    await page.getByRole("button").last().click();
-
-    await page.getByRole("button").first().click();
-    await page.getByRole("button").last().click();
-
-    await page.getByRole("button").first().click();
-    await page.getByRole("button").last().click();
-
-    await page.getByRole("button").first().click();
-    await page.getByRole("button").last().click();
-
-    await page.getByRole("button").first().click();
-    await page.getByRole("button").last().click();
-
-    await page.getByRole("button").first().click();
-    await page.getByRole("button").last().click();
-
-    await page.getByRole("button").first().click();
-    await page.getByRole("button").last().click();
-
-    await page.getByRole("button").first().click();
-    await page.getByRole("button").last().click();
+    // repeat based on the number of elements on the first topic meta-data words array
+    for (let index = 0; index < TOPIC_NUMBER_OF_WORDS; index++) {
+      await page.getByRole("button").first().click();
+      await page.getByRole("button").last().click();
+    }
 
     await expect(page.getByRole("link")).toBeVisible();
 

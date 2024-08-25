@@ -61,9 +61,37 @@ The user can access dark mode by clicking on the right hand side top corner them
 
 > ## Configurations
 
-### **This project is setup to use**
+### **Initial set up**
 
-#### npm scripts
+To get the project started setting up the language please follow this steps
+
+> 1. create a JSON file - meta data object, this is going to be the data source:
+
+- main object keys = topics from origin language, these must be in kebab-case, e.g. **base-instructions**, **basic-greetings** ...
+
+- nested objects keys:
+
+  - translation: topic in target language
+  - meta-data: topic meta-data
+  - wordsToHighlight: words with special highlighting styles, it is a array index, taking each word as an array element
+
+![meta-data-json](assets/images/source_files/meta-data-json.png)
+
+> 2. create an images folder:
+
+The sub-folders must also be in kebab-case, e.g. **base-instructions**, **basic-greetings** since they are referenced in the meta-data json object keys, the images files are referenced in the meta-data objects file name field,
+
+![meta-data-json](assets/images/source_files/images_folder.png)
+
+> 3. set the configuration constants file in the config folder:
+
+- First section sets the language
+- Second section sets strings for headings and calls to action buttons and links
+- Third section sets values for testing, these must be added manually based on the meta-data JSON
+
+![constants_config_file](assets/images/source_files/constants_config_file.png)
+
+### **npm scripts**
 
 - **Vite**:
 
@@ -89,26 +117,6 @@ The user can access dark mode by clicking on the right hand side top corner them
 - services / utils
 - types
 
-### **Data source**
-
-#### JSON file - meta data:
-
-main object keys = topics from origin language, these must be in kebab-case, e.g. **base-instructions**, **basic-greetings** ...
-
-#### Nested objects keys:
-
-- translation: topic in target language
-- meta-data: topic meta-data
-- wordsToHighlight: words with special highlighting styles
-
-![meta-data-json](assets/images/source_files/meta-data-json.png)
-
-### images folder:
-
-the images files are referenced in the meta-data objects file name field, these must also be in kebab-case, e.g. **base-instructions**, **basic-greetings** since they are referenced in the meta-data json object keys
-
-![meta-data-json](assets/images/source_files/images_folder.png)
-
 ### **Build**
 
 - after each test run **_npm clean_** to remove build files
@@ -129,7 +137,7 @@ the images files are referenced in the meta-data objects file name field, these 
 
 ![sometimes_not_passing_test](assets/images/testing/sometimes_not_passing_test.png)
 
-- run on vite preview in dev mode
+- run on vite preview to get the build code tested
 
 ![storybook_scripts](assets/images/scripts/preview_scripts.png)
 
