@@ -1,4 +1,7 @@
+// speech
 export const TARGET_LANGUAGE: string = "en-US";
+
+// sections dynamic language strings
 export const HOME_HEADING: string = "Vocabulary App";
 export const ACTION_BUTTON_LISTEN: string = "Listen";
 export const ACTION_BUTTON_NEXT: string = "Next";
