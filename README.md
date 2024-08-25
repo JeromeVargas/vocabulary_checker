@@ -23,7 +23,7 @@ The user can choose the topic in the home page to move the interface area
 
 #### Text section:
 
-This is the word or words to study, you can click on the text to hide it:
+This is the word or words to study, you can click on question mark to show the text:
 
 ![interface_text_area_1](assets/images/sections/interface_text_section_1.png)
 ![interface_text_area_2](assets/images/sections/interface_text_section_2.png)
@@ -118,6 +118,10 @@ the images files are referenced in the meta-data objects file name field, these 
 <br/>
 
 > ## Known issues
+
+![Firefox](assets/images/icons//firefox.png)
+
+- **_speech does not work on Firefox_** because it is based on the Chromium speech utterance api
 
 ### **Playwright**
 
