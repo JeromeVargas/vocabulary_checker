@@ -1,5 +1,6 @@
 /* Speech */
 export const TARGET_LANGUAGE: string = "en-US";
+export const UTTERANCE_SPEED: number = 0.7;
 
 /* Sections dynamic language strings  */
 export const HOME_HEADING: string = "Vocabulary App";
