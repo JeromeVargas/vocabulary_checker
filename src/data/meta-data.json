@@ -64,7 +64,7 @@
       { "word": "our elephant is big", "fileName": "elephant" },
       { "word": "their egg is white", "fileName": "egg" },
       { "word": "my apple is red", "fileName": "apple" },
-      { "word": "his orange is good", "fileName": "orange" },
+      { "word": "his orange is round", "fileName": "orange" },
       { "word": "your office is nice", "fileName": "office" }
     ],
     "wordsToHighlight": [0]
@@ -83,7 +83,7 @@
       { "word": "our elephants are big", "fileName": "elephant" },
       { "word": "their eggs are white", "fileName": "egg" },
       { "word": "my apples are red", "fileName": "apple" },
-      { "word": "his oranges are good", "fileName": "orange" },
+      { "word": "his oranges are round", "fileName": "orange" },
       { "word": "your offices are nice", "fileName": "office" }
     ],
     "wordsToHighlight": [1]
