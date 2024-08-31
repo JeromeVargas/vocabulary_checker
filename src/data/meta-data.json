@@ -1,91 +1,25 @@
 {
-  "articles": {
-    "translation": "Articles",
+  "base-instructions": {
+    "translation": "しょるい",
     "metadata": [
-      { "word": "a car", "fileName": "car" },
-      { "word": "a dog", "fileName": "dog" },
-      { "word": "a cat", "fileName": "cat" },
-      { "word": "a house", "fileName": "house" },
-      { "word": "a teacher", "fileName": "teacher" },
-      { "word": "an elephant", "fileName": "elephant" },
-      { "word": "an egg", "fileName": "egg" },
-      { "word": "an apple", "fileName": "apple" },
-      { "word": "an orange", "fileName": "orange" },
-      { "word": "an office", "fileName": "office" }
+      { "word": "はなしましょう", "fileName": "hanashimashou" },
+      { "word": "かいわ", "fileName": "kaiwa" },
+      { "word": "きくれんしゅう", "fileName": "kikurenshou" },
+      { "word": "たんごひょう", "fileName": "tangohyou" }
     ],
-    "wordsToHighlight": [0]
+    "wordsToHighlight": []
   },
-  "adjectives": {
-    "translation": "Adjectives",
+  "basic-greetings": {
+    "translation": "あいさつ",
     "metadata": [
-      { "word": "a fast car", "fileName": "car" },
-      { "word": "a small dog", "fileName": "dog" },
-      { "word": "a funny cat", "fileName": "cat" },
-      { "word": "a beautiful house", "fileName": "house" },
-      { "word": "a young teacher", "fileName": "teacher" },
-      { "word": "a big elephant", "fileName": "elephant" },
-      { "word": "a white egg", "fileName": "egg" },
-      { "word": "a red apple", "fileName": "apple" },
-      { "word": "a round orange", "fileName": "orange" },
-      { "word": "a nice office", "fileName": "office" }
+      { "word": "おはようございます", "fileName": "ohayou_gozaimasu" },
+      { "word": "こんにちは", "fileName": "konnichiwa" },
+      { "word": "こんばんは", "fileName": "konbanwa" },
+      { "word": "おやすみなさい", "fileName": "oyasumi_nasai" },
+      { "word": "さよなら", "fileName": "sayonara" },
+      { "word": "じゃあまたね", "fileName": "ja_mata_ne" },
+      { "word": "またあした", "fileName": "mata_ashita" }
     ],
-    "wordsToHighlight": [1]
-  },
-  "verb-to-be": {
-    "translation": "Verb to be",
-    "metadata": [
-      { "word": "it is a fast car", "fileName": "car" },
-      { "word": "she is a small dog", "fileName": "dog" },
-      { "word": "he is a funny cat", "fileName": "cat" },
-      {
-        "word": "it is a beautiful house",
-        "fileName": "house"
-      },
-      { "word": "she is a young teacher", "fileName": "teacher" },
-      { "word": "he is a big elephant", "fileName": "elephant" },
-      { "word": "it is a white egg", "fileName": "egg" },
-      { "word": "it is a red apple", "fileName": "apple" },
-      { "word": "it is a round orange", "fileName": "orange" },
-      { "word": "it is a nice office", "fileName": "office" }
-    ],
-    "wordsToHighlight": [0, 1]
-  },
-  "possessives": {
-    "translation": "Possessives",
-    "metadata": [
-      { "word": "her car is fast", "fileName": "car" },
-      { "word": "his dog is small", "fileName": "dog" },
-      { "word": "your cat is funny", "fileName": "cat" },
-      {
-        "word": "our house is beautiful",
-        "fileName": "house"
-      },
-      { "word": "their teacher is young", "fileName": "teacher" },
-      { "word": "our elephant is big", "fileName": "elephant" },
-      { "word": "their egg is white", "fileName": "egg" },
-      { "word": "my apple is red", "fileName": "apple" },
-      { "word": "his orange is round", "fileName": "orange" },
-      { "word": "your office is nice", "fileName": "office" }
-    ],
-    "wordsToHighlight": [0]
-  },
-  "plurals-1": {
-    "translation": "Plurals 1",
-    "metadata": [
-      { "word": "her cars are fast", "fileName": "car" },
-      { "word": "his dogs are small", "fileName": "dog" },
-      { "word": "your cats are funny", "fileName": "cat" },
-      {
-        "word": "our houses are beautiful",
-        "fileName": "house"
-      },
-      { "word": "their teachers are young", "fileName": "teacher" },
-      { "word": "our elephants are big", "fileName": "elephant" },
-      { "word": "their eggs are white", "fileName": "egg" },
-      { "word": "my apples are red", "fileName": "apple" },
-      { "word": "his oranges are round", "fileName": "orange" },
-      { "word": "your offices are nice", "fileName": "office" }
-    ],
-    "wordsToHighlight": [1]
+    "wordsToHighlight": []
   }
 }
