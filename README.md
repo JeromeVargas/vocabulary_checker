@@ -13,7 +13,11 @@ This is an app that allows the user to do pronunciation shadowing on vocabulary 
 
 > ## Life demo:
 
+### [English vocabulary reviewer](https://vocabulary-checker.onrender.com/)
+
 ### [French vocabulary reviewer](https://french-vocabulary-checker.netlify.app/)
+
+### [Japanese vocabulary reviewer](https://japanese-vocabulary-checker.netlify.app/)
 
 > ## User journey:
 
