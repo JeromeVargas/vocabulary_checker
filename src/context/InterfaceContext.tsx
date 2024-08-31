@@ -10,6 +10,7 @@ const initialContextState: UseInterfaceDataContextType = {
   currentImage: "",
   highlights: [],
   path: "",
+  progress: 0,
   handleNext: () => {},
   handleReset: () => {},
   handleIsShowText: () => {},

@@ -95,10 +95,15 @@ const useInterfaceReducer = ({ pathname }: useInterfaceReducerProps) => {
     [path],
   );
 
+  // derived state
   const text = state.imagesData.length > 0 ? state.imagesData[index].word : "";
   const currentImage =
     state.imagesData.length > 0 ? state.imagesData[index].fileName : "";
   const highlights = data[path as keyof typeof data].wordsToHighlight;
+  const imagesLength = data[path as keyof typeof data].metadata.length;
+  const progress = Math.round(
+    (1 - state.imagesData.length / imagesLength) * 100,
+  );
 
   // state handlers
   const handleNext = () => {
@@ -154,6 +159,7 @@ const useInterfaceReducer = ({ pathname }: useInterfaceReducerProps) => {
     currentImage,
     highlights,
     path,
+    progress,
     handleNext,
     handleReset,
     handleIsShowText,

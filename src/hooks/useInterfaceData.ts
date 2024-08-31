@@ -12,6 +12,7 @@ type UseInterfaceDataHookType = {
   currentImage: string;
   highlights: number[];
   path: string;
+  progress: number;
   handleNext: () => void;
   handleReset: () => void;
   handleSpeech: () => void;
@@ -26,6 +27,7 @@ const useInterfaceData = (): UseInterfaceDataHookType => {
     currentImage,
     highlights,
     path,
+    progress,
     handleNext,
     handleReset,
     handleSpeech,
@@ -42,6 +44,7 @@ const useInterfaceData = (): UseInterfaceDataHookType => {
     currentImage,
     highlights,
     path,
+    progress,
     handleNext,
     handleReset,
     handleSpeech,

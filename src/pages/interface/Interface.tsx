@@ -14,12 +14,18 @@ const ImageSection = lazy(
 );
 
 function Interface() {
-  const { imagesData, isLoaded } = useInterfaceData();
+  const { imagesData, isLoaded, progress } = useInterfaceData();
 
   return (
     <ErrorBoundary fallback={<Error404Page />}>
       <Suspense fallback={<Loader />}>
         <main className="flex h-dvh flex-col items-center justify-evenly">
+          <div className="h-2 w-full rounded-full bg-font-main text-xl">
+            <div
+              style={{ width: `${progress}%` }}
+              className={`h-full rounded-full bg-neutral-shade`}
+            ></div>
+          </div>
           {/* content area */}
           {imagesData.length > 0 ? (
             <>
