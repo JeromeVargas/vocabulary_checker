@@ -1,15 +1,16 @@
 /* Speech */
-export const TARGET_LANGUAGE: string = "en-US";
-export const UTTERANCE_SPEED: number = 0.7;
+export const TARGET_LANGUAGE: string = "fr-FR";
+export const UTTERANCE_SPEED: number = 0.9;
 
 /* Sections dynamic language strings  */
-export const HOME_HEADING: string = "Vocabulary App";
-export const ACTION_BUTTON_LISTEN: string = "Listen";
-export const ACTION_BUTTON_NEXT: string = "Next";
-export const CONGRATS_MESSAGE: string = "Congrats!";
-export const TRY_AGAIN_BUTTON: string = "Try Again";
-export const NEW_EXERCISE_LINK: string = "New Exercise";
-export const ERROR_MESSAGE_LINK: string = "Please go back to the home page";
+export const HOME_HEADING: string = "Application de Vocabulaire";
+export const ACTION_BUTTON_LISTEN: string = "Écouter";
+export const ACTION_BUTTON_NEXT: string = "Suivant";
+export const CONGRATS_MESSAGE: string = "Félicitations !";
+export const TRY_AGAIN_BUTTON: string = "Réessayer";
+export const NEW_EXERCISE_LINK: string = "Nouvel Exercice";
+export const ERROR_MESSAGE_LINK: string =
+  "Veuillez revenir à la page d'accueil";
 
 /* Testing */
 // add this manually from the first meta-data JSON key

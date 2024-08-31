@@ -2,89 +2,89 @@
   "articles": {
     "translation": "Articles",
     "metadata": [
-      { "word": "a car", "fileName": "car" },
-      { "word": "a dog", "fileName": "dog" },
-      { "word": "a cat", "fileName": "cat" },
-      { "word": "a house", "fileName": "house" },
-      { "word": "a teacher", "fileName": "teacher" },
-      { "word": "an elephant", "fileName": "elephant" },
-      { "word": "an egg", "fileName": "egg" },
-      { "word": "an apple", "fileName": "apple" },
-      { "word": "an orange", "fileName": "orange" },
-      { "word": "an office", "fileName": "office" }
+      { "word": "une voiture", "fileName": "car" },
+      { "word": "un chien", "fileName": "dog" },
+      { "word": "un chat", "fileName": "cat" },
+      { "word": "une maison", "fileName": "house" },
+      { "word": "un enseignant", "fileName": "teacher" },
+      { "word": "un éléphant", "fileName": "elephant" },
+      { "word": "un œuf", "fileName": "egg" },
+      { "word": "une pomme", "fileName": "apple" },
+      { "word": "une orange", "fileName": "orange" },
+      { "word": "un bureau", "fileName": "office" }
     ],
     "wordsToHighlight": [0]
   },
   "adjectives": {
-    "translation": "Adjectives",
+    "translation": "Adjectifs",
     "metadata": [
-      { "word": "a fast car", "fileName": "car" },
-      { "word": "a small dog", "fileName": "dog" },
-      { "word": "a funny cat", "fileName": "cat" },
-      { "word": "a beautiful house", "fileName": "house" },
-      { "word": "a young teacher", "fileName": "teacher" },
-      { "word": "a big elephant", "fileName": "elephant" },
-      { "word": "a white egg", "fileName": "egg" },
-      { "word": "a red apple", "fileName": "apple" },
-      { "word": "a round orange", "fileName": "orange" },
-      { "word": "a nice office", "fileName": "office" }
+      { "word": "une voiture rapide", "fileName": "car" },
+      { "word": "un petit chien", "fileName": "dog" },
+      { "word": "un chat drôle", "fileName": "cat" },
+      { "word": "une belle maison", "fileName": "house" },
+      { "word": "un jeune enseignant", "fileName": "teacher" },
+      { "word": "un grand éléphant", "fileName": "elephant" },
+      { "word": "un œuf blanc", "fileName": "egg" },
+      { "word": "une pomme rouge", "fileName": "apple" },
+      { "word": "une orange ronde", "fileName": "orange" },
+      { "word": "un bureau agréable", "fileName": "office" }
     ],
-    "wordsToHighlight": [1]
+    "wordsToHighlight": [2]
   },
   "verb-to-be": {
-    "translation": "Verb to be",
+    "translation": "Verbe être",
     "metadata": [
-      { "word": "it is a fast car", "fileName": "car" },
-      { "word": "she is a small dog", "fileName": "dog" },
-      { "word": "he is a funny cat", "fileName": "cat" },
+      { "word": "c'est une voiture rapide", "fileName": "car" },
+      { "word": "elle est un petit chien", "fileName": "dog" },
+      { "word": "il est un chat drôle", "fileName": "cat" },
       {
-        "word": "it is a beautiful house",
+        "word": "c'est une belle maison",
         "fileName": "house"
       },
-      { "word": "she is a young teacher", "fileName": "teacher" },
-      { "word": "he is a big elephant", "fileName": "elephant" },
-      { "word": "it is a white egg", "fileName": "egg" },
-      { "word": "it is a red apple", "fileName": "apple" },
-      { "word": "it is a round orange", "fileName": "orange" },
-      { "word": "it is a nice office", "fileName": "office" }
+      { "word": "elle est une jeune enseignante", "fileName": "teacher" },
+      { "word": "il est un grand éléphant", "fileName": "elephant" },
+      { "word": "c'est un œuf blanc", "fileName": "egg" },
+      { "word": "c'est une pomme rouge", "fileName": "apple" },
+      { "word": "c'est une orange ronde", "fileName": "orange" },
+      { "word": "c'est un bureau agréable", "fileName": "office" }
     ],
     "wordsToHighlight": [0, 1]
   },
   "possessives": {
-    "translation": "Possessives",
+    "translation": "Possessifs",
     "metadata": [
-      { "word": "her car is fast", "fileName": "car" },
-      { "word": "his dog is small", "fileName": "dog" },
-      { "word": "your cat is funny", "fileName": "cat" },
+      { "word": "sa voiture est rapide", "fileName": "car" },
+      { "word": "son chien est petit", "fileName": "dog" },
+      { "word": "ton chat est drôle", "fileName": "cat" },
       {
-        "word": "our house is beautiful",
+        "word": "notre maison est belle",
         "fileName": "house"
       },
-      { "word": "their teacher is young", "fileName": "teacher" },
-      { "word": "our elephant is big", "fileName": "elephant" },
-      { "word": "their egg is white", "fileName": "egg" },
-      { "word": "my apple is red", "fileName": "apple" },
-      { "word": "his orange is round", "fileName": "orange" },
-      { "word": "your office is nice", "fileName": "office" }
+      { "word": "leur enseignant est jeune", "fileName": "teacher" },
+      { "word": "notre éléphant est grand", "fileName": "elephant" },
+      { "word": "leur œuf est blanc", "fileName": "egg" },
+      { "word": "ma pomme est rouge", "fileName": "apple" },
+      { "word": "son orange est bonne", "fileName": "orange" },
+      { "word": "ton bureau est agréable", "fileName": "office" }
     ],
     "wordsToHighlight": [0]
   },
   "plurals-1": {
-    "translation": "Plurals 1",
+    "translation": "Pluriels 1",
     "metadata": [
-      { "word": "her cars are fast", "fileName": "car" },
-      { "word": "his dogs are small", "fileName": "dog" },
-      { "word": "your cats are funny", "fileName": "cat" },
+      { "word": "ses voitures sont rapides", "fileName": "car" },
+      { "word": "ses chiens sont petits", "fileName": "dog" },
+      { "word": "tes chats sont drôles", "fileName": "cat" },
       {
-        "word": "our houses are beautiful",
+        "word": "nos maisons sont belles",
         "fileName": "house"
       },
-      { "word": "their teachers are young", "fileName": "teacher" },
-      { "word": "our elephants are big", "fileName": "elephant" },
-      { "word": "their eggs are white", "fileName": "egg" },
-      { "word": "my apples are red", "fileName": "apple" },
-      { "word": "his oranges are round", "fileName": "orange" },
-      { "word": "your offices are nice", "fileName": "office" }
+      { "word": "leurs enseignants sont jeunes", "fileName": "teacher" },
+      { "word": "nos éléphants sont grands", "fileName": "elephant" },
+      { "word": "leurs œufs sont blancs", "fileName": "egg" },
+      { "word": "mes pommes sont rouges", "fileName": "apple" },
+      { "word": "ses oranges sont bonnes", "fileName": "orange" },
+      { "word": "tes bureaux sont agréables", "fileName": "office" }
     ],
     "wordsToHighlight": [1]
   }
