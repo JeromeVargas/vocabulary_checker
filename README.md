@@ -11,6 +11,10 @@
 
 This is an app that allows the user to do pronunciation shadowing on vocabulary organized by topic. The user can listen to the work or words and have context by looking at the associated image and repeat the pronunciation of the word. The word pronunciation is produced by the Chromium speech utterance API.
 
+> ## Life demo:
+
+### [French vocabulary reviewer](https://french-vocabulary-checker.netlify.app/)
+
 > ## User journey:
 
 ### **Home page**:
