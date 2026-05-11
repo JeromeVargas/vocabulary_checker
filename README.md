@@ -109,9 +109,6 @@ The sub-folders must also be in kebab-case, e.g. **base-instructions**, **basic-
 
 ![playwright_scripts](assets/images/scripts/playwright_scripts.png)
 
-- **Storybook**
-
-![storybook_scripts](assets/images/scripts/storybook_scripts.png)
 
 <br/>
 
@@ -146,17 +143,3 @@ The sub-folders must also be in kebab-case, e.g. **base-instructions**, **basic-
 ![sometimes_not_passing_test](assets/images/testing/sometimes_not_passing_test.png)
 
 - run on vite preview to get the build code tested
-
-![storybook_scripts](assets/images/scripts/preview_scripts.png)
-
-### **Storybook**
-
-types had to be adapted in the dark mode add-on migration
-
-#### preview.ts
-
-![storybook_adapted_types](assets/images/storybook/storybook_adapted_types_1.png)
-
-#### index.d.ts
-
-![storybook_adapted_types](assets/images/storybook/storybook_adapted_types_2.png)
