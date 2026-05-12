@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useReducer } from "react";
+import { useCallback, useEffect, useMemo, useReducer } from "react";
 
 import pathSlashRemover from "../lib/utils/path";
 import dataFetcher from "../services/dataFetcher";
@@ -146,12 +146,12 @@ const useInterfaceReducer = ({ pathname }: useInterfaceReducerProps) => {
   };
 
   /* isLoaded code */
-  const handleSetIsLoaded = () => {
+  const handleSetIsLoaded = useCallback(() => {
     dispatch({
       type: REDUCER_ACTIONS_TYPES.TOGGLE_IS_LOADED,
       payload: true,
     });
-  };
+  }, []);
 
   return {
     state,

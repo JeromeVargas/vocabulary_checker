@@ -46,20 +46,28 @@ const useImageReducer = ({
     const imgElCurrent = imgRef.current;
 
     if (imgElCurrent) {
-      imgElCurrent.addEventListener("error", (e) => {
-        if (e.type !== "error") return;
-        handleSetError();
-      });
-
-      imgElCurrent.addEventListener("load", () => {
+      const loadHandler = () => {
         setTimeout(() => {
           handleSetIsLoaded();
         }, 3000);
-      });
+      };
+
+      const errorHandler = (e: Event) => {
+        if (e.type !== "error") return;
+        handleSetError();
+      };
+
+      if (imgElCurrent.complete && imgElCurrent.naturalWidth > 0) {
+        loadHandler();
+        return;
+      }
+
+      imgElCurrent.addEventListener("load", loadHandler);
+      imgElCurrent.addEventListener("error", errorHandler);
 
       return () => {
-        imgElCurrent.removeEventListener("load", handleSetIsLoaded);
-        imgElCurrent.removeEventListener("error", handleSetError);
+        imgElCurrent.removeEventListener("load", loadHandler);
+        imgElCurrent.removeEventListener("error", errorHandler);
       };
     }
   }, [imgRef, handleSetIsLoaded]);
