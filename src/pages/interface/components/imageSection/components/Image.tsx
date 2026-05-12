@@ -7,7 +7,7 @@ type ImageProps = {
   imageUrl: string;
   imageTranslation: string;
   currentImage: string;
-  imgRef: React.RefObject<HTMLImageElement>;
+  imgRef: React.RefObject<HTMLImageElement | null>;
 };
 
 const Image = ({

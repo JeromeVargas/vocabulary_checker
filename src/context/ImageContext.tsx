@@ -13,7 +13,7 @@ export const ImageDataContext =
 
 type ChildrenType = {
   children?: ReactElement | ReactElement[] | undefined;
-  imgRef: React.RefObject<HTMLImageElement>;
+  imgRef: React.RefObject<HTMLImageElement | null>;
   handleSetIsLoaded: () => void;
 };
 

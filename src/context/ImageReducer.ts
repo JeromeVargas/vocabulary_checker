@@ -26,7 +26,7 @@ const reducer = (state: StateType, action: ReducerAction): StateType => {
 };
 
 type useImageReducerProps = {
-  imgRef: React.RefObject<HTMLImageElement>;
+  imgRef: React.RefObject<HTMLImageElement | null>;
   handleSetIsLoaded: () => void;
 };
 
