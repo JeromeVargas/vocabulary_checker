@@ -39,7 +39,7 @@ const Button = ({ kind, isSpeechReady, onClick, ...props }: ButtonProps) => {
     <button
       onClick={onClick}
       className={cn(variants({ kind }), {
-        "cursor-not-allowed bg-neutral-light text-neutral-main opacity-50":
+        "cursor-not-allowed bg-neutral-light text-neutral-main":
           kind === "action" && isSpeechReady === false,
         "bg-accent-main text-white shadow-sm hover:-translate-y-0.5 hover:shadow-md":
           kind === "action" && isSpeechReady === true,
