@@ -6,9 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "serve": "vite preview",
+    "preview": "vite preview",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "npm run build && vite preview",
+    "setup": "npm run build && vite preview",
     "test": "npx playwright test",
     "clean": "rm -rf dist/ playwright-report/ test-results/"
   },

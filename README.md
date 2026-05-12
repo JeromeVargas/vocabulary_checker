@@ -78,7 +78,6 @@ To get the project started setting up the language please follow this steps
 - main object keys = topics from origin language, these must be in kebab-case, e.g. **base-instructions**, **basic-greetings** ...
 
 - nested objects keys:
-
   - translation: topic in target language
   - meta-data: topic meta-data
   - wordsToHighlight: words with special highlighting styles, it is a array index, taking each word as an array element
@@ -108,7 +107,6 @@ The sub-folders must also be in kebab-case, e.g. **base-instructions**, **basic-
 - **Playwright**:
 
 ![playwright_scripts](assets/images/scripts/playwright_scripts.png)
-
 
 <br/>
 
@@ -142,4 +140,4 @@ The sub-folders must also be in kebab-case, e.g. **base-instructions**, **basic-
 
 ![sometimes_not_passing_test](assets/images/testing/sometimes_not_passing_test.png)
 
-- run on vite preview to get the build code tested
+- run on vite setup to get the build code tested
