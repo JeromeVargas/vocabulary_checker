@@ -7,18 +7,22 @@ import {
 } from "../../../../../config/constants";
 
 import { cn } from "../../../../../lib/classMerge";
-const variants = cva("border-4 px-10 py-4 text-center text-font-main", {
-  variants: {
-    kind: {
-      action: "w-60 select-none rounded-2xl font-bold",
-      reset:
-        "w-10/12 rounded-xl bg-neutral-shade font-normal opacity-90 hover:-translate-y-1 hover:translate-x-1 hover:bg-accent-main md:w-auto",
+
+const variants = cva(
+  "inline-flex items-center justify-center rounded-xl px-8 py-3 text-sm font-medium transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-main/70",
+  {
+    variants: {
+      kind: {
+        action: "w-full max-w-xs select-none",
+        reset:
+          "w-full bg-base-shade text-font-main ring-1 ring-neutral-shade/50 hover:bg-accent-main hover:text-white hover:ring-accent-main sm:w-auto",
+      },
+    },
+    defaultVariants: {
+      kind: "action",
     },
   },
-  defaultVariants: {
-    kind: "action",
-  },
-});
+);
 
 import { type HTMLAttributes } from "react";
 
@@ -35,9 +39,9 @@ const Button = ({ kind, isSpeechReady, onClick, ...props }: ButtonProps) => {
     <button
       onClick={onClick}
       className={cn(variants({ kind }), {
-        "cursor-none bg-base-main":
+        "cursor-not-allowed bg-neutral-light text-neutral-main opacity-50":
           kind === "action" && isSpeechReady === false,
-        "border-accent-shade bg-neutral-shade hover:-translate-y-1 hover:translate-x-1":
+        "bg-accent-main text-white shadow-sm hover:-translate-y-0.5 hover:shadow-md":
           kind === "action" && isSpeechReady === true,
       })}
       disabled={kind === "action" && !isSpeechReady}

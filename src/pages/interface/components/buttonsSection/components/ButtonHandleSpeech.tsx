@@ -8,9 +8,9 @@ const ButtonHandleSpeech = () => {
   const { handleSpeech } = useInterfaceData();
   return (
     <button
-      aria-label="sound"
+      aria-label="Play pronunciation"
       className={cn(
-        "rounded-full border-2 border-accent-shade bg-base-shade transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-100 hover:border-accent-contrast",
+        "flex size-14 items-center justify-center rounded-full bg-base-shade text-accent-main ring-1 ring-neutral-shade/50 transition-all duration-200 hover:bg-accent-main hover:text-white hover:ring-accent-main",
         {
           "animate-pulse-slow": isFirstAccess === true,
         },
@@ -21,27 +21,14 @@ const ButtonHandleSpeech = () => {
       <svg
         onClick={handleIsFirstAccess}
         xmlns="http://www.w3.org/2000/svg"
-        width="5.5rem"
-        height="5.5rem"
-        viewBox="0 0 48 48"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        aria-hidden="true"
       >
-        <path
-          fill="#81d4fa"
-          d="M28 7.1v2c7.3 1 13 7.3 13 14.9s-5.7 13.9-13 14.9v2c8.4-1 15-8.2 15-16.9S36.4 8.1 28 7.1"
-        ></path>
-        <path
-          fill="#546e7a"
-          d="M14 32H7c-1.1 0-2-.9-2-2V18c0-1.1.9-2 2-2h7z"
-        ></path>
-        <path fill="#78909c" d="M26 42L14 32V16L26 6z"></path>
-        <path
-          fill="#03a9f4"
-          d="M28 17.3v2.1c1.8.8 3 2.5 3 4.6s-1.2 3.8-3 4.6v2.1c2.9-.9 5-3.5 5-6.7s-2.1-5.8-5-6.7"
-        ></path>
-        <path
-          fill="#4fc3f7"
-          d="M28 12.2v2c4.6.9 8 5 8 9.8s-3.4 8.9-8 9.8v2c5.7-1 10-5.9 10-11.8s-4.3-10.9-10-11.8"
-        ></path>
+        <path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.318.664-2.66 1.905A9.76 9.76 0 0 0 1.5 12c0 .898.121 1.768.35 2.595.341 1.24 1.518 1.905 2.659 1.905h1.93l4.5 4.5c.945.945 2.561.276 2.561-1.06V4.06ZM18.584 5.106a.75.75 0 0 1 1.06 0c3.808 3.807 3.808 9.98 0 13.788a.75.75 0 0 1-1.06-1.06 8.25 8.25 0 0 0 0-11.668.75.75 0 0 1 0-1.06Z" />
+        <path d="M15.932 7.757a.75.75 0 0 1 1.061 0 6 6 0 0 1 0 8.486.75.75 0 0 1-1.06-1.061 4.5 4.5 0 0 0 0-6.364.75.75 0 0 1 0-1.06Z" />
       </svg>
     </button>
   );

@@ -14,30 +14,28 @@ const ImageSection = () => {
   } = useInterfaceData();
 
   return (
-    <>
-      <section className="grid rounded-3xl border-8 border-accent-shade bg-base-main p-4">
-        <ImageDataProvider
-          imgRef={imgRef}
-          handleSetIsLoaded={handleSetIsLoaded}
-        >
-          {images.map((image) => {
-            const imageUrl: string = new URL(
-              `../../../../assets/images/${path}/${image.fileName}.jpg`,
-              import.meta.url,
-            ).href;
-            return (
-              <Image
-                key={image.fileName}
-                imgRef={imgRef}
-                imageUrl={imageUrl}
-                imageTranslation={image.fileName}
-                currentImage={currentImage}
-              />
-            );
-          })}
-        </ImageDataProvider>
-      </section>
-    </>
+    <section className="grid overflow-hidden rounded-2xl bg-base-shade shadow-lg ring-1 ring-neutral-shade/30">
+      <ImageDataProvider
+        imgRef={imgRef}
+        handleSetIsLoaded={handleSetIsLoaded}
+      >
+        {images.map((image) => {
+          const imageUrl: string = new URL(
+            `../../../../assets/images/${path}/${image.fileName}.jpg`,
+            import.meta.url,
+          ).href;
+          return (
+            <Image
+              key={image.fileName}
+              imgRef={imgRef}
+              imageUrl={imageUrl}
+              imageTranslation={image.fileName}
+              currentImage={currentImage}
+            />
+          );
+        })}
+      </ImageDataProvider>
+    </section>
   );
 };
 

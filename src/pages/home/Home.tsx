@@ -11,28 +11,43 @@ const Home = () => {
   const keys = Object.keys(data);
   const values = Object.values(data);
 
-  // maps the keys (paths in original language) as topic and its translations (topics in target language) as link text
   const topics = keys.map((topic, index) => {
     return { topic, topicTargetLanguage: values[index].translation };
   });
 
   return (
     <>
-      <header className="mt-16">
+      <header className="relative mt-10 w-full px-6 pb-6 pt-4 text-center">
         <ThemeButton />
-        <h1 className="text-font-main">{HOME_HEADING}</h1>
+        <h1 className="text-2xl font-semibold tracking-tight text-font-main md:text-3xl">
+          {HOME_HEADING}
+        </h1>
       </header>
       <main>
-        <section className="m-10 md:m-20">
-          <ul className="space-y-6 md:space-y-9">
+        <section className="mx-auto w-full max-w-sm px-6 pb-10 md:max-w-md">
+          <ul className="space-y-3">
             {topics.map(({ topic, topicTargetLanguage }) => {
               return (
-                <li key={topic} className="flex flex-col items-center">
+                <li key={topic}>
                   <Link
-                    className="w-10/12 rounded-xl border-4 bg-accent-main py-4 text-center text-2xl font-normal text-font-main opacity-90 hover:-translate-y-1 hover:translate-x-1 hover:bg-neutral-shade md:w-1/2 md:text-5xl lg:w-1/3 xl:w-1/4 2xl:w-1/5"
+                    className="flex w-full items-center justify-between rounded-xl bg-base-shade px-5 py-4 text-base font-medium text-font-main shadow-sm ring-1 ring-neutral-shade/50 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:ring-accent-main/60"
                     to={`/${topic}`}
                   >
-                    {topicTargetLanguage}
+                    <span>{topicTargetLanguage}</span>
+                    <svg
+                      className="h-4 w-4 text-neutral-main"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      aria-hidden="true"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M6 12l4-4-4-4"
+                      />
+                    </svg>
                   </Link>
                 </li>
               );

@@ -13,7 +13,7 @@ const ButtonsSection = () => {
     handleReset,
   } = useInterfaceData();
   return (
-    <>
+    <div className="flex w-full flex-col items-center gap-3 px-4">
       {images.length > 0 ? (
         <>
           <ButtonHandleSpeech />
@@ -24,17 +24,17 @@ const ButtonsSection = () => {
           />
         </>
       ) : (
-        <>
+        <div className="flex w-full flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <Button kind="reset" onClick={handleReset} />
           <Link
-            className="w-10/12 rounded-xl border-4 bg-neutral-shade px-10 py-4 text-center font-normal text-font-main opacity-90 hover:-translate-y-1 hover:translate-x-1 hover:bg-accent-main md:w-auto"
+            className="inline-flex w-full items-center justify-center rounded-xl bg-base-shade px-8 py-3 text-sm font-medium text-font-main ring-1 ring-neutral-shade/50 transition-all duration-150 hover:bg-accent-main hover:text-white hover:ring-accent-main sm:w-auto"
             to="/"
           >
             {NEW_EXERCISE_LINK}
           </Link>
-        </>
+        </div>
       )}
-    </>
+    </div>
   );
 };
 
