@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 @import "tailwindcss";
 
@@ -15,6 +15,17 @@
 
   --animate-pulse-slow: indigo-pulse 2s ease-in-out infinite;
   --animate-slide-up: slide-up-fade 0.3s ease-out both;
+  --animate-big-bounce: big-bounce 1s ease-in-out infinite;
+
+  @keyframes big-bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-1.75rem);
+    }
+  }
 
   @keyframes slide-up-fade {
     from {
@@ -28,7 +39,8 @@
   }
 
   @keyframes indigo-pulse {
-    0%, 100% {
+    0%,
+    100% {
       box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.7);
     }
     50% {
@@ -39,8 +51,8 @@
 
 @layer base {
   body {
-    @apply flex min-h-dvh flex-col items-center bg-base-main text-center text-base font-normal antialiased;
-    font-family: 'Inter', system-ui, sans-serif;
+    @apply bg-base-main flex min-h-dvh flex-col items-center text-center text-base font-normal antialiased;
+    font-family: "Inter", system-ui, sans-serif;
   }
 
   #root {

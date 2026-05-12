@@ -16,14 +16,18 @@ const Loader = () => {
 
   return showLoader ? (
     <section
-      className="fixed inset-0 z-50 flex h-dvh items-center justify-center bg-base-main/80 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex h-dvh items-center justify-center bg-base-main/90 backdrop-blur-sm"
       role="status"
-      aria-live="polite"
       aria-label="Loading"
     >
-      <div className="flex flex-col items-center gap-4">
-        <div className="h-10 w-10 animate-spin rounded-full border-2 border-neutral-shade border-t-accent-main" />
-        <span className="text-sm font-medium text-neutral-main">Loading…</span>
+      <div className="flex items-center gap-3">
+        {[0, 150, 300].map((delay) => (
+          <span
+            key={delay}
+            className="h-4 w-4 animate-big-bounce rounded-full bg-accent-main will-change-transform"
+            style={{ animationDelay: `${delay}ms` }}
+          />
+        ))}
       </div>
     </section>
   ) : null;
