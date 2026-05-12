@@ -1,6 +1,7 @@
 {
   "articles": {
     "translation": "Articles",
+    "emoji": "🧩",
     "metadata": [
       { "word": "a car", "fileName": "car" },
       { "word": "a dog", "fileName": "dog" },
@@ -17,6 +18,7 @@
   },
   "adjectives": {
     "translation": "Adjectives",
+    "emoji": "🎨",
     "metadata": [
       { "word": "a fast car", "fileName": "car" },
       { "word": "a small dog", "fileName": "dog" },
@@ -33,6 +35,7 @@
   },
   "verb-to-be": {
     "translation": "Verb to be",
+    "emoji": "⚡",
     "metadata": [
       { "word": "it is a fast car", "fileName": "car" },
       { "word": "she is a small dog", "fileName": "dog" },
@@ -52,6 +55,7 @@
   },
   "possessives": {
     "translation": "Possessives",
+    "emoji": "🔑",
     "metadata": [
       { "word": "her car is fast", "fileName": "car" },
       { "word": "his dog is small", "fileName": "dog" },
@@ -71,6 +75,7 @@
   },
   "plurals-1": {
     "translation": "Plurals 1",
+    "emoji": "🔢",
     "metadata": [
       { "word": "her cars are fast", "fileName": "car" },
       { "word": "his dogs are small", "fileName": "dog" },

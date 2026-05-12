@@ -14,6 +14,18 @@
   --color-accent-contrast: rgb(var(--_accent-contrast));
 
   --animate-pulse-slow: indigo-pulse 2s ease-in-out infinite;
+  --animate-slide-up: slide-up-fade 0.3s ease-out both;
+
+  @keyframes slide-up-fade {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
   @keyframes indigo-pulse {
     0%, 100% {
