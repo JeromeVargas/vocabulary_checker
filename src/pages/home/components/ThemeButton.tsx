@@ -5,7 +5,7 @@ const ThemeButton = () => {
   return (
     <button
       aria-label="Toggle theme"
-      className="absolute right-0 top-0 rounded-lg p-2 text-neutral-main transition-colors duration-150 hover:bg-neutral-light hover:text-font-main"
+      className="rounded-lg p-2 text-neutral-main transition-colors duration-150 hover:bg-neutral-light hover:text-font-main"
       onClick={handleChangeTheme}
     >
       {theme === "dark" ? (
