@@ -29,6 +29,8 @@ const Home = () => {
     return topic.includes(q) || topicTargetLanguage.toLowerCase().includes(q);
   });
 
+  const displayed = filtered.slice(0, 5);
+
   return (
     <>
       <Header />
@@ -56,14 +58,14 @@ const Home = () => {
               Topics
             </p>
             <span className="rounded-full bg-base-shade px-2 py-0.5 text-xs font-medium text-neutral-main ring-1 ring-neutral-shade/50">
-              {filtered.length}
+              {displayed.length}
             </span>
           </div>
 
           {/* Topic list */}
-          {filtered.length > 0 ? (
+          {displayed.length > 0 ? (
             <ul className="space-y-3">
-              {filtered.map(({ topic, topicTargetLanguage, emoji }, index) => {
+              {displayed.map(({ topic, topicTargetLanguage, emoji }, index) => {
                 return (
                   <li
                     key={topic}
