@@ -11,6 +11,8 @@ export const TRY_AGAIN_BUTTON: string = "Try Again";
 export const NEW_EXERCISE_LINK: string = "New Exercise";
 export const ERROR_MESSAGE_LINK: string = "Please go back to the home page";
 
+export const SEARCH_PLACEHOLDER: string = "Search topics...";
+
 /* Testing */
 // add this manually from the first meta-data JSON key
 export const TOPIC: string = "articles";
