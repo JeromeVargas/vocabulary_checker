@@ -30,9 +30,10 @@ interface ButtonProps
   extends HTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof variants> {
   isSpeechReady?: boolean;
+  isPlaying?: boolean;
 }
 
-const Button = ({ kind, isSpeechReady, onClick, ...props }: ButtonProps) => {
+const Button = ({ kind, isSpeechReady, isPlaying, onClick, ...props }: ButtonProps) => {
   const nextText =
     isSpeechReady === false ? ACTION_BUTTON_LISTEN : ACTION_BUTTON_NEXT;
   return (
@@ -40,11 +41,11 @@ const Button = ({ kind, isSpeechReady, onClick, ...props }: ButtonProps) => {
       onClick={onClick}
       className={cn(variants({ kind }), {
         "cursor-not-allowed bg-neutral-light text-neutral-main":
-          kind === "action" && isSpeechReady === false,
+          kind === "action" && (isSpeechReady === false || isPlaying),
         "bg-accent-main text-white shadow-sm hover:-translate-y-0.5 hover:shadow-md":
-          kind === "action" && isSpeechReady === true,
+          kind === "action" && isSpeechReady === true && !isPlaying,
       })}
-      disabled={kind === "action" && !isSpeechReady}
+      disabled={kind === "action" && (!isSpeechReady || !!isPlaying)}
       {...props}
     >
       {kind === "action" && nextText}

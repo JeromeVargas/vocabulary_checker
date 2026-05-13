@@ -9,6 +9,7 @@ const ButtonsSection = () => {
   const {
     imagesData: images,
     isSpeechReady,
+    isPlaying,
     handleNext,
     handleReset,
   } = useInterfaceData();
@@ -20,6 +21,7 @@ const ButtonsSection = () => {
           <Button
             kind="action"
             isSpeechReady={isSpeechReady}
+            isPlaying={isPlaying}
             onClick={handleNext}
           />
         </>

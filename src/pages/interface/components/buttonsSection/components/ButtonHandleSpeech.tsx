@@ -5,7 +5,7 @@ import { cn } from "../../../../../lib/classMerge";
 
 const ButtonHandleSpeech = () => {
   const { isFirstAccess, handleIsFirstAccess } = useAppData();
-  const { handleSpeech } = useInterfaceData();
+  const { handleSpeech, isPlaying } = useInterfaceData();
   return (
     <button
       aria-label="Play pronunciation"
@@ -13,9 +13,11 @@ const ButtonHandleSpeech = () => {
         "flex size-14 items-center justify-center rounded-full bg-base-shade text-accent-main ring-1 ring-neutral-shade/50 transition-all duration-200 hover:bg-accent-main hover:text-white hover:ring-accent-main",
         {
           "animate-pulse-slow": isFirstAccess === true,
+          "cursor-not-allowed opacity-50": isPlaying,
         },
       )}
       type="button"
+      disabled={isPlaying}
       onClick={handleSpeech}
     >
       <svg

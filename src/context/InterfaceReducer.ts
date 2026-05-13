@@ -13,6 +13,7 @@ export type StateType = {
   imagesData: image[];
   isShowText: boolean;
   isSpeechReady: boolean;
+  isPlaying: boolean;
   isLoaded: boolean;
 };
 
@@ -20,6 +21,7 @@ export const initialState: StateType = {
   imagesData: [],
   isShowText: false,
   isSpeechReady: false,
+  isPlaying: false,
   isLoaded: false,
 };
 
@@ -29,6 +31,7 @@ const enum REDUCER_ACTIONS_TYPES {
   TOGGLE_IS_SHOW_TEXT,
   RESET_IS_SHOW_TEXT,
   TOGGLE_IS_SPEECH_READY,
+  SET_IS_PLAYING,
   TOGGLE_IS_LOADED,
 }
 
@@ -38,6 +41,7 @@ type ReducerAction =
   | { type: REDUCER_ACTIONS_TYPES.TOGGLE_IS_SHOW_TEXT }
   | { type: REDUCER_ACTIONS_TYPES.RESET_IS_SHOW_TEXT }
   | { type: REDUCER_ACTIONS_TYPES.TOGGLE_IS_SPEECH_READY; payload: boolean }
+  | { type: REDUCER_ACTIONS_TYPES.SET_IS_PLAYING; payload: boolean }
   | { type: REDUCER_ACTIONS_TYPES.TOGGLE_IS_LOADED; payload: boolean };
 
 const reducer = (state: StateType, action: ReducerAction): StateType => {
@@ -63,6 +67,8 @@ const reducer = (state: StateType, action: ReducerAction): StateType => {
         ...state,
         isSpeechReady: action.payload,
       };
+    case REDUCER_ACTIONS_TYPES.SET_IS_PLAYING:
+      return { ...state, isPlaying: action.payload };
     case REDUCER_ACTIONS_TYPES.TOGGLE_IS_LOADED:
       if (state.isLoaded === action.payload) return state;
       return { ...state, isLoaded: action.payload };
@@ -136,13 +142,11 @@ const useInterfaceReducer = ({ pathname }: useInterfaceReducerProps) => {
   };
 
   const handleSpeech = () => {
-    setTimeout(() => {
-      dispatch({
-        type: REDUCER_ACTIONS_TYPES.TOGGLE_IS_SPEECH_READY,
-        payload: true,
-      });
-    }, 1000);
-    speechUtterance(text);
+    dispatch({ type: REDUCER_ACTIONS_TYPES.SET_IS_PLAYING, payload: true });
+    speechUtterance(text, () => {
+      dispatch({ type: REDUCER_ACTIONS_TYPES.SET_IS_PLAYING, payload: false });
+      dispatch({ type: REDUCER_ACTIONS_TYPES.TOGGLE_IS_SPEECH_READY, payload: true });
+    });
   };
 
   /* isLoaded code */

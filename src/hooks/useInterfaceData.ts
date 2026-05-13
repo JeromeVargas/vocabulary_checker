@@ -6,6 +6,7 @@ import { image } from "../types";
 type UseInterfaceDataHookType = {
   imagesData: image[];
   isSpeechReady: boolean;
+  isPlaying: boolean;
   isLoaded: boolean;
   isShowText: boolean;
   text: string;
@@ -22,7 +23,7 @@ type UseInterfaceDataHookType = {
 
 const useInterfaceData = (): UseInterfaceDataHookType => {
   const {
-    state: { imagesData, isSpeechReady, isLoaded, isShowText },
+    state: { imagesData, isSpeechReady, isPlaying, isLoaded, isShowText },
     text,
     currentImage,
     highlights,
@@ -38,6 +39,7 @@ const useInterfaceData = (): UseInterfaceDataHookType => {
   return {
     imagesData,
     isSpeechReady,
+    isPlaying,
     isLoaded,
     isShowText,
     text,
