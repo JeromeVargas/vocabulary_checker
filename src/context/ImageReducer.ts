@@ -28,11 +28,13 @@ const reducer = (state: StateType, action: ReducerAction): StateType => {
 type useImageReducerProps = {
   imgRef: React.RefObject<HTMLImageElement | null>;
   handleSetIsLoaded: () => void;
+  currentImage: string;
 };
 
 const useImageReducer = ({
   imgRef,
   handleSetIsLoaded,
+  currentImage,
 }: useImageReducerProps) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
@@ -58,7 +60,7 @@ const useImageReducer = ({
       };
 
       if (imgElCurrent.complete && imgElCurrent.naturalWidth > 0) {
-        loadHandler();
+        handleSetIsLoaded();
         return;
       }
 
@@ -70,7 +72,7 @@ const useImageReducer = ({
         imgElCurrent.removeEventListener("error", errorHandler);
       };
     }
-  }, [imgRef, handleSetIsLoaded]);
+  }, [imgRef, handleSetIsLoaded, currentImage]);
 
   return { state };
 };

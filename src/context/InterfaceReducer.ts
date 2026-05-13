@@ -64,6 +64,7 @@ const reducer = (state: StateType, action: ReducerAction): StateType => {
         isSpeechReady: action.payload,
       };
     case REDUCER_ACTIONS_TYPES.TOGGLE_IS_LOADED:
+      if (state.isLoaded === action.payload) return state;
       return { ...state, isLoaded: action.payload };
     default:
       throw new Error("There is not such action");
@@ -75,11 +76,14 @@ type useInterfaceReducerProps = {
 };
 
 const useInterfaceReducer = ({ pathname }: useInterfaceReducerProps) => {
-  const [state, dispatch] = useReducer(reducer, initialState);
-
   /* meta-data code */
   // formats the path from url
   const path = pathSlashRemover(pathname);
+
+  const [state, dispatch] = useReducer(reducer, {
+    ...initialState,
+    isLoaded: sessionStorage.getItem(`loaded_${path}`) === 'true',
+  });
 
   // sets the images array item index to show its text, image file name and the words to highlight
   const index = useMemo(() => {
@@ -125,10 +129,6 @@ const useInterfaceReducer = ({ pathname }: useInterfaceReducerProps) => {
       type: REDUCER_ACTIONS_TYPES.SET_IMAGES_DATA,
       payload: path,
     });
-    dispatch({
-      type: REDUCER_ACTIONS_TYPES.TOGGLE_IS_LOADED,
-      payload: false,
-    });
   };
 
   const handleIsShowText = () => {
@@ -147,11 +147,12 @@ const useInterfaceReducer = ({ pathname }: useInterfaceReducerProps) => {
 
   /* isLoaded code */
   const handleSetIsLoaded = useCallback(() => {
+    sessionStorage.setItem(`loaded_${path}`, 'true');
     dispatch({
       type: REDUCER_ACTIONS_TYPES.TOGGLE_IS_LOADED,
       payload: true,
     });
-  }, []);
+  }, [path]);
 
   return {
     state,

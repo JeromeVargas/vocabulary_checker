@@ -18,6 +18,7 @@ const ImageSection = () => {
       <ImageDataProvider
         imgRef={imgRef}
         handleSetIsLoaded={handleSetIsLoaded}
+        currentImage={currentImage}
       >
         {images.map((image) => {
           const imageUrl: string = new URL(
