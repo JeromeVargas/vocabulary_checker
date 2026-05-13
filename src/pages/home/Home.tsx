@@ -55,11 +55,13 @@ const Home = () => {
           {/* Topic count label */}
           <div className="mb-4 flex items-center justify-between">
             <p className="text-xs font-semibold uppercase tracking-widest text-neutral-main">
-              Topics
+              {query ? "Topics" : "Try one of these"}
             </p>
-            <span className="rounded-full bg-base-shade px-2 py-0.5 text-xs font-medium text-neutral-main ring-1 ring-neutral-shade/50">
-              {displayed.length}
-            </span>
+            {query && (
+              <span className="rounded-full bg-base-shade px-2 py-0.5 text-xs font-medium text-neutral-main ring-1 ring-neutral-shade/50">
+                {displayed.length}
+              </span>
+            )}
           </div>
 
           {/* Topic list */}
