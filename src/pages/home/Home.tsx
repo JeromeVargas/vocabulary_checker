@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import SearchBar from "./components/SearchBar";
 
 import dataFetcher from "../../services/dataFetcher";
+import { shuffleArray } from "../../lib/utils/random";
 
 const Home = () => {
   const data = dataFetcher();
@@ -21,7 +22,9 @@ const Home = () => {
     };
   });
 
-  const filtered = topics.filter(({ topic, topicTargetLanguage }) => {
+  const [shuffledTopics] = useState(() => shuffleArray(topics));
+
+  const filtered = shuffledTopics.filter(({ topic, topicTargetLanguage }) => {
     const q = query.toLowerCase();
     return topic.includes(q) || topicTargetLanguage.toLowerCase().includes(q);
   });
