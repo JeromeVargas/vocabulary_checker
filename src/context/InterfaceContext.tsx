@@ -1,25 +1,7 @@
-import { type ReactElement, createContext } from "react";
+import { type ReactElement } from "react";
 
-import useInterfaceReducer, { initialState } from "./InterfaceReducer";
-
-type UseInterfaceDataContextType = ReturnType<typeof useInterfaceReducer>;
-
-const initialContextState: UseInterfaceDataContextType = {
-  state: initialState,
-  text: "",
-  currentImage: "",
-  highlights: [],
-  path: "",
-  progress: 0,
-  handleNext: () => {},
-  handleReset: () => {},
-  handleIsShowText: () => {},
-  handleSpeech: () => {},
-  handleSetIsLoaded: () => {},
-};
-
-export const InterfaceDataContext =
-  createContext<UseInterfaceDataContextType>(initialContextState);
+import useInterfaceReducer from "./InterfaceReducer";
+import { InterfaceDataContext } from "./InterfaceDataContext";
 
 type ChildrenType = {
   children?: ReactElement | ReactElement[] | undefined;
