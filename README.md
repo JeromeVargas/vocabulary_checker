@@ -170,4 +170,4 @@ Sub-folders must also be in kebab-case (e.g. `articles`, `verb-to-be`) and must 
 ### **Playwright**
 
 - There is an inconsistently failing test in WebKit, so WebKit has been removed from the Playwright browser configuration.
-- Tests must be run against the Vite preview build (`npm run setup`) to exercise the compiled output rather than the dev server.
+- Tests must be run against the Vite preview build (`npm run test_setup`) to exercise the compiled output rather than the dev server.
