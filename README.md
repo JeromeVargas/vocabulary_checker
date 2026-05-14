@@ -1,6 +1,5 @@
-![banner](assets/images/banner.png)
+# Vocabulary Reviewer
 
-<br/>
 <br/>
 
 ![GitHub top language](https://img.shields.io/github/languages/top/JeromeVargas/vocabulary_checker)
@@ -9,150 +8,166 @@
 
 > ## What it does
 
-This is an app that allows the user to do pronunciation shadowing on vocabulary organized by topic. The user can listen to the work or words and have context by looking at the associated image and repeat the pronunciation of the word. The word pronunciation is produced by the Chromium speech utterance API.
+This is an app that allows the user to do pronunciation shadowing on vocabulary organized by topic. The user can listen to one or more words and have context by looking at the associated image, then repeat the pronunciation. Word pronunciation is produced by the Chromium Speech Utterance API.
 
-> ## Life demo:
+> ## Live demo:
+
+### [English vocabulary reviewer](https://vocabulary-checker.onrender.com/)
 
 ### [Japanese vocabulary reviewer](https://japanese-vocabulary-checker.netlify.app/)
+
+### [Japanese vocabulary reviewer](https://japanese-vocabulary-checker.netlify.app/)
+
+> ## Getting started
+
+```bash
+git clone https://github.com/JeromeVargas/vocabulary_checker.git
+npm install
+npm run dev
+```
 
 > ## User journey:
 
 ### **Home page**:
 
-The user can choose the topic in the home page to move the interface area
-
-![home_page](assets/images/sections/home_page.png)
+The home page displays a list of available topics. Topics are shown in a randomized order each session, up to five at a time. A search bar at the top allows the user to filter topics by name. Clicking a topic card navigates to the interface for that topic.
 
 ### **Interface**:
 
 #### Text section:
 
-This is the word or words to study, you can click on question mark to show the text:
-
-![interface_text_area_1](assets/images/sections/interface_text_section_1.png)
-![interface_text_area_2](assets/images/sections/interface_text_section_2.png)
+Displays the word or phrase being studied. The text is initially hidden — clicking the question mark icon reveals it. This encourages the user to attempt pronunciation before confirming the spelling.
 
 #### Image section:
 
-It shows what the graphic representation of the word or words is:
-
-![interface_image_area](assets/images/sections/interface_image_section.png)
+Shows a graphic representation of the word or phrase, providing visual context to reinforce vocabulary retention.
 
 #### Button section:
 
-It contains the calls to action:
+##### Actions area
 
-#### Actions area
+A speaker button triggers the Chromium Speech Utterance API to read the word aloud. After the speech plays, the button label transitions from **_Listen_** to **_Next_**, advancing to the next word in the topic when clicked.
 
-The speaker button is a speech handler, it triggers the speech and allows the user to change the state from **_Listen_** to **_Next_**:
+##### Reset / Exit area
 
-![interface_button_section_1](assets/images/sections/interface_button_section_1.png)
-![interface_button_section_2](assets/images/sections/interface_button_section_2.png)
+Once the user has gone through all words in the topic, two options are presented:
 
-#### Reset / Exit area
-
-Once the user go through all the words for the topic the user can choose between either reset the same topic by clicking on **_Try Again_** or to try other topic by clicking on **_New Exercise_**:
-
-![interface_button_section_3](assets/images/sections/interface_button_section_3.png)
+- **Try Again** — resets the current topic so the user can practice it again.
+- **New Exercise** — navigates back to the home page to pick a different topic.
 
 ### **Dark mode**:
 
-The user can access dark mode by clicking on the right hand side top corner theme icon:
-
-![dark_mode](assets/images/sections/dark_mode.png)
+A theme toggle icon in the top-right corner switches the app between light and dark mode. The preference is reflected immediately across the entire interface.
 
 <br/>
+
+> ## Tech stack
+
+| Technology | Version |
+|---|---|
+| React | 19 |
+| TypeScript | 6 |
+| Vite | 8 |
+| Tailwind CSS | 4 |
+| Playwright | 1.60 |
 
 > ## Configurations
 
 ### **Initial set up**
 
-To get the project started setting up the language please follow this steps
+To get the project started and configure it for a language, follow these steps:
 
-> 1. create a JSON file - meta data object, this is going to be the data source:
+> 1. Create a JSON file — the meta-data object that acts as the data source:
 
-- main object keys = topics from origin language, these must be in kebab-case, e.g. **base-instructions**, **basic-greetings** ...
+Top-level keys represent topics and must be in kebab-case, e.g. `articles`, `verb-to-be`, `plurals-1`. Each topic object has four fields:
 
-- nested objects keys:
+| Field | Type | Description |
+|---|---|---|
+| `translation` | `string` | Display name of the topic shown in the UI |
+| `emoji` | `string` | A single emoji used as the topic's visual identifier on its card |
+| `metadata` | `array` | Ordered list of word objects for this topic (see below) |
+| `wordsToHighlight` | `number[]` | Zero-based positions of words within a phrase that receive highlight styling |
 
-  - translation: topic in target language
-  - meta-data: topic meta-data
-  - wordsToHighlight: words with special highlighting styles, it is a array index, taking each word as an array element
+Each object in the `metadata` array has two fields:
 
-![meta-data-json](assets/images/source_files/meta-data-json.png)
+| Field | Type | Description |
+|---|---|---|
+| `word` | `string` | The full word or phrase the user will study and pronounce |
+| `fileName` | `string` | Filename (without extension) of the image inside this topic's sub-folder |
 
-> 2. create an images folder:
+**`wordsToHighlight` explained:** Words within a phrase are indexed left to right starting at `0`. For example, in `"a fast car"`, index `0` = `"a"`, index `1` = `"fast"`, index `2` = `"car"`. Passing `[1]` highlights the word at position 1 (`"fast"`).
 
-The sub-folders must also be in kebab-case, e.g. **base-instructions**, **basic-greetings** since they are referenced in the meta-data json object keys, the images files are referenced in the meta-data objects file name field,
+Example structure:
 
-![meta-data-json](assets/images/source_files/images_folder.png)
+```json
+{
+  "articles": {
+    "translation": "Articles",
+    "emoji": "🧩",
+    "metadata": [
+      { "word": "a car", "fileName": "car" },
+      { "word": "an apple", "fileName": "apple" }
+    ],
+    "wordsToHighlight": [0]
+  }
+}
+```
 
-> 3. set the configuration constants file in the config folder:
+> 2. Create an images folder:
 
-- First section sets the language
-- Second section sets strings for headings and calls to action buttons and links
-- Third section sets values for testing, these must be added manually based on the meta-data JSON
+Sub-folders must also be in kebab-case (e.g. `articles`, `verb-to-be`) and must match the top-level keys in the meta-data JSON exactly. Place the image files directly inside their topic sub-folder; the `fileName` field in each metadata object references them by name without the file extension.
 
-![constants_config_file](assets/images/source_files/constants_config_file.png)
+> 3. Set the configuration constants file at `src/config/constants.ts`:
+
+- **Speech section** — sets the target language locale (e.g. `"en-US"`) and utterance speed.
+- **Strings section** — sets the copy for headings and call-to-action buttons (e.g. `Listen`, `Next`, `Try Again`, `New Exercise`).
+- **Testing section** — sets values used by Playwright tests; these must be filled in manually based on the meta-data JSON (topic key and number of words in that topic).
 
 ### **npm scripts**
 
 - **Vite**:
 
-![vite_scripts](assets/images/scripts/vite_scripts.png)
+| Script | Command | Description |
+|---|---|---|
+| `dev` | `vite` | Starts the development server |
+| `build` | `tsc && vite build` | Type-checks and builds for production |
+| `preview` | `vite preview` | Previews the production build locally |
+| `setup` | `npm run build && vite preview` | Builds then immediately serves the preview |
 
 - **Playwright**:
 
-![playwright_scripts](assets/images/scripts/playwright_scripts.png)
+| Script | Command | Description |
+|---|---|---|
+| `test` | `npx playwright test` | Runs the full Playwright test suite |
 
-- **Storybook**
+- **Utilities**:
 
-![storybook_scripts](assets/images/scripts/storybook_scripts.png)
+| Script | Command | Description |
+|---|---|---|
+| `lint` | `eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0` | Lints all TypeScript/TSX files |
+| `clean` | `rm -rf dist/ playwright-report/ test-results/` | Removes build artifacts and test output |
 
 <br/>
 
 > ## Instructions
 
-### **File management**, please organize imports this way:
+### **File management** — organize imports in this order:
 
-- library / lib
-- components
-- hooks
-- services / utils
-- types
-
-### **Build**
-
-- after each test run **_npm clean_** to remove build files
-
-![clean_scripts](assets/images/scripts/clean_scripts.png)
+1. Library / lib
+2. Components
+3. Hooks
+4. Services / utils
+5. Types
 
 <br/>
 
 > ## Known issues
 
-![Firefox](assets/images/icons//firefox.png)
+![Firefox](assets/images/icons/firefox.png)
 
-- **_speech does not work on Firefox_** because it is based on the Chromium speech utterance api
+- **_Speech does not work on Firefox_** because the app relies on the Chromium Speech Utterance API, which Firefox does not support.
 
 ### **Playwright**
 
-- sometimes there is an inconsistently failing test in webkit, then webkit was removed from the testing
-
-![sometimes_not_passing_test](assets/images/testing/sometimes_not_passing_test.png)
-
-- run on vite preview to get the build code tested
-
-![storybook_scripts](assets/images/scripts/preview_scripts.png)
-
-### **Storybook**
-
-types had to be adapted in the dark mode add-on migration
-
-#### preview.ts
-
-![storybook_adapted_types](assets/images/storybook/storybook_adapted_types_1.png)
-
-#### index.d.ts
-
-![storybook_adapted_types](assets/images/storybook/storybook_adapted_types_2.png)
+- There is an inconsistently failing test in WebKit, so WebKit has been removed from the Playwright browser configuration.
+- Tests must be run against the Vite preview build (`npm run setup`) to exercise the compiled output rather than the dev server.

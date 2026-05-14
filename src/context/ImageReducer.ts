@@ -26,13 +26,15 @@ const reducer = (state: StateType, action: ReducerAction): StateType => {
 };
 
 type useImageReducerProps = {
-  imgRef: React.RefObject<HTMLImageElement>;
+  imgRef: React.RefObject<HTMLImageElement | null>;
   handleSetIsLoaded: () => void;
+  currentImage: string;
 };
 
 const useImageReducer = ({
   imgRef,
   handleSetIsLoaded,
+  currentImage,
 }: useImageReducerProps) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
@@ -46,23 +48,31 @@ const useImageReducer = ({
     const imgElCurrent = imgRef.current;
 
     if (imgElCurrent) {
-      imgElCurrent.addEventListener("error", (e) => {
-        if (e.type !== "error") return;
-        handleSetError();
-      });
-
-      imgElCurrent.addEventListener("load", () => {
+      const loadHandler = () => {
         setTimeout(() => {
           handleSetIsLoaded();
         }, 3000);
-      });
+      };
+
+      const errorHandler = (e: Event) => {
+        if (e.type !== "error") return;
+        handleSetError();
+      };
+
+      if (imgElCurrent.complete && imgElCurrent.naturalWidth > 0) {
+        handleSetIsLoaded();
+        return;
+      }
+
+      imgElCurrent.addEventListener("load", loadHandler);
+      imgElCurrent.addEventListener("error", errorHandler);
 
       return () => {
-        imgElCurrent.removeEventListener("load", handleSetIsLoaded);
-        imgElCurrent.removeEventListener("error", handleSetError);
+        imgElCurrent.removeEventListener("load", loadHandler);
+        imgElCurrent.removeEventListener("error", errorHandler);
       };
     }
-  }, [imgRef, handleSetIsLoaded]);
+  }, [imgRef, handleSetIsLoaded, currentImage]);
 
   return { state };
 };

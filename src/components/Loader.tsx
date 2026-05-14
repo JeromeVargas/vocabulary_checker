@@ -1,34 +1,31 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Loader = () => {
-  const [showLoader, setShowLoader] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Set a timeout to hide the loader after 10s
-    const timer = setTimeout(() => {
-      setShowLoader(false);
-      // navigate to a not_found a non existent route to trigger the error 404 component
-      navigate("/not_found");
-    }, 10000);
-
-    // Clean up the timer if the component unmounts
+    const timer = setTimeout(() => navigate("/not_found"), 10000);
     return () => clearTimeout(timer);
   }, [navigate]);
 
-  return showLoader ? (
-    <section className="fixed inset-0 flex h-dvh items-center justify-center border-8 border-accent-main bg-neutral-light">
-      <div
-        className="inline-block h-60 w-60 animate-spin rounded-full border-8 border-solid border-neutral-main border-r-neutral-shade align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite] md:h-80 md:w-80"
-        role="status"
-      >
-        <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
-          Loading...
-        </span>
+  return (
+    <section
+      className="fixed inset-0 z-50 flex h-dvh items-center justify-center bg-base-main/90 backdrop-blur-sm"
+      role="status"
+      aria-label="Loading"
+    >
+      <div className="flex items-center gap-3">
+        {[0, 150, 300].map((delay) => (
+          <span
+            key={delay}
+            className="size-4 animate-big-bounce rounded-full bg-accent-main will-change-transform"
+            style={{ animationDelay: `${delay}ms` }}
+          />
+        ))}
       </div>
     </section>
-  ) : null;
+  );
 };
 
 export default Loader;

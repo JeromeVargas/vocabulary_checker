@@ -13,18 +13,20 @@ export const ImageDataContext =
 
 type ChildrenType = {
   children?: ReactElement | ReactElement[] | undefined;
-  imgRef: React.RefObject<HTMLImageElement>;
+  imgRef: React.RefObject<HTMLImageElement | null>;
   handleSetIsLoaded: () => void;
+  currentImage: string;
 };
 
 export const ImageDataProvider = ({
   children,
   imgRef,
   handleSetIsLoaded,
+  currentImage,
 }: ChildrenType): ReactElement => {
   return (
     <ImageDataContext.Provider
-      value={useImageReducer({ imgRef, handleSetIsLoaded })}
+      value={useImageReducer({ imgRef, handleSetIsLoaded, currentImage })}
     >
       {children}
     </ImageDataContext.Provider>

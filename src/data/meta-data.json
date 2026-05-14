@@ -1,6 +1,7 @@
 {
   "base-instructions": {
     "translation": "しょるい",
+    "emoji": "📄",
     "metadata": [
       { "word": "はなしましょう", "fileName": "hanashimashou" },
       { "word": "かいわ", "fileName": "kaiwa" },
@@ -11,6 +12,7 @@
   },
   "basic-greetings": {
     "translation": "あいさつ",
+    "emoji": "👋",
     "metadata": [
       { "word": "おはようございます", "fileName": "ohayou_gozaimasu" },
       { "word": "こんにちは", "fileName": "konnichiwa" },

@@ -11,6 +11,8 @@ export const TRY_AGAIN_BUTTON: string = "もういちど";
 export const NEW_EXERCISE_LINK: string = "あたらしいれんしゅう";
 export const ERROR_MESSAGE_LINK: string = "ほーむぺーじにもどってください";
 
+export const SEARCH_PLACEHOLDER: string = "Search topics...";
+
 /* Testing */
 // add this manually from the first meta-data JSON key
 export const TOPIC: string = "base-instructions";

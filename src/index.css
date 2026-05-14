@@ -1,10 +1,58 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@import "tailwindcss";
+
+@theme inline {
+  --color-base-main: rgb(var(--_base-main));
+  --color-base-shade: rgb(var(--_base-shade));
+  --color-font-main: rgb(var(--_font-main));
+  --color-neutral-main: rgb(var(--_neutral-main));
+  --color-neutral-shade: rgb(var(--_neutral-shade));
+  --color-neutral-light: rgb(var(--_neutral-light));
+  --color-accent-main: rgb(var(--_accent-main));
+  --color-accent-shade: rgb(var(--_accent-shade));
+  --color-accent-contrast: rgb(var(--_accent-contrast));
+
+  --animate-pulse-slow: indigo-pulse 2s ease-in-out infinite;
+  --animate-slide-up: slide-up-fade 0.3s ease-out both;
+  --animate-big-bounce: big-bounce 1s ease-in-out infinite;
+
+  @keyframes big-bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-1.75rem);
+    }
+  }
+
+  @keyframes slide-up-fade {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes indigo-pulse {
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.7);
+    }
+    50% {
+      box-shadow: 0 0 0 12px rgba(99, 102, 241, 0);
+    }
+  }
+}
 
 @layer base {
   body {
-    @apply flex min-h-dvh flex-col items-center bg-base-main text-center text-5xl font-black;
+    @apply bg-base-main flex min-h-dvh flex-col items-center text-center text-base font-normal antialiased;
+    font-family: "Inter", system-ui, sans-serif;
   }
 
   #root {
@@ -13,53 +61,53 @@
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --color-base-main: 31 27 36;
-      --color-base-shade: 18 18 18;
-      --color-font-main: 255 255 255;
-      --color-neutral-main: 121 121 121;
-      --color-neutral-shade: 80 80 80;
-      --color-neutral-light: 12 12 12;
-      --color-accent-main: 60 251 146;
-      --color-accent-shade: 149 204 199;
-      --color-accent-contrast: 248 113 113;
+      --_base-main: 15 17 27;
+      --_base-shade: 22 27 42;
+      --_font-main: 226 232 240;
+      --_neutral-main: 100 116 139;
+      --_neutral-shade: 51 65 85;
+      --_neutral-light: 30 41 59;
+      --_accent-main: 99 102 241;
+      --_accent-shade: 129 140 248;
+      --_accent-contrast: 239 68 68;
     }
   }
 
   @media (prefers-color-scheme: light) {
     :root {
-      --color-base-main: 96 165 250;
-      --color-base-shade: 147 197 253;
-      --color-font-main: 255 255 255;
-      --color-neutral-main: 74 222 128;
-      --color-neutral-shade: 134 239 172;
-      --color-neutral-light: 187 247 208;
-      --color-accent-main: 251 146 60;
-      --color-accent-shade: 253 186 116;
-      --color-accent-contrast: 248 113 113;
+      --_base-main: 248 250 252;
+      --_base-shade: 241 245 249;
+      --_font-main: 15 23 42;
+      --_neutral-main: 100 116 139;
+      --_neutral-shade: 203 213 225;
+      --_neutral-light: 226 232 240;
+      --_accent-main: 99 102 241;
+      --_accent-shade: 67 56 202;
+      --_accent-contrast: 239 68 68;
     }
   }
 
   :root[data-theme="dark"] {
-    --color-base-main: 31 27 36;
-    --color-base-shade: 18 18 18;
-    --color-font-main: 255 255 255;
-    --color-neutral-main: 121 121 121;
-    --color-neutral-shade: 80 80 80;
-    --color-neutral-light: 12 12 12;
-    --color-accent-main: 60 251 146;
-    --color-accent-shade: 149 204 199;
-    --color-accent-contrast: 248 113 113;
+    --_base-main: 15 17 27;
+    --_base-shade: 22 27 42;
+    --_font-main: 226 232 240;
+    --_neutral-main: 100 116 139;
+    --_neutral-shade: 51 65 85;
+    --_neutral-light: 30 41 59;
+    --_accent-main: 99 102 241;
+    --_accent-shade: 129 140 248;
+    --_accent-contrast: 239 68 68;
   }
 
   :root[data-theme="light"] {
-    --color-base-main: 96 165 250;
-    --color-base-shade: 147 197 253;
-    --color-font-main: 255 255 255;
-    --color-neutral-main: 74 222 128;
-    --color-neutral-shade: 134 239 172;
-    --color-neutral-light: 187 247 208;
-    --color-accent-main: 251 146 60;
-    --color-accent-shade: 253 186 116;
-    --color-accent-contrast: 248 113 113;
+    --_base-main: 248 250 252;
+    --_base-shade: 241 245 249;
+    --_font-main: 15 23 42;
+    --_neutral-main: 100 116 139;
+    --_neutral-shade: 203 213 225;
+    --_neutral-light: 226 232 240;
+    --_accent-main: 99 102 241;
+    --_accent-shade: 67 56 202;
+    --_accent-contrast: 239 68 68;
   }
 }

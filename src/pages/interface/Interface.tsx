@@ -19,12 +19,12 @@ function Interface() {
   return (
     <ErrorBoundary fallback={<Error404Page />}>
       <Suspense fallback={<Loader />}>
-        <main className="flex h-dvh flex-col items-center justify-evenly">
-          <div className="h-2 w-full rounded-full bg-font-main text-xl">
+        <main className="flex h-dvh flex-col items-center justify-evenly px-4">
+          <div className="h-1 w-full overflow-hidden rounded-full bg-neutral-light">
             <div
               style={{ width: `${progress}%` }}
-              className={`h-full rounded-full bg-neutral-shade`}
-            ></div>
+              className="h-full rounded-full bg-accent-main transition-all duration-500 ease-out"
+            />
           </div>
           {/* content area */}
           {imagesData.length > 0 ? (
@@ -33,7 +33,7 @@ function Interface() {
               <ImageSection />
             </>
           ) : (
-            <p className="text-center text-6xl font-bold text-font-main md:text-9xl">
+            <p className="text-4xl font-bold tracking-tight text-font-main md:text-6xl">
               {CONGRATS_MESSAGE}
             </p>
           )}

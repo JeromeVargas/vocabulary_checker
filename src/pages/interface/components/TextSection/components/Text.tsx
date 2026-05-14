@@ -4,33 +4,30 @@ import TextPlaceHolder from "./../components/TextPlaceHolder";
 const Text = () => {
   const { isShowText, text, highlights, handleIsShowText } = useInterfaceData();
   return (
-    <>
-      <h1
-        onClick={handleIsShowText}
-        className="select-none text-center font-medium"
-      >
-        {/* text */}
-        {isShowText ? (
-          <p>
-            {text.split(" ").map((item, index) =>
-              highlights.includes(index) ? (
-                // highlighted words
-                <span key={index} className="text-accent-shade">
-                  {item}{" "}
-                </span>
-              ) : (
-                // regular words
-                <span key={index} className="text-font-main">
-                  {item}{" "}
-                </span>
-              ),
-            )}
-          </p>
-        ) : (
-          <TextPlaceHolder />
-        )}
-      </h1>
-    </>
+    <button
+      type="button"
+      onClick={handleIsShowText}
+      className="select-none text-center focus-visible:outline-none"
+      aria-label={isShowText ? text : "Reveal word"}
+    >
+      {isShowText ? (
+        <span className="block text-3xl font-semibold leading-snug tracking-tight md:text-4xl">
+          {text.split(" ").map((item, index) =>
+            highlights.includes(index) ? (
+              <span key={index} className="text-accent-shade">
+                {item}{" "}
+              </span>
+            ) : (
+              <span key={index} className="text-font-main">
+                {item}{" "}
+              </span>
+            ),
+          )}
+        </span>
+      ) : (
+        <TextPlaceHolder />
+      )}
+    </button>
   );
 };
 
