@@ -12,6 +12,8 @@ export const NEW_EXERCISE_LINK: string = "Nouvel Exercice";
 export const ERROR_MESSAGE_LINK: string =
   "Veuillez revenir à la page d'accueil";
 
+export const SEARCH_PLACEHOLDER: string = "Search topics...";
+
 /* Testing */
 // add this manually from the first meta-data JSON key
 export const TOPIC: string = "articles";

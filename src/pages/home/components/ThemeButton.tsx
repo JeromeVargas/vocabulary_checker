@@ -4,17 +4,15 @@ const ThemeButton = () => {
   const { theme, handleChangeTheme } = useAppData();
   return (
     <button
-      aria-label="theme"
-      className="absolute right-0 top-0 p-2 hover:-translate-x-1 hover:translate-y-1"
+      aria-label="Toggle theme"
+      className="rounded-lg p-2 text-neutral-main transition-colors duration-150 hover:bg-neutral-light hover:text-font-main"
       onClick={handleChangeTheme}
     >
       {theme === "dark" ? (
         <svg
-          className="h-12 w-12 text-white transition-none"
+          className="size-5"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
           fill="none"
           viewBox="0 0 24 24"
         >
@@ -28,11 +26,9 @@ const ThemeButton = () => {
         </svg>
       ) : (
         <svg
-          className="h-12 w-12 text-gray-800 transition-none"
+          className="size-5"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
           fill="currentColor"
           viewBox="0 0 24 24"
         >
