@@ -1,4 +1,4 @@
-# Vocabulary Reviewer
+# Vocabulary Checker
 
 <br/>
 
@@ -12,11 +12,11 @@ This is an app that allows the user to do pronunciation shadowing on vocabulary 
 
 > ## Live demo:
 
-### [English vocabulary reviewer](https://vocabulary-checker.onrender.com/)
+### [English vocabulary checker](https://vocabulary-checker.onrender.com/)
 
-### [French vocabulary reviewer](https://french-vocabulary-checker.netlify.app/)
+### [French vocabulary checker](https://french-vocabulary-checker.netlify.app/)
 
-### [Japanese vocabulary reviewer](https://japanese-vocabulary-checker.netlify.app/)
+### [Japanese vocabulary checker](https://japanese-vocabulary-checker.netlify.app/)
 
 > ## Getting started
 
@@ -63,13 +63,13 @@ A theme toggle icon in the top-right corner switches the app between light and d
 
 > ## Tech stack
 
-| Technology | Version |
-|---|---|
-| React | 19 |
-| TypeScript | 6 |
-| Vite | 8 |
-| Tailwind CSS | 4 |
-| Playwright | 1.60 |
+| Technology   | Version |
+| ------------ | ------- |
+| React        | 19      |
+| TypeScript   | 6       |
+| Vite         | 8       |
+| Tailwind CSS | 4       |
+| Playwright   | 1.60    |
 
 > ## Configurations
 
@@ -81,18 +81,18 @@ To get the project started and configure it for a language, follow these steps:
 
 Top-level keys represent topics and must be in kebab-case, e.g. `articles`, `verb-to-be`, `plurals-1`. Each topic object has four fields:
 
-| Field | Type | Description |
-|---|---|---|
-| `translation` | `string` | Display name of the topic shown in the UI |
-| `emoji` | `string` | A single emoji used as the topic's visual identifier on its card |
-| `metadata` | `array` | Ordered list of word objects for this topic (see below) |
+| Field              | Type       | Description                                                                  |
+| ------------------ | ---------- | ---------------------------------------------------------------------------- |
+| `translation`      | `string`   | Display name of the topic shown in the UI                                    |
+| `emoji`            | `string`   | A single emoji used as the topic's visual identifier on its card             |
+| `metadata`         | `array`    | Ordered list of word objects for this topic (see below)                      |
 | `wordsToHighlight` | `number[]` | Zero-based positions of words within a phrase that receive highlight styling |
 
 Each object in the `metadata` array has two fields:
 
-| Field | Type | Description |
-|---|---|---|
-| `word` | `string` | The full word or phrase the user will study and pronounce |
+| Field      | Type     | Description                                                              |
+| ---------- | -------- | ------------------------------------------------------------------------ |
+| `word`     | `string` | The full word or phrase the user will study and pronounce                |
 | `fileName` | `string` | Filename (without extension) of the image inside this topic's sub-folder |
 
 **`wordsToHighlight` explained:** Words within a phrase are indexed left to right starting at `0`. For example, in `"a fast car"`, index `0` = `"a"`, index `1` = `"fast"`, index `2` = `"car"`. Passing `[1]` highlights the word at position 1 (`"fast"`).
@@ -127,25 +127,25 @@ Sub-folders must also be in kebab-case (e.g. `articles`, `verb-to-be`) and must 
 
 - **Vite**:
 
-| Script | Command | Description |
-|---|---|---|
-| `dev` | `vite` | Starts the development server |
-| `build` | `tsc && vite build` | Type-checks and builds for production |
-| `preview` | `vite preview` | Previews the production build locally |
-| `setup` | `npm run build && vite preview` | Builds then immediately serves the preview |
+| Script    | Command                         | Description                                |
+| --------- | ------------------------------- | ------------------------------------------ |
+| `dev`     | `vite`                          | Starts the development server              |
+| `build`   | `tsc && vite build`             | Type-checks and builds for production      |
+| `preview` | `vite preview`                  | Previews the production build locally      |
+| `setup`   | `npm run build && vite preview` | Builds then immediately serves the preview |
 
 - **Playwright**:
 
-| Script | Command | Description |
-|---|---|---|
+| Script | Command               | Description                         |
+| ------ | --------------------- | ----------------------------------- |
 | `test` | `npx playwright test` | Runs the full Playwright test suite |
 
 - **Utilities**:
 
-| Script | Command | Description |
-|---|---|---|
-| `lint` | `eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0` | Lints all TypeScript/TSX files |
-| `clean` | `rm -rf dist/ playwright-report/ test-results/` | Removes build artifacts and test output |
+| Script  | Command                                                                     | Description                             |
+| ------- | --------------------------------------------------------------------------- | --------------------------------------- |
+| `lint`  | `eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0` | Lints all TypeScript/TSX files          |
+| `clean` | `rm -rf dist/ playwright-report/ test-results/`                             | Removes build artifacts and test output |
 
 <br/>
 
