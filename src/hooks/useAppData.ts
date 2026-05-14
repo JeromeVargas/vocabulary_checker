@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { use } from "react";
 import { AppDataContext } from "../context/AppContext";
 
 type UseAppDataHookType = {
@@ -13,7 +13,7 @@ const useAppData = (): UseAppDataHookType => {
     state: { theme, isFirstAccess },
     handleChangeTheme,
     handleIsFirstAccess,
-  } = useContext(AppDataContext);
+  } = use(AppDataContext);
 
   return { theme, isFirstAccess, handleChangeTheme, handleIsFirstAccess };
 };

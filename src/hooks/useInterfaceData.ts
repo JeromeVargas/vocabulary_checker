@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { use } from "react";
 import { InterfaceDataContext } from "../context/InterfaceContext";
 
 import { image } from "../types";
@@ -34,7 +34,7 @@ const useInterfaceData = (): UseInterfaceDataHookType => {
     handleSpeech,
     handleSetIsLoaded,
     handleIsShowText,
-  } = useContext(InterfaceDataContext);
+  } = use(InterfaceDataContext);
 
   return {
     imagesData,

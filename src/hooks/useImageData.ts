@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { use } from "react";
 import { ImageDataContext } from "../context/ImageContext";
 
 type UseImageDataHookType = {
@@ -8,7 +8,7 @@ type UseImageDataHookType = {
 const useImageData = (): UseImageDataHookType => {
   const {
     state: { error },
-  } = useContext(ImageDataContext);
+  } = use(ImageDataContext);
 
   return {
     error,
