@@ -1,15 +1,7 @@
-import { type ReactElement, createContext } from "react";
+import { type ReactElement } from "react";
 
-import useImageReducer, { initialState } from "./ImageReducer";
-
-type UseImageDataContextType = ReturnType<typeof useImageReducer>;
-
-const initialContextState: UseImageDataContextType = {
-  state: initialState,
-};
-
-export const ImageDataContext =
-  createContext<UseImageDataContextType>(initialContextState);
+import useImageReducer from "./ImageReducer";
+import { ImageDataContext } from "./ImageDataContext";
 
 type ChildrenType = {
   children?: ReactElement | ReactElement[] | undefined;

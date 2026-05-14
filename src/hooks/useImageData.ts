@@ -1,5 +1,5 @@
 import { use } from "react";
-import { ImageDataContext } from "../context/ImageContext";
+import { ImageDataContext } from "../context/ImageDataContext";
 
 type UseImageDataHookType = {
   error: boolean;

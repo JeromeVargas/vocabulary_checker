@@ -1,17 +1,7 @@
-import { type ReactElement, createContext } from "react";
+import { type ReactElement } from "react";
 
-import useAppReducer, { initialState } from "./appReducer";
-
-type UseAppDataContextType = ReturnType<typeof useAppReducer>;
-
-const initialContextState: UseAppDataContextType = {
-  state: initialState,  
-  handleChangeTheme: () => {},
-  handleIsFirstAccess: () => {},
-};
-
-export const AppDataContext =
-  createContext<UseAppDataContextType>(initialContextState);
+import useAppReducer from "./appReducer";
+import { AppDataContext } from "./AppDataContext";
 
 type ChildrenType = {
   children?: ReactElement | ReactElement[] | undefined;
