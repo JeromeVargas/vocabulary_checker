@@ -1,5 +1,5 @@
 import { use } from "react";
-import { AppDataContext } from "../context/AppContext";
+import { AppDataContext } from "../context/AppDataContext";
 
 type UseAppDataHookType = {
   theme: string;

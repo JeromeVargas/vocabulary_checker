@@ -1,5 +1,5 @@
 import { use } from "react";
-import { InterfaceDataContext } from "../context/InterfaceContext";
+import { InterfaceDataContext } from "../context/InterfaceDataContext";
 
 import { image } from "../types";
 
