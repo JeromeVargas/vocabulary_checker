@@ -12,7 +12,7 @@ This is an app that allows the user to check vocabulary organized by topic. The 
 
 > ## Live demo:
 
-### [English vocabulary checker](https://vocabulary-checker.onrender.com/)
+### [English vocabulary checker](https://english-vocabulary-checker.netlify.app/)
 
 ### [French vocabulary checker](https://french-vocabulary-checker.netlify.app/)
 
