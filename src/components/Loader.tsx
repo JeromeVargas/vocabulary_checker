@@ -19,7 +19,7 @@ const Loader = () => {
         {[0, 150, 300].map((delay) => (
           <span
             key={delay}
-            className="h-4 w-4 animate-big-bounce rounded-full bg-accent-main will-change-transform"
+            className="size-4 animate-big-bounce rounded-full bg-accent-main will-change-transform"
             style={{ animationDelay: `${delay}ms` }}
           />
         ))}

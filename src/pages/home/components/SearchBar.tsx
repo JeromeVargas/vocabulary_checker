@@ -9,7 +9,7 @@ const SearchBar = ({ value, onChange }: Props) => {
   return (
     <div className="flex items-center gap-2 rounded-xl bg-base-shade px-4 py-3 ring-1 ring-neutral-shade/50 transition-all duration-200 focus-within:ring-accent-main/60">
       <svg
-        className="h-4 w-4 shrink-0 text-neutral-main"
+        className="size-4 shrink-0 text-neutral-main"
         viewBox="0 0 16 16"
         fill="none"
         stroke="currentColor"
@@ -34,7 +34,7 @@ const SearchBar = ({ value, onChange }: Props) => {
           className="flex shrink-0 items-center justify-center text-neutral-main transition-colors duration-150 hover:text-font-main"
         >
           <svg
-            className="h-4 w-4"
+            className="size-4"
             viewBox="0 0 16 16"
             fill="none"
             stroke="currentColor"

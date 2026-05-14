@@ -10,7 +10,7 @@ const ThemeButton = () => {
     >
       {theme === "dark" ? (
         <svg
-          className="h-5 w-5"
+          className="size-5"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -26,7 +26,7 @@ const ThemeButton = () => {
         </svg>
       ) : (
         <svg
-          className="h-5 w-5"
+          className="size-5"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"

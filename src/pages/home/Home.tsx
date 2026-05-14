@@ -85,7 +85,7 @@ const Home = () => {
                         <span>{topicTargetLanguage}</span>
                       </div>
                       <svg
-                        className="h-4 w-4 text-neutral-main transition-colors duration-200 group-hover:text-accent-main"
+                        className="size-4 text-neutral-main transition-colors duration-200 group-hover:text-accent-main"
                         viewBox="0 0 16 16"
                         fill="none"
                         stroke="currentColor"
