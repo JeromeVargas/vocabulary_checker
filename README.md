@@ -8,7 +8,7 @@
 
 > ## What it does
 
-This is an app that allows the user to do pronunciation shadowing on vocabulary organized by topic. The user can listen to one or more words and have context by looking at the associated image, then repeat the pronunciation. Word pronunciation is produced by the Chromium Speech Utterance API.
+This is an app that allows the user to check vocabulary organized by topic. The user can listen to one or more words and have context by looking at the associated image, then repeat the pronunciation. Word pronunciation is produced by the Chromium Speech Utterance API.
 
 > ## Live demo:
 
