@@ -1,0 +1,9 @@
+# Vocabulary flash cards
+
+	- app to work on vocabulary	
+
+# To do
+	- add more topics
+	- add d1 database
+	- add image cloudflare storage
+	- improve the audio by using a better speech utterance system or adding actual recordings
