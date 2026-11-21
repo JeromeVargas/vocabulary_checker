@@ -16,5 +16,3 @@ export const SEARCH_PLACEHOLDER: string = "Search topics...";
 /* Testing */
 // add this manually from the first meta-data JSON key
 export const TOPIC: string = "articles";
-// add this manually from the previously mentioned key metadata array length
-export const TOPIC_NUMBER_OF_WORDS: number = 10;

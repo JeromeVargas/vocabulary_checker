@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-import { TOPIC, TOPIC_NUMBER_OF_WORDS } from "../src/config/constants";
+import { TOPIC } from "../src/config/constants";
 
 const LOCAL_HOST_URL_INTERFACE = `http://localhost:4173/${TOPIC}`;
 
